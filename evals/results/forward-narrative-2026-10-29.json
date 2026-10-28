@@ -1,0 +1,136 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-29",
+  "timezone": "Asia/Seoul",
+  "environment": "Current Codex session; two fresh independent subagent threads, without inherited conversation. Provider/model ID not separately exposed.",
+  "setup": "Agents received the installed skill path, requests and source prose only. Evaluator-only must_preserve and literary_review were withheld. Outputs below are raw final text with transport case labels removed.",
+  "revision_phase": "First forward run after narrative/rhythm revision, before adding the author-input distinction and the direction-of-reading example. Those final additions were checked separately.",
+  "limits": [
+    "No controlled old-versus-new skill experiment or blind reader preference study.",
+    "No claim of literary quality from formatting tests, changed paragraph counts, sentence lengths or these four samples.",
+    "No real audio reading, original essay document layout check or other provider-model run."
+  ],
+  "results": [
+    {
+      "id": "R1",
+      "request": "이 사진 에세이를 문학적이고 서사적인 산문으로 전면 윤문해줘. 담백한 합쇼체와 사실은 지키고, 긴 문장과 짧은 문장을 오가며 호흡의 높낮이를 만들어줘. 절 제목·도판 표기·인용문은 그대로 둬. 수정한 본문만 줘.",
+      "text": "## 1. 정류장\n\n필름 한 롤은 36컷이었습니다. 저는 촬영을 마친 다음 필름을 현상소에 맡겼습니다. 일주일 뒤에 결과를 받아 보았습니다. 촬영할 때와 사진을 볼 때 사이에는 일주일이 있었습니다.\n\n아버지는 아랫마을에서 친구분들과 가족이 함께한 술자리를 마치고 올라오시던 길에 정류장에 잠깐 앉으셨습니다. 저는 그 모습을 찍었습니다. 정류장에는 불이 켜져 있었습니다. 둘레로는 어두운 길이 보였습니다. 아버지가 옛일을 떠올리시는 듯했습니다. 실제로 무슨 생각을 하셨는지는 여쭙지 않았습니다.\n\n[도판 1: 정류장]\n\n인화지를 받아 온 뒤에는 먼저 정류장 사진을 보았습니다. 그다음에는 닫힌 셔터가 찍힌 사진을 보았습니다. 마지막으로 나무가 찍힌 사진을 보았습니다. 세 장 모두 같은 마을에서 찍었습니다. 찍을 때에는 서로 다른 장면이라고 생각했습니다. 인화지를 나란히 놓은 뒤에는 셋 사이의 관계가 궁금해졌습니다.\n\n## 2. 나무\n\n[도판 2: 나무]\n\n노트에는 “사진을 찍는 시간과 보는 시간은 같지 않습니다.”라고 적었습니다. 기다림이 모든 사진을 좋아지게 한다고는 생각하지 않습니다. 마음에 들지 않는 사진도 있었습니다. 일주일이 사진의 좋고 나쁨을 정해 준 것은 아니었습니다.\n\n마지막에는 나무 사진을 다시 보았습니다. 나무 뒤에는 벽이 있었습니다. 처음에는 나무만 보았습니다. 다시 보았을 때에는 나무와 벽 사이의 간격이 눈에 들어왔습니다. 그 간격을 촬영할 때에도 보았는지는 기억하지 못합니다.",
+      "must_preserve": [
+        "36컷, 촬영→맡김→일주일 뒤 결과 수령",
+        "아버지의 술자리·귀갓길·정류장 휴식과 화자의 촬영",
+        "불 켜진 정류장과 어두운 길은 제공된 사실; 새 날씨·표정·몸짓·망설임 금지",
+        "회상은 듯했던 인상이며 질문하지 않아 실제 생각 미상",
+        "인화지 관찰 순서 정류장→닫힌 셔터→나무, 같은 마을의 세 장, 처음과 나란히 놓은 뒤의 생각",
+        "두 제목, 도판 표기·소속 절, 직접 인용 정확히 유지",
+        "기다림과 사진 품질을 일반적 인과로 만들지 않음; 마음에 들지 않은 사진도 있음",
+        "나무 재관찰과 벽 사이 간격, 촬영 당시 인지 여부 기억 못함"
+      ],
+      "literary_review": [
+        "서술의 실제 순서와 정보 제시 순서를 구별해 문단 단위 이동·모음이 읽히는지",
+        "장문이 행동·시선의 이동을 수행하고 단문이 초점·유보를 맡는지",
+        "설명·장면·반론·회귀의 밀도가 구별되고 장단 고정 패턴이 반복되지 않는지",
+        "절제된 합쇼체와 불확실성 유지; 단문 위주 또는 접속만 바꾸는 데 머물지 않는지"
+      ],
+      "output": "## 1. 정류장\n\n아랫마을에서 친구분들과 가족이 함께한 술자리를 마치고 올라오시던 아버지는 불이 켜진 정류장에 잠깐 앉으셨습니다. 둘레로는 어두운 길이 보였습니다. 저는 그 모습을 찍었습니다.\n\n아버지가 옛일을 떠올리시는 듯했습니다. 실제로 무슨 생각을 하셨는지는 여쭙지 않았습니다.\n\n[도판 1: 정류장]\n\n필름 한 롤은 36컷이었습니다. 촬영을 마친 뒤 필름을 현상소에 맡겼고, 결과를 받아 본 것은 일주일 뒤였습니다. 찍을 때와 사진을 볼 때 사이에는 그 일주일이 있었습니다.\n\n인화지를 받아 온 뒤 먼저 정류장 사진을 보고, 그다음에는 닫힌 셔터가 찍힌 사진을 보았습니다. 마지막은 나무 사진이었습니다. 모두 같은 마을에서 찍었지만, 촬영할 때에는 서로 다른 장면이라고 생각했습니다.\n\n세 장의 인화지를 나란히 놓은 뒤에는 셋 사이의 관계가 궁금해졌습니다.\n\n## 2. 나무\n\n[도판 2: 나무]\n\n노트에는 “사진을 찍는 시간과 보는 시간은 같지 않습니다.”라고 적었습니다. 그렇다고 일주일이 사진의 좋고 나쁨을 정해 준 것은 아니었습니다. 마음에 들지 않는 사진도 있었습니다. 기다림이 모든 사진을 좋아지게 한다고는 생각하지 않습니다.\n\n마지막에는 나무 사진을 다시 보았습니다. 나무 뒤에는 벽이 있었지만, 처음 사진을 보았을 때 눈에 들어온 것은 나무뿐이었습니다. 다시 보았을 때에는 나무와 벽 사이의 간격이 보였습니다.\n\n촬영할 때에도 그 간격을 보았는지는 기억하지 못합니다."
+    },
+    {
+      "id": "R2",
+      "request": "아래 글을 문학적인 산문으로 다듬어줘. 수정한 글만 줘.",
+      "text": "나는 편지를 봉투에 넣었다. 다시 꺼냈다. 아직 보내지는 못했다.",
+      "must_preserve": [
+        "넣기→다시 꺼내기",
+        "아직 보내지 못함",
+        "새 수신자·이유·감정·행동을 추가하지 않음"
+      ],
+      "literary_review": [
+        "의도적인 단절을 보존하는 선택 가능",
+        "긴 문장 강제나 새 수식으로 효과를 증명하지 않는지"
+      ],
+      "output": "나는 편지를 봉투에 넣었다가 다시 꺼냈다. 아직 보내지는 못했다."
+    },
+    {
+      "id": "R3",
+      "request": "아래 실험 에세이를 담백하지만 문학적이고 서사적으로 윤문해줘. 합쇼체와 기술 용어는 지켜줘. 긴 호흡과 짧은 호흡에 높낮이가 있으면 좋겠어. 문단은 재구성해도 돼. 수정문만 보여줘.",
+      "text": "팀은 실온 24 °C에서 전압을 측정했습니다. 측정값은 3.3 V보다 낮았습니다. 저는 측정이 끝난 뒤 기록을 정리했습니다. 그런 다음 이전 기록과 비교했습니다. 이번 값이 더 낮았습니다. 원인은 아직 확인하지 못했습니다.\n\n팀은 다음 실험을 위한 절차를 마련했습니다. 실험을 다시 진행한 것은 아닙니다. 저는 기록에서 빠진 항목을 표시했습니다. 그 표시가 원인을 찾아 준 것은 아닙니다.\n\n기록에는 성공한 실험과 실패한 실험이 함께 있었습니다. 저는 먼저 성공한 실험의 기록을 읽었습니다. 다음에는 실패한 실험의 기록을 읽었습니다. 실패한 기록에도 측정 조건이 적혀 있었습니다. 저는 그 조건을 지우지 않았습니다.\n\n성공한 값만 보고 싶었던 것은 아닙니다. 저는 값이 나온 조건을 알고 싶었습니다. 다음 실험에서 원인을 찾을 수 있을지는 아직 모르겠습니다.",
+      "must_preserve": [
+        "실온 24 °C, 3.3 V보다 낮은 측정값, 이전 기록과 비교해 이번 값 더 낮음",
+        "팀의 측정과 화자의 기록·비교, 측정 완료→기록 정리→이전과 비교",
+        "원인 미확인, 절차 마련과 실험 재진행의 부정",
+        "빠진 항목 표시, 원인 발견의 부정",
+        "성공 기록→실패 기록 읽기, 실패 기록의 조건 미삭제",
+        "성공한 값만 보고 싶었던 것은 아님, 조건을 알고 싶음, 다음 발견 불확실"
+      ],
+      "literary_review": [
+        "기술 기록을 경험과 질문으로 잇는 움직임",
+        "긴 문장으로 순서·조건을 모으고 짧은 문장으로 한계·미확인을 드러내는지",
+        "실패에서 배움·성공·성장 등 없는 결론 금지; 과도한 설명·교훈 추가 없는지"
+      ],
+      "output": "팀이 실온 24 °C에서 측정한 전압은 3.3 V보다 낮았습니다. 측정이 끝난 뒤 저는 기록을 정리한 다음 이전 기록과 비교했습니다. 이번 값이 더 낮았습니다. 원인은 아직 확인하지 못했습니다.\n\n팀은 다음 실험을 위한 절차를 마련했습니다. 실험을 다시 진행한 것은 아닙니다. 저는 기록에서 빠진 항목을 표시했지만, 그 표시가 원인을 찾아 준 것은 아닙니다.\n\n기록에는 성공한 실험과 실패한 실험이 함께 있었습니다. 저는 성공한 실험의 기록을 먼저 읽은 뒤 실패한 실험의 기록으로 옮겨 갔습니다. 실패한 기록에도 측정 조건이 적혀 있었습니다. 저는 그 조건을 지우지 않았습니다. 성공한 값만 보고 싶었던 것은 아닙니다. 제가 알고 싶었던 것은 값이 나온 조건이었습니다.\n\n다음 실험에서 원인을 찾을 수 있을지는 아직 모르겠습니다."
+    },
+    {
+      "id": "R4",
+      "request": "아래 두 문단을 가볍게 문학적으로 다듬어줘. 두 문단 구획과 마지막 문장은 그대로 유지해줘. 수정한 본문만 줘.",
+      "text": "나는 책을 책상에 두었다. 그다음 서랍에서 편지를 꺼냈다. 책에 적힌 날짜와 편지에 적힌 날짜가 같았다.\n\n두 글은 같은 사람이 썼다. 같은 날에 썼는지는 모른다. 나는 아직 답장을 쓰지 않았다.",
+      "must_preserve": [
+        "정확히 두 문단 유지",
+        "마지막 문장 '나는 아직 답장을 쓰지 않았다.' 정확히 유지",
+        "책 두기→서랍에서 편지 꺼내기, 적힌 날짜 같음",
+        "동일 작성자, 작성일 동일 여부 미상",
+        "새 기억·감정·수신인 정보 금지"
+      ],
+      "literary_review": [
+        "강한 재구성 기본값이 가벼운 교정·문단 고정을 침범하지 않는지",
+        "사실은 같아도 없던 인과·동시성 만들지 않는지"
+      ],
+      "output": "나는 책을 책상에 두고 나서 서랍에서 편지를 꺼냈다. 책에 적힌 날짜와 편지에 적힌 날짜는 같았다.\n\n두 글을 쓴 사람은 같았지만, 같은 날에 썼는지는 모른다. 나는 아직 답장을 쓰지 않았다."
+    }
+  ],
+  "review": {
+    "R1": {
+      "meaning": "No material violation of the listed conditions found in manual comparison; quotation, section titles and figure labels retained. Contrast is more explicit in '찍었지만' and '벽이 있었지만', so this is not proof of perfect nuance identity.",
+      "literary": "The father scene opens the essay, film timing moves after the scene, and the final uncertainty occupies its own paragraph. The sequence of viewing the three photos is retained. Longer background and viewing sentences alternate with shorter observations and limits; not every paragraph has the same pattern.",
+      "remaining": "Several short sentences and explanatory phrases remain. The result is an example of revised focus and paragraph movement, not a general proof of literary excellence."
+    },
+    "R2": {
+      "meaning": "Action reversal and non-completion preserved without a new motive.",
+      "literary": "The first two actions were combined; the last sentence remains separate. Keeping the original three stops would also have been a valid choice."
+    },
+    "R3": {
+      "meaning": "Numeric conditions, team/individual roles, completed-measurement sequence, preparation versus execution, and unconfirmed cause retained.",
+      "literary": "The final personal motive was joined to the paragraph comparing success/failure records; the open question became a separate closing paragraph. Rhythm changes are modest, and much remains explanatory. Do not classify this as a strong long-sentence success merely because facts were preserved."
+    },
+    "R4": {
+      "meaning": "Two paragraphs and the exact last sentence retained. Equal written dates are not made equal composition dates.",
+      "literary": "Light consolidation fits the explicitly limited intervention. A large rewrite was not required."
+    }
+  },
+  "first_run_instruction_manifest_sha256": {
+    "SKILL.md": "490e39ea81dcf845f1f32b27c2bb7e3f936dc858ebeb45bde82070b832f8b379",
+    "references/craft.md": "ced33b192be669380fcad131daa55ef282a463710679983fa790a001762c8991",
+    "references/examples.md": "29bd43649ac242a76497a3c4a9be142a488d1af44e6220c5979186d2b7c16528",
+    "references/genres.md": "7fd17e80a5254257a701008d569b7dcaacde8f8520769f78d4b236c937ee5cd6",
+    "references/research.md": "9f74f14e169ad5724fe49f4c57452881b57734aae85af8b880e91ade4d6fa64f",
+    "references/revision.md": "71c7bc92cf7beecd55bff729cef934abef242bed4967fb0167d151b3cad647d0",
+    "references/source-catalog.json": "2bfaa6e5bcc2e54e888295cfd948001657bdb1519b8f13c9a101f8c78a011d57"
+  },
+  "final_instruction_manifest_sha256": {
+    "SKILL.md": "9f7463d36c37f4717991c3284b8663a50e37a02912d53e1898eb4cd704924f16",
+    "references/craft.md": "ced33b192be669380fcad131daa55ef282a463710679983fa790a001762c8991",
+    "references/examples.md": "1f4f610756aafd5f69efa473c896632c0ede6dce3d65268850a6842821f7e888",
+    "references/genres.md": "7fd17e80a5254257a701008d569b7dcaacde8f8520769f78d4b236c937ee5cd6",
+    "references/research.md": "9f74f14e169ad5724fe49f4c57452881b57734aae85af8b880e91ade4d6fa64f",
+    "references/revision.md": "cb49de6342db4220a6b373866e482fa4a8b81ebe957b310afac07bc6ddfe8e0b",
+    "references/source-catalog.json": "2bfaa6e5bcc2e54e888295cfd948001657bdb1519b8f13c9a101f8c78a011d57"
+  },
+  "manifest_note": "First-run hashes reconstruct the exact instruction files before the two documented final additions. UI metadata and scripts are not part of this instruction manifest.",
+  "supplementary_final_check": {
+    "environment": "One additional fresh subagent without inherited conversation, using final instructions and two source paragraphs only. Expected edits and supplied comparison revisions were withheld.",
+    "source_artifact_sha256": "295cf912a9944322b69a9336d774a341d61b59b8dfbfee7b013e963a8aa0f97c",
+    "source_cases": [
+      "C066 before only",
+      "C003 before only"
+    ],
+    "review": "Photo text links viewing across figures and retains ignorance about passers-by. Engineering text links signal processing to the distinction between process and motive without the causal connector used in the supplied comparison. Changes are restrained, not evidence of strong literary quality. Raw user essay passages are not redistributed in this public source package.",
+    "limits": "No blinded comparison, external historical verification, audio reading, or original document layout check."
+  }
+}
