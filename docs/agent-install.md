@@ -1,6 +1,6 @@
 # GitHub 링크를 받은 에이전트의 설치 절차
 
-사용자가 이 저장소의 링크와 함께 설치를 요청하면 아래 순서로 원본을 확보하고, 현재 도구에 설치한 뒤 실제 파일을 확인한다. 열람이나 설명만 요청했다면 설치를 시작하지 않는다. 호스트의 지침과 사용자가 지정한 범위를 먼저 따른다.
+사용자가 이 저장소의 링크와 함께 설치를 요청하면, 먼저 원본을 확인하고 현재 도구에 맞는 자리를 찾는다. 아래 순서에 따라 설치한 뒤에는 실제 파일까지 대조한다. 열람이나 설명만 요청했다면 설치를 시작하지 않는다. 호스트의 지침과 사용자가 지정한 범위를 먼저 따른다.
 
 ## Gemini 앱의 계정 스킬
 
@@ -12,10 +12,10 @@ Gemini **앱**에서 받은 요청이라면 [Gemini 앱 안내](gemini-app.md)�
 
 | 현재 도구 | 설치기 target | 사용자 경로 | 프로젝트 경로 |
 | --- | --- | --- | --- |
-| Codex CLI ,  로컬 Codex | `codex` | `~/.agents/skills/<name>/` | `<project>/.agents/skills/<name>/` |
+| Codex CLI, 로컬 Codex | `codex` | `~/.agents/skills/<name>/` | `<project>/.agents/skills/<name>/` |
 | Claude Code | `claude` | `~/.claude/skills/<name>/` | `<project>/.claude/skills/<name>/` |
 | Gemini CLI | `gemini` | `~/.gemini/skills/<name>/` | `<project>/.gemini/skills/<name>/` |
-| Antigravity App ,  IDE | `antigravity` | `~/.gemini/config/skills/<name>/` | `<project>/.agents/skills/<name>/` |
+| Antigravity App, IDE | `antigravity` | `~/.gemini/config/skills/<name>/` | `<project>/.agents/skills/<name>/` |
 | Antigravity CLI | `antigravity-cli` | `~/.gemini/antigravity-cli/skills/<name>/` | `<project>/.agents/skills/<name>/` |
 
 `<name>`은 원본 `SKILL.md` frontmatter의 이름이다. 저장소 URL과 폴더 이름이 달라도 이 이름을 유지한다. Windows의 `~`는 실제 사용자 프로필 경로를 뜻하며 `Path.home()`으로 계산한다. WSL에서 실행 중이면 WSL의 홈을 사용한다.
@@ -71,7 +71,7 @@ scripts/check_output.py
 3. 도구가 제공하는 스킬 목록, 새로고침 기능이 있으면 해당 도구의 방법으로 반영 여부를 확인한다. 현재 세션의 목록이 캐시되어 있으면 디스크 설치 완료와 목록 반영 여부를 구분한다. API, 문서에서 확인하지 않은 새로고침 명령을 만들어 실행하지 않는다.
 4. 설치한 스킬명, 도구, 실제 설치 경로와 필요한 경우 백업 위치를 짧게 알려준다. 모델이 스킬을 실제 사용한 검증과 파일 설치 검증을 구분한다.
 
-완료 보고는 실제로 확인한 위치를 따라야 한다. 클라우드 임시 폴더에 복사했더라도 사용자의 컴퓨터에 접근하지 못했다면 그 컴퓨터에 설치했다고 말하지 않는다. ChatGPT의 관리형 개인 스킬은 호스트가 제공하는 관리 절차로 설치하고 로컬 CLI 설치와 구별한다. 필요한 네트워크, 쓰기 권한이 없어 멈췄다면 그 지점을 설명한다.
+마지막 보고에는 실제로 확인한 위치를 적는다. 클라우드 임시 폴더에 복사했더라도 사용자의 컴퓨터에 접근하지 못했다면 그 컴퓨터에 설치했다고 말하지 않는다. ChatGPT의 관리형 개인 스킬은 호스트가 제공하는 관리 절차로 설치하고 로컬 CLI 설치와 구별한다. 필요한 네트워크나 쓰기 권한이 없어 멈췄다면 그 지점을 설명한다.
 
 ## 출처와 확인 범위
 

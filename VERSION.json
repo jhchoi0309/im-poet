@@ -3,19 +3,19 @@
   "revised_on": "2026-10-29",
   "schema_version": 1,
   "sha256": {
-    "SKILL.md": "c7c3cbbe5383beb0afea44a48254ec0d935b8250dc88c4558030f322e7e3a02d",
-    "prompts/gemini-app.txt": "3578415f1cd8bc7f5be3c3c183443479e3cff32dc935457e094d1ce1ff1e8435",
-    "prompts/im-poet.md": "3578415f1cd8bc7f5be3c3c183443479e3cff32dc935457e094d1ce1ff1e8435",
-    "references/craft.md": "1099dd83469af11bd28354ac4617b7e1f03d19369dff0fc3b4a8693b4febad01",
-    "references/editorial-judgment.md": "9c1734c29590894871d56fc44cfc3b50dbc5e135c57693ae5f85bde61482cd36",
-    "references/examples.md": "65e49ada63fbc344d7b1a3e58639257e1a5a68569e64e4f1b43cc7d043ffa1c0",
-    "references/genres.md": "457f9fee34d1bb94c31b8f7b23bc5a0000bc34e738745ea321ccb2e5cf7e9aaa",
-    "references/research.md": "3ceb1caae15dba4333ca3d9dc9ceffdb9e0554e6dfb992a5255c4c73f049b9b9",
-    "references/revision.md": "d70af9d4ae955cc8c76e568d6aedaa3fff1826e0816ba66517d1e33c5f17a4ff",
+    "SKILL.md": "5a2f1db96151fa3228269ef3161ccbead5ba3b562deca17db66129252491a3a8",
+    "prompts/gemini-app.txt": "8795150f91cf99fd80611ad784521b7d9e74e0295faf2c945b6bc9bb1a2474fb",
+    "prompts/im-poet.md": "8795150f91cf99fd80611ad784521b7d9e74e0295faf2c945b6bc9bb1a2474fb",
+    "references/craft.md": "ac4045114daed4cebe1b8b355555f49cb9883ed08bcd4d96e0798ac5a0ea0e0b",
+    "references/editorial-judgment.md": "0527072cd4eafcc539ed77a70d37ea06d2b7d997ae84451faaeb5145fd8617f8",
+    "references/examples.md": "9986202138ea6a56c2dd1f3c6633b553396b483278bd79855dff88200b13396a",
+    "references/genres.md": "532042e6b8691067c312225d63c2949a18cb7991a93feda02521ecfc9b2a7bdd",
+    "references/research.md": "a9ebcbdc4efd331474fcc99bee01cdebf568378c6a2c4fa4dc005b638c2cd46d",
+    "references/revision.md": "433855d873a5f2ae83356f856994bee07364fc896a9dcce7accc1050504f50be",
     "references/source-catalog.json": "2bfaa6e5bcc2e54e888295cfd948001657bdb1519b8f13c9a101f8c78a011d57",
-    "references/word-choice.md": "d910f55af004da24c9001ad02a9a5b26e6cf39b260eb8af00670aee88cc67092",
+    "references/word-choice.md": "92c5573a14f81c94ab036162c548587ef115586ec54d0568c9850336b709c8e5",
     "scripts/check_output.py": "720a0fb8c2d0df008e13b67e432ee675fe8a37edd9f37ec69fde4a914f8d29d7",
     "scripts/count_text.py": "4b954968cd48ff9ada919fb687cfe2ec9d0d650bd83a128debc009059d826b10"
   },
-  "version": "0.3.0"
+  "version": "0.3.1"
 }

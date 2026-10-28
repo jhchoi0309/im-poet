@@ -1,10 +1,10 @@
 # 호환성과 사용 방법
 
-기존 im-poetry의 호환성 안내를 이어받아 im-poet의 설치기를 같은 경로의 임시 환경에서 점검했습니다. 공식 문서를 확인한 날짜는 2026-10-28입니다. 개별 서비스의 모델 출력까지 모두 실행한 것은 아닙니다. 경로와 기능은 바뀔 수 있으므로 아래 공식 문서를 함께 확인하세요. 기능의 제공 여부와 문체 지시를 따르는 정도도 계정과 환경에 따라 달라질 수 있습니다.
+im-poet을 사용하는 자리는 컴퓨터의 설치 폴더일 수도, 계정에 저장한 스킬이나 한 번의 대화일 수도 있습니다. 이 안내는 그 자리를 구분하고 각각의 사용법을 찾도록 돕습니다. 기존 im-poetry의 호환성 안내를 이어받아 같은 경로의 임시 환경에서 설치기를 점검했으며, 공식 문서는 2026-10-28에 확인했습니다. 서비스별 모델 출력은 모두 실행하지 않았습니다. 경로와 기능, 문체 지시를 따르는 정도는 계정과 환경에 따라 달라질 수 있으니 아래 공식 문서도 함께 확인하세요.
 
 ## 운영체제별 실행
 
-| 항목 | Windows | macOS ,  Linux |
+| 항목 | Windows | macOS, Linux |
 | --- | --- | --- |
 | Python 실행 | `py -3` 또는 Python 3.10 이상의 `python` | `python3` |
 | 개별 설치 | `py -3 scripts/install.py --target codex` | `python3 scripts/install.py --target codex` |
@@ -62,7 +62,7 @@ GitHub URL만 주고 설치를 요청한 에이전트는 [설치 담당 에이�
 
 출처: [Gemini Apps — Tips for creating custom Gems](https://support.google.com/gemini/answer/15235603?hl=en).
 
-## GPT ,  ChatGPT ,  Codex
+## GPT, ChatGPT, Codex
 
 ### Codex
 
@@ -82,6 +82,6 @@ GitHub URL만 주고 설치를 요청한 에이전트는 [설치 담당 에이�
 
 ## 형식 호환성과 실제 실행
 
-위 경로와 지침 방식은 공식 문서를 확인해 작성했습니다. 설치기와 공통 파일이 맞게 동작하는지 살핀 기록과, Claude, Gemini, GPT 모델이 실제로 글을 다듬은 기록은 구별합니다. 모델별로 확인한 결과는 [평가 기록](evaluation.md)에 남겼습니다.
+위의 경로와 지침 방식은 공식 문서를 확인해 정리했습니다. 설치기와 공통 파일의 동작을 살핀 기록, 각 모델이 실제로 글을 다듬은 기록은 구별해 두었습니다. 모델별로 확인한 결과는 [평가 기록](evaluation.md)에서 볼 수 있습니다.
 
 공통 형식 출처: [Agent Skills specification](https://agentskills.io/specification).

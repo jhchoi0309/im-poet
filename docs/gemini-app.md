@@ -1,6 +1,6 @@
 # Gemini 앱에서 사용하기
 
-Gemini 앱에서는 계정의 Skills에 지침을 저장하고, Gemini CLI에서는 로컬 스킬 폴더에 파일을 둔다. 이 저장소는 앱에 가져올 `SKILL.md` 패키지와 대화에서 스킬을 만들 때 읽을 [단일 지침](../prompts/gemini-app.txt)을 함께 제공한다. 단일 지침은 원본 `SKILL.md`에서 생성하므로 로컬 참고 파일을 따로 읽지 않아도 된다.
+Gemini 앱에 글을 건네기 전에, 계정의 Skills에 im-poet의 지침을 담아 둘 수 있다. Gemini CLI에서는 컴퓨터의 스킬 폴더에 파일을 둔다. 이 저장소는 앱에 가져올 `SKILL.md` 패키지와 스킬을 만들 때 읽을 [단일 지침](../prompts/gemini-app.txt)을 함께 제공한다. 단일 지침은 원본 `SKILL.md`에서 생성하므로 로컬 참고 파일을 따로 읽지 않아도 된다.
 
 ## 링크로 생성 요청
 
@@ -29,7 +29,7 @@ Gemini 앱에서 Customize → Skills → Create → Upload를 열고 원하는 
 
 ## Skills가 제공되지 않는 경우
 
-Gems를 사용할 수 있다면 새 Gem의 Instructions에 `prompts/gemini-app.txt` 전문을 넣고 저장한다. 파일을 Knowledge에 올리는 것과 지침 영역에 저장하는 것은 구별해야 한다. 스킬이나 Gem을 저장할 수 없는 환경에서는 새 대화의 첫 메시지에 단일 지침을 붙여 넣고 다음 메시지에 원고를 보낼 수 있다. 이때 지침은 그 대화에 적용된다. 영구 설치로 보고하지 않는다.
+Gems를 사용할 수 있다면 새 Gem의 Instructions에 `prompts/gemini-app.txt` 전문을 넣고 저장한다. 파일을 Knowledge에 올리는 일과 지침 영역에 저장하는 일을 구별한다. 스킬이나 Gem을 저장할 수 없는 환경에서는 새 대화의 첫 메시지에 단일 지침을 붙여 넣고, 다음 메시지에 원고를 보낼 수 있다. 지침은 그 대화에 적용된다. 영구 설치로 보고하지 않는다.
 
 ## 출처
 
