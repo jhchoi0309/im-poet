@@ -9,16 +9,30 @@ import re
 import sys
 from urllib.parse import unquote, urlsplit
 
-from build import render
+from build import manifest_text, render
 from install import package_files
+from check_output import positions
 
 ROOT = Path(__file__).resolve().parents[1]
+
+
+def unchanged_examples(text: str) -> list[str]:
+    pattern = re.compile(
+        r"^원문:\n\n(?P<before>(?:>[^\n]*\n)+)\n"
+        r"(?:가능한 윤문|윤문):\n\n(?P<after>(?:>[^\n]*(?:\n|$))+)",
+        re.M,
+    )
+    return [
+        match.group("before").strip()
+        for match in pattern.finditer(text)
+        if match.group("before").strip() == match.group("after").strip()
+    ]
 
 
 def check(root: Path) -> list[str]:
     errors: list[str] = []
     required = (
-        "SKILL.md", "README.md", "LICENSE", "agents/openai.yaml", ".gitattributes",
+        "SKILL.md", "VERSION.json", "README.md", "LICENSE", "agents/openai.yaml", ".gitattributes",
         "scripts/bundle_upload.py", "scripts/bundle_install.py", "scripts/package_pair.py",
         "scripts/uninstall_legacy.py", "docs/package-usage.md", "docs/agent-install.md",
         "AGENTS.md", "CLAUDE.md", "GEMINI.md", "docs/gemini-app.md", "prompts/gemini-app.txt",
@@ -26,6 +40,7 @@ def check(root: Path) -> list[str]:
         "scripts/launchers/install.sh", "scripts/launchers/install.ps1",
         "references/craft.md", "references/genres.md", "references/examples.md",
         "references/research.md", "references/source-catalog.json", "scripts/count_text.py",
+        "references/word-choice.md", "references/editorial-judgment.md", "scripts/check_output.py",
         "docs/compatibility.md", "docs/research.md", "docs/evaluation.md",
         "prompts/im-poet.md", "evals/cases.json",
     )
@@ -64,6 +79,8 @@ def check(root: Path) -> list[str]:
             errors.append("Standalone prompt is out of date")
         if (root / "prompts/gemini-app.txt").read_text(encoding="utf-8") != expected:
             errors.append("Gemini App prompt is out of date")
+        if (root / "VERSION.json").read_text(encoding="utf-8") != manifest_text(root):
+            errors.append("Version manifest is out of date")
         if len(expected) > 8000:
             errors.append("Standalone prompt exceeds the project's 8000-character budget")
         if "references/" in expected or "portable:omit" in expected:
@@ -75,6 +92,11 @@ def check(root: Path) -> list[str]:
         if ".git" in file.parts:
             continue
         text = file.read_text(encoding="utf-8")
+        if positions(text):
+            errors.append(f"Forbidden middle-dot separator in {file.relative_to(root)}")
+        if file.relative_to(root).as_posix() in ("README.md", "references/examples.md"):
+            if unchanged_examples(text):
+                errors.append(f"Unchanged before/after example in {file.relative_to(root)}")
         if "[TODO" in text:
             errors.append(f"Unfinished template: {file.relative_to(root)}")
         if "\ue200genui" in text or "\ue200cite" in text:
@@ -86,6 +108,9 @@ def check(root: Path) -> list[str]:
             destination = (file.parent / unquote(parsed.path)).resolve()
             if not destination.is_relative_to(root.resolve()) or not destination.exists():
                 errors.append(f"Broken local link in {file.relative_to(root)}: {link}")
+    for relative in ("prompts/gemini-app.txt", "agents/openai.yaml"):
+        if positions((root / relative).read_text(encoding="utf-8")):
+            errors.append(f"Forbidden middle-dot separator in {relative}")
     data = json.loads((root / "evals/cases.json").read_text(encoding="utf-8"))
     ids: set[str] = set()
     for case in data.get("cases", []):

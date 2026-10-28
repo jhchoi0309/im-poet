@@ -13,7 +13,8 @@ import tempfile
 
 ROOT = Path(__file__).resolve().parents[1]
 NAME = "im-poet"
-PACKAGE = ("SKILL.md", "references", "agents", "LICENSE", "scripts/count_text.py")
+PACKAGE = ("SKILL.md", "VERSION.json", "references", "agents", "LICENSE",
+           "scripts/count_text.py", "scripts/check_output.py")
 LOCATIONS = {
     "claude": Path(".claude/skills"),
     "gemini": Path(".gemini/skills"),

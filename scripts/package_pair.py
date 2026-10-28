@@ -53,7 +53,12 @@ def build(novelist: Path, poet: Path, output: Path) -> None:
             # installers, Git objects, networking scripts, or compiled files.
             app = package / "gemini-app" / name
             app.mkdir(parents=True)
-            for relative in ("SKILL.md", "references", "agents", "LICENSE", "scripts/count_text.py"):
+            app_files = ["SKILL.md", "references", "agents", "LICENSE", "scripts/count_text.py"]
+            if (source / "scripts/check_output.py").is_file():
+                app_files.append("scripts/check_output.py")
+            if (source / "VERSION.json").is_file():
+                app_files.append("VERSION.json")
+            for relative in app_files:
                 original, destination = source / relative, app / ("LICENSE.txt" if relative == "LICENSE" else relative)
                 if original.is_dir():
                     shutil.copytree(original, destination)

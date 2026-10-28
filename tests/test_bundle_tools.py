@@ -81,7 +81,7 @@ class BundleToolsTests(unittest.TestCase):
             source = self.package / name
             source.mkdir()
             # Source packages exercise the real installer under both skill identities.
-            for rel in ("SKILL.md", "references", "agents", "LICENSE", "scripts", "docs"):
+            for rel in ("SKILL.md", "VERSION.json", "references", "agents", "LICENSE", "scripts", "docs"):
                 original, target = ROOT / rel, source / rel
                 if original.is_dir():
                     shutil.copytree(original, target, ignore=shutil.ignore_patterns("__pycache__"))

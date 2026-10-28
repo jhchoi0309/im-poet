@@ -4,11 +4,15 @@
 from __future__ import annotations
 
 import argparse
+import hashlib
+import json
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 START = "<!-- portable:omit:start -->"
 END = "<!-- portable:omit:end -->"
+SKILL_VERSION = "0.3.0"
+REVISED_ON = "2026-10-29"
 
 
 def render(skill: str) -> str:
@@ -38,23 +42,44 @@ def render(skill: str) -> str:
     return "\n".join(output).strip() + "\n"
 
 
+def manifest_text(root: Path) -> str:
+    paths = [root / "SKILL.md", *sorted((root / "references").rglob("*")),
+             root / "scripts/count_text.py", root / "scripts/check_output.py"]
+    hashes = {}
+    for path in paths:
+        if path.is_symlink():
+            raise ValueError("Version manifest cannot follow symbolic links")
+        if path.is_file():
+            hashes[path.relative_to(root).as_posix()] = hashlib.sha256(path.read_bytes()).hexdigest()
+    prompt = render((root / "SKILL.md").read_text(encoding="utf-8")).encode("utf-8")
+    hashes["prompts/im-poet.md"] = hashlib.sha256(prompt).hexdigest()
+    hashes["prompts/gemini-app.txt"] = hashes["prompts/im-poet.md"]
+    return json.dumps(
+        {"schema_version": 1, "name": "im-poet", "version": SKILL_VERSION,
+         "revised_on": REVISED_ON, "sha256": hashes},
+        ensure_ascii=False, sort_keys=True, indent=2,
+    ) + "\n"
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--check", action="store_true", help="Check without writing")
     args = parser.parse_args()
     skill = (ROOT / "SKILL.md").read_text(encoding="utf-8")
     expected = render(skill)
-    outputs = (ROOT / "prompts" / "im-poet.md", ROOT / "prompts" / "gemini-app.txt")
+    outputs = {ROOT / "prompts" / "im-poet.md": expected,
+               ROOT / "prompts" / "gemini-app.txt": expected,
+               ROOT / "VERSION.json": manifest_text(ROOT)}
     if args.check:
-        for output in outputs:
-            if not output.is_file() or output.read_text(encoding="utf-8") != expected:
+        for output, content in outputs.items():
+            if not output.is_file() or output.read_text(encoding="utf-8") != content:
                 print(f"Out of date: {output.name}; run the build script")
                 return 1
-        print("Standalone and Gemini App prompts match SKILL.md")
+        print("Prompts and version manifest match the current skill content")
         return 0
-    for output in outputs:
+    for output, content in outputs.items():
         output.parent.mkdir(parents=True, exist_ok=True)
-        output.write_text(expected, encoding="utf-8", newline="\n")
+        output.write_text(content, encoding="utf-8", newline="\n")
     print(f"Built standalone and Gemini App prompts ({len(expected)} characters each)")
     return 0
 

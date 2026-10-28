@@ -4,7 +4,7 @@
 
 ## 운영체제별 실행
 
-| 항목 | Windows | macOS · Linux |
+| 항목 | Windows | macOS ,  Linux |
 | --- | --- | --- |
 | Python 실행 | `py -3` 또는 Python 3.10 이상의 `python` | `python3` |
 | 개별 설치 | `py -3 scripts/install.py --target codex` | `python3 scripts/install.py --target codex` |
@@ -13,15 +13,15 @@
 
 설치기는 각 홈의 `.claude/skills`, `.gemini/skills`, `.agents/skills` 아래에 스킬 이름으로 폴더를 만듭니다. `--project`를 지정하면 그 프로젝트 아래의 같은 상대 경로를 쓰고, 별도 위치를 사용하는 도구에는 `--destination`으로 정확한 경로를 전달합니다. Windows 네이티브와 WSL은 각각의 홈을 기준으로 설치합니다. 두 환경에서는 따로 실행하세요.
 
-패키지 공통 설치·업로드·압축 해제와 이전 스킬 제거는 [공통 패키지 안내](package-usage.md)를 참고하세요. 핵심 동작은 Python 표준 라이브러리로 구현했고 GitHub 업로드에만 Git·GitHub CLI가 필요합니다. 각 모델 도구 자체의 Windows 실행 환경은 제공자의 요구 사항을 따릅니다.
+패키지 공통 설치, 업로드, 압축 해제와 이전 스킬 제거는 [공통 패키지 안내](package-usage.md)를 참고하세요. 핵심 동작은 Python 표준 라이브러리로 구현했고 GitHub 업로드에만 Git, GitHub CLI가 필요합니다. 각 모델 도구 자체의 Windows 실행 환경은 제공자의 요구 사항을 따릅니다.
 
 ## Antigravity와 Gemini 앱
 
-Antigravity App·IDE는 `--target antigravity`, Antigravity CLI는 `--target antigravity-cli`를 사용합니다. App·IDE 사용자 경로는 `~/.gemini/config/skills`, CLI 사용자 경로는 `~/.gemini/antigravity-cli/skills`이며 프로젝트 범위는 모두 `.agents/skills`입니다. [공식 문서](https://antigravity.google/docs/skills)를 2026-10-28 확인했습니다.
+Antigravity App, IDE는 `--target antigravity`, Antigravity CLI는 `--target antigravity-cli`를 사용합니다. App, IDE 사용자 경로는 `~/.gemini/config/skills`, CLI 사용자 경로는 `~/.gemini/antigravity-cli/skills`이며 프로젝트 범위는 모두 `.agents/skills`입니다. [공식 문서](https://antigravity.google/docs/skills)를 2026-10-28 확인했습니다.
 
-Gemini 앱에서 사용할 지침은 Skills 생성·가져오기 기능으로 계정에 저장합니다. 배포 패키지의 `gemini-app/<skill-name>/` 폴더나 `prompts/gemini-app.txt`를 사용하고, 링크로 생성하는 절차와 기능의 제공 범위는 [앱용 안내](gemini-app.md)에서 확인하세요. 로컬 CLI 폴더를 복사하는 일은 Gemini CLI의 설치입니다. 앱의 저장 결과와 각각 확인해야 합니다.
+Gemini 앱에서 사용할 지침은 Skills 생성, 가져오기 기능으로 계정에 저장합니다. 배포 패키지의 `gemini-app/<skill-name>/` 폴더나 `prompts/gemini-app.txt`를 사용하고, 링크로 생성하는 절차와 기능의 제공 범위는 [앱용 안내](gemini-app.md)에서 확인하세요. 로컬 CLI 폴더를 복사하는 일은 Gemini CLI의 설치입니다. 앱의 저장 결과와 각각 확인해야 합니다.
 
-GitHub URL만 주고 설치를 요청한 에이전트는 [설치 담당 에이전트 안내](agent-install.md)를 읽고 현재 도구를 선택하도록 구성했습니다. Codex·Claude Code·Gemini CLI와 Antigravity용 경로를 구분하며, 호스트가 제공하지 않는 파일 접근이나 앱 계정 쓰기 기능을 있다고 가정하지 않습니다.
+GitHub URL만 주고 설치를 요청한 에이전트는 [설치 담당 에이전트 안내](agent-install.md)를 읽고 현재 도구를 선택하도록 구성했습니다. Codex, Claude Code, Gemini CLI와 Antigravity용 경로를 구분하며, 호스트가 제공하지 않는 파일 접근이나 앱 계정 쓰기 기능을 있다고 가정하지 않습니다.
 
 ## 공통 파일
 
@@ -62,7 +62,7 @@ GitHub URL만 주고 설치를 요청한 에이전트는 [설치 담당 에이�
 
 출처: [Gemini Apps — Tips for creating custom Gems](https://support.google.com/gemini/answer/15235603?hl=en).
 
-## GPT · ChatGPT · Codex
+## GPT ,  ChatGPT ,  Codex
 
 ### Codex
 
@@ -82,6 +82,6 @@ GitHub URL만 주고 설치를 요청한 에이전트는 [설치 담당 에이�
 
 ## 형식 호환성과 실제 실행
 
-위 경로와 지침 방식은 공식 문서를 확인해 작성했습니다. 설치기와 공통 파일이 맞게 동작하는지 살핀 기록과, Claude·Gemini·GPT 모델이 실제로 글을 다듬은 기록은 구별합니다. 모델별로 확인한 결과는 [평가 기록](evaluation.md)에 남겼습니다.
+위 경로와 지침 방식은 공식 문서를 확인해 작성했습니다. 설치기와 공통 파일이 맞게 동작하는지 살핀 기록과, Claude, Gemini, GPT 모델이 실제로 글을 다듬은 기록은 구별합니다. 모델별로 확인한 결과는 [평가 기록](evaluation.md)에 남겼습니다.
 
 공통 형식 출처: [Agent Skills specification](https://agentskills.io/specification).
