@@ -1,6 +1,6 @@
 # im-novelist · im-poet 공통 배포 패키지
 
-Windows·macOS·Linux에서 Python 3.10 이상으로 설치와 업로드를 실행합니다. 업로드와 설치의 핵심 구현은 Python 표준 라이브러리입니다. 운영체제별 셸 명령이나 체크섬 프로그램을 추가로 설치할 필요가 없습니다.
+패키지를 풀면 두 스킬의 소스와 이력, 설치와 업로드에 쓸 도구가 함께 나옵니다. Windows·macOS·Linux에서는 Python 3.10 이상으로 같은 핵심 도구를 실행합니다. 설치와 업로드를 Python 표준 라이브러리로 구현했으므로 운영체제마다 별도의 셸 명령이나 체크섬 프로그램을 준비할 필요는 없습니다.
 
 ## 들어 있는 파일
 
@@ -16,13 +16,13 @@ Windows·macOS·Linux에서 Python 3.10 이상으로 설치와 업로드를 실�
 | `uninstall-im-poetry.py` | 이전 로컬 스킬을 백업하면서 제거·복구 |
 | `VERSIONS.json`, `SHA256SUMS` | 소스 커밋과 최상위 배포 파일의 체크섬 |
 
-설치만 할 때는 Python만 필요합니다. GitHub 업로드에는 Git과 GitHub CLI(`gh`)도 필요합니다. 실제 윤문에는 Agent Skills를 읽는 도구와 그 도구의 모델 연결이 필요합니다. 각 도구 자체의 운영체제 요구 조건은 제공자 문서를 따릅니다.
+설치할 때에는 Python을 준비하고, GitHub에 업로드할 때에는 Git과 GitHub CLI(`gh`)도 준비합니다. 실제로 글을 다듬으려면 Agent Skills를 읽는 도구와 그 도구의 모델 연결이 필요합니다. 각 도구가 요구하는 운영체제 조건은 제공자의 문서를 따릅니다.
 
 ## 사용자는 GitHub 링크로 설치 요청
 
-Codex·Claude Code·Gemini CLI와 Antigravity에는 해당 저장소 URL과 “이 스킬 설치해줘”를 보내도록 안내합니다. 저장소의 README·AGENTS.md·CLAUDE.md·GEMINI.md는 에이전트를 현재 도구에 맞는 설치 절차로 연결합니다. 사용자가 도구별 경로나 명령을 외울 필요가 없도록 구성했습니다. 호스트가 제공하는 파일 접근과 권한 정책은 그대로 적용됩니다.
+Codex·Claude Code·Gemini CLI와 Antigravity에 저장소 URL을 주고 “이 스킬 설치해줘”라고 요청하면, 에이전트가 README·AGENTS.md·CLAUDE.md·GEMINI.md를 따라 현재 도구에 맞는 설치 절차를 찾도록 구성했습니다. 사용자가 경로와 명령을 외우기보다 에이전트가 확인하고 수행하는 방식입니다. 호스트의 파일 접근과 권한 정책은 그대로 따릅니다.
 
-Gemini 앱은 계정의 Skills 기능으로 지침을 저장합니다. 링크 내용을 읽고 스킬을 생성할 수 있는 앱에는 같은 요청으로 진행하도록 안내합니다. 직접 가져오려면 이 패키지의 `gemini-app/<skill-name>/` 폴더를 앱의 Skills 업로드에서 선택하세요. 앱 생성과 CLI 설치는 다른 작업입니다. 각 소스의 `docs/gemini-app.md`에 사용 방법과 계정별 제공 범위를 적었습니다.
+Gemini 앱에서는 계정의 Skills 기능에 지침을 저장합니다. 링크를 읽고 스킬을 생성할 수 있는 앱에는 같은 요청으로 진행하도록 안내했으며, 직접 가져올 때에는 Skills 업로드에서 이 패키지의 `gemini-app/<skill-name>/` 폴더를 선택하면 됩니다. 앱에 저장했는지와 CLI에 설치했는지는 따로 확인하세요. 사용 방법과 계정별 제공 범위는 각 소스의 `docs/gemini-app.md`에 적었습니다.
 
 ## Windows: PowerShell에서 실행
 
@@ -118,7 +118,7 @@ python3 im-writing-skills/uninstall-im-poetry.py
 
 ## 검증 범위
 
-이번 작업에서는 Linux의 Python 3.12에서 설치·업데이트·백업·실패 복구, CRLF/BOM, 한글·공백·이모지 경로, 번들 복원, 로컬 Git 업로드와 이력 충돌을 실행해 확인했습니다. GitHub API는 모의 응답으로 검사했으며 실제 계정 업로드는 사용자가 실행하는 단계입니다.
+이번 작업에서 직접 실행한 환경은 Linux의 Python 3.12입니다. 이 환경에서 설치와 업데이트, 백업과 실패 복구를 확인하고 CRLF/BOM과 한글·공백·이모지 경로, 번들 복원, 로컬 Git 업로드와 이력 충돌을 살폈습니다. GitHub API에는 모의 응답을 사용했습니다. 이 업로드 도구로 실제 계정에 올리는 단계는 사용자가 실행합니다.
 
 두 저장소의 CI는 Windows·macOS·Linux와 Python 3.10·3.13의 6개 조합으로 구성했습니다. 구성 파일을 추가한 것과 실제 CI 통과는 다릅니다. Windows·macOS의 네이티브 실행 결과는 아직 확인하지 않았습니다. Windows 전용 junction 검사와 PowerShell 실행 도구 검사는 해당 환경의 CI에서 실행됩니다. 셸 도구는 핵심 Python 구현으로 연결되며, 설치 경로에 있는 링크나 junction은 임의로 교체하지 않습니다.
 

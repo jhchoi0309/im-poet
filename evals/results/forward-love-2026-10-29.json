@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-29",
+  "timezone": "Asia/Seoul",
+  "setup": "One fresh subagent without inherited conversation received the installed skill path and the two requests/source texts only. It did not receive intended outputs or reviewer diagnoses. The texts are fictional, not user memories.",
+  "environment": "Current Codex session. Specific model ID not separately exposed.",
+  "limits": [
+    "Two samples, not a controlled old/new or blinded reader preference study.",
+    "Text comparison only; no audio reading, model-provider comparison or literary quality guarantee."
+  ],
+  "cases": [
+    {
+      "id": "L1",
+      "request": "이 소설 원고를 문학적이고 서사적인 산문으로 다듬어줘. 담백하게, 긴 문장과 짧은 문장을 오가며 호흡의 높낮이가 있으면 좋겠어. 사실과 인물의 마음은 그대로 유지하고 문단은 재구성해도 돼. 수정한 본문만 줘.",
+      "text": "토요일 오전에 우리는 함께 살던 집에서 각자의 짐을 쌌다. 나는 먼저 접시를 상자에 넣었다. 그런 다음 컵을 넣었다. 너는 책을 챙겼다. 두 사람이 산 책이 한 권 섞여 있었다. 그 책은 누가 가져갈지 정하지 못했다.\n\n우리는 헤어지기로 했다. 나는 여전히 너를 사랑했다. 너도 같은 마음인지는 몰랐다. 너는 짐을 다 싼 뒤 내게 열쇠를 건넸다. 나는 열쇠를 식탁 위에 놓았다.\n\n네가 나간 다음에는 함께 산 책을 다시 보았다. 책은 아직 상자 밖에 있었다. 누구의 짐에도 넣지 않은 책이었다. 나는 그 책을 펼치지 않았다.",
+      "output": "토요일 오전, 함께 살던 집에서 우리는 각자의 짐을 쌌다. 나는 접시를 먼저 상자에 넣고 그다음에 컵을 넣었다. 네가 챙기던 책들 사이에는 우리가 함께 산 책이 한 권 섞여 있었는데, 그 책을 누가 가져갈지는 정하지 못했다.\n\n우리는 헤어지기로 했다. 나는 여전히 너를 사랑했지만, 너도 같은 마음인지는 몰랐다.\n\n짐을 다 싼 너는 내게 열쇠를 건넸고, 나는 그 열쇠를 식탁 위에 놓았다.\n\n네가 나간 뒤 나는 그 책을 다시 보았다. 누구의 짐에도 넣지 않은 책은 아직 상자 밖에 있었다. 나는 그 책을 펼치지 않았다.",
+      "meaning_review": "The date, role and action sequence, one shared book with unresolved ownership, joint separation decision, narrator's continued love, unknown partner feeling, handed-over key and unopened book remain. The relation between the shared book and the partner's books is more explicit than the original loose sequence; note this nuance rather than claiming exact identity.",
+      "literary_review": "The uncertainty about the shared book ends a longer sentence; the separation and unknown feeling occupy their own paragraph. The key action is separated before returning to the book. This shows paragraph movement and varied pauses, not a universal quality guarantee."
+    },
+    {
+      "id": "L2",
+      "request": "이 편지를 문학적인 산문으로 윤문해줘. 반말과 인용문은 유지하고 수정한 글만 줘.",
+      "text": "나는 네가 보고 싶어. 어제 네 메시지에는 “금요일 7시에 만나자.”라고 적혀 있었어. 나는 아직 답하지 않았어. 네가 왜 만나자고 했는지는 몰라. 다시 시작하자는 뜻인지는 알 수 없어. 나는 먼저 네 이야기를 듣고 싶어.",
+      "output": "어제 네 메시지에는 “금요일 7시에 만나자.”라고 적혀 있었어. 나는 아직 그 말에 답하지 않았어.\n\n나는 네가 보고 싶어. 네가 왜 만나자고 했는지, 그 말이 다시 시작하자는 뜻인지는 알 수 없어. 먼저 네 이야기를 듣고 싶어.",
+      "meaning_review": "The exact quoted meeting time, informal speech, yesterday's message, unanswered state, narrator's wish, and uncertain invitation/reunion motive remain.",
+      "literary_review": "The message precedes the wish; motive and possible reunion are combined in a longer uncertainty sentence before the closing desire to listen. Change is restrained and no reason for the breakup is invented."
+    }
+  ],
+  "instruction_manifest_sha256": {
+    "SKILL.md": "56bc0aa7bfcf8fc50aff8cf466c9c333bf7018e0c6f30ac765f1cbce13645484",
+    "references/craft.md": "406f0a9503b63c00776484222ecbaf48e47b5a88c93425dec22d2bb244f30934",
+    "references/examples.md": "5bf4693325483cbb72b45f85f1a964c069be4d733ed58d86aee38888b582b0be",
+    "references/genres.md": "b7d8b5e36b08130574dee6a08467d009ceba50e652f5c080dc33ef014b270a1a",
+    "references/research.md": "af71d9d4c1da5a6b9b47e56ae68a7bf62033770df27576b3eb67cf9fc83335c8",
+    "references/revision.md": "1f4ad90eb2864fa28185c4bf2c2f6f21b93ae0d049c64c8faedd1e76018f08d6",
+    "references/source-catalog.json": "2bfaa6e5bcc2e54e888295cfd948001657bdb1519b8f13c9a101f8c78a011d57"
+  }
+}
