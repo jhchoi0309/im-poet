@@ -1,0 +1,61 @@
+{
+  "date": "2026-10-28",
+  "platform": "Linux",
+  "python": "3.12.14",
+  "tests_run": 40,
+  "passed": 38,
+  "skipped": [
+    {
+      "test": "test_powershell_launchers_forward_unicode_and_spaced_arguments (test_distribution.DistributionTests.test_powershell_launchers_forward_unicode_and_spaced_arguments)",
+      "reason": "Native PowerShell is not available"
+    },
+    {
+      "test": "test_windows_junction_target_is_preserved (test_portability.PortabilityTests.test_windows_junction_target_is_preserved)",
+      "reason": "Native Windows junction test"
+    }
+  ],
+  "failures": [],
+  "errors": [],
+  "passed_tests": [
+    "test_archive_contains_committed_source_bundles_and_native_launchers (test_bundle_tools.BundleToolsTests.test_archive_contains_committed_source_bundles_and_native_launchers)",
+    "test_create_both_repositories_and_verify_remote_main (test_bundle_tools.BundleToolsTests.test_create_both_repositories_and_verify_remote_main)",
+    "test_damaged_bundle_fails_before_any_github_request (test_bundle_tools.BundleToolsTests.test_damaged_bundle_fails_before_any_github_request)",
+    "test_divergent_main_prevents_writes_to_both_repositories (test_bundle_tools.BundleToolsTests.test_divergent_main_prevents_writes_to_both_repositories)",
+    "test_existing_repositories_are_idempotent (test_bundle_tools.BundleToolsTests.test_existing_repositories_are_idempotent)",
+    "test_install_both_source_packages_without_git_or_github (test_bundle_tools.BundleToolsTests.test_install_both_source_packages_without_git_or_github)",
+    "test_install_preflight_preserves_all_destinations_when_one_conflicts (test_bundle_tools.BundleToolsTests.test_install_preflight_preserves_all_destinations_when_one_conflicts)",
+    "test_network_error_is_not_treated_as_missing_repository (test_bundle_tools.BundleToolsTests.test_network_error_is_not_treated_as_missing_repository)",
+    "test_offline_check_does_not_require_or_contact_github (test_bundle_tools.BundleToolsTests.test_offline_check_does_not_require_or_contact_github)",
+    "test_wrong_account_cannot_publish (test_bundle_tools.BundleToolsTests.test_wrong_account_cannot_publish)",
+    "test_legacy_uninstall_and_restore_preserve_the_two_new_skills (test_distribution.DistributionTests.test_legacy_uninstall_and_restore_preserve_the_two_new_skills)",
+    "test_antigravity_app_and_cli_have_distinct_user_paths_and_shared_project_scope (test_portability.PortabilityTests.test_antigravity_app_and_cli_have_distinct_user_paths_and_shared_project_scope)",
+    "test_crlf_and_bom_package_installs_and_updates_without_losing_previous_bytes (test_portability.PortabilityTests.test_crlf_and_bom_package_installs_and_updates_without_losing_previous_bytes)",
+    "test_explicit_project_root_overrides_home (test_portability.PortabilityTests.test_explicit_project_root_overrides_home)",
+    "test_line_endings_do_not_relax_skill_identity (test_portability.PortabilityTests.test_line_endings_do_not_relax_skill_identity)",
+    "test_native_and_windows_home_paths_are_composed_without_posix_assumptions (test_portability.PortabilityTests.test_native_and_windows_home_paths_are_composed_without_posix_assumptions)",
+    "test_unicode_and_spaces_in_cli_destination (test_portability.PortabilityTests.test_unicode_and_spaces_in_cli_destination)",
+    "test_crlf_and_lf_normalization_are_explicit (test_tools.ByteCountTests.test_crlf_and_lf_normalization_are_explicit)",
+    "test_encoding_and_limit_change_real_count (test_tools.ByteCountTests.test_encoding_and_limit_change_real_count)",
+    "test_encoding_is_required_and_bom_is_counted (test_tools.ByteCountTests.test_encoding_is_required_and_bom_is_counted)",
+    "test_unencodable_text_does_not_claim_a_count (test_tools.ByteCountTests.test_unencodable_text_does_not_claim_a_count)",
+    "test_utf8_counts_actual_bytes_spaces_and_mixed_newlines (test_tools.ByteCountTests.test_utf8_counts_actual_bytes_spaces_and_mixed_newlines)",
+    "test_cli_project_locations (test_tools.InstallerTests.test_cli_project_locations)",
+    "test_conflicting_cli_options_fail (test_tools.InstallerTests.test_conflicting_cli_options_fail)",
+    "test_different_existing_skill_is_untouched (test_tools.InstallerTests.test_different_existing_skill_is_untouched)",
+    "test_dry_run_creates_nothing (test_tools.InstallerTests.test_dry_run_creates_nothing)",
+    "test_extra_user_file_prevents_overwrite (test_tools.InstallerTests.test_extra_user_file_prevents_overwrite)",
+    "test_install_is_complete_and_does_not_copy_development_files (test_tools.InstallerTests.test_install_is_complete_and_does_not_copy_development_files)",
+    "test_second_install_is_idempotent (test_tools.InstallerTests.test_second_install_is_idempotent)",
+    "test_target_symlink_is_not_followed (test_tools.InstallerTests.test_target_symlink_is_not_followed)",
+    "test_update_dry_run_leaves_existing_version_and_no_backup (test_tools.InstallerTests.test_update_dry_run_leaves_existing_version_and_no_backup)",
+    "test_update_preserves_previous_version_and_extra_files_in_backup (test_tools.InstallerTests.test_update_preserves_previous_version_and_extra_files_in_backup)",
+    "test_update_rejects_an_unrelated_skill_even_when_requested (test_tools.InstallerTests.test_update_rejects_an_unrelated_skill_even_when_requested)",
+    "test_update_restores_existing_folder_if_new_folder_cannot_be_placed (test_tools.InstallerTests.test_update_restores_existing_folder_if_new_folder_cannot_be_placed)",
+    "test_gemini_app_prompt_is_self_contained_and_matches_the_source (test_tools.PromptTests.test_gemini_app_prompt_is_self_contained_and_matches_the_source)",
+    "test_malformed_omission_is_rejected (test_tools.PromptTests.test_malformed_omission_is_rejected)",
+    "test_native_and_standalone_share_protected_examples (test_tools.PromptTests.test_native_and_standalone_share_protected_examples)",
+    "test_removes_only_frontmatter_and_native_reference_block (test_tools.PromptTests.test_removes_only_frontmatter_and_native_reference_block)"
+  ],
+  "native_windows_macos_results": "Not executed here; CI matrix is configured for subsequent GitHub runs.",
+  "gemini_apps_and_agent_install_behavior": "Native account creation and autonomous GitHub URL installation in provider products were not executed; package format, content, target paths and installers were tested."
+}

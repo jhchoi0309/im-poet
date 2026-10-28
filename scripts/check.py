@@ -18,7 +18,12 @@ ROOT = Path(__file__).resolve().parents[1]
 def check(root: Path) -> list[str]:
     errors: list[str] = []
     required = (
-        "SKILL.md", "README.md", "LICENSE", "agents/openai.yaml",
+        "SKILL.md", "README.md", "LICENSE", "agents/openai.yaml", ".gitattributes",
+        "scripts/bundle_upload.py", "scripts/bundle_install.py", "scripts/package_pair.py",
+        "scripts/uninstall_legacy.py", "docs/package-usage.md", "docs/agent-install.md",
+        "AGENTS.md", "CLAUDE.md", "GEMINI.md", "docs/gemini-app.md", "prompts/gemini-app.txt",
+        "scripts/launchers/upload.sh", "scripts/launchers/upload.ps1",
+        "scripts/launchers/install.sh", "scripts/launchers/install.ps1",
         "references/craft.md", "references/genres.md", "references/examples.md",
         "references/research.md", "references/source-catalog.json", "scripts/count_text.py",
         "docs/compatibility.md", "docs/research.md", "docs/evaluation.md",
@@ -57,6 +62,8 @@ def check(root: Path) -> list[str]:
         expected = render(skill)
         if (root / "prompts/im-poet.md").read_text(encoding="utf-8") != expected:
             errors.append("Standalone prompt is out of date")
+        if (root / "prompts/gemini-app.txt").read_text(encoding="utf-8") != expected:
+            errors.append("Gemini App prompt is out of date")
         if len(expected) > 8000:
             errors.append("Standalone prompt exceeds the project's 8000-character budget")
         if "references/" in expected or "portable:omit" in expected:

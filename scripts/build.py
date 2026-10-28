@@ -42,17 +42,20 @@ def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--check", action="store_true", help="Check without writing")
     args = parser.parse_args()
-    output = ROOT / "prompts" / "im-poet.md"
-    expected = render((ROOT / "SKILL.md").read_text(encoding="utf-8"))
+    skill = (ROOT / "SKILL.md").read_text(encoding="utf-8")
+    expected = render(skill)
+    outputs = (ROOT / "prompts" / "im-poet.md", ROOT / "prompts" / "gemini-app.txt")
     if args.check:
-        if not output.is_file() or output.read_text(encoding="utf-8") != expected:
-            print("Out of date: prompts/im-poet.md; run python3 scripts/build.py")
-            return 1
-        print("Standalone prompt matches SKILL.md")
+        for output in outputs:
+            if not output.is_file() or output.read_text(encoding="utf-8") != expected:
+                print(f"Out of date: {output.name}; run the build script")
+                return 1
+        print("Standalone and Gemini App prompts match SKILL.md")
         return 0
-    output.parent.mkdir(parents=True, exist_ok=True)
-    output.write_text(expected, encoding="utf-8")
-    print(f"Built prompts/im-poet.md ({len(expected)} characters)")
+    for output in outputs:
+        output.parent.mkdir(parents=True, exist_ok=True)
+        output.write_text(expected, encoding="utf-8", newline="\n")
+    print(f"Built standalone and Gemini App prompts ({len(expected)} characters each)")
     return 0
 
 

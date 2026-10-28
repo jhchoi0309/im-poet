@@ -7,6 +7,8 @@ import argparse
 import os
 from pathlib import Path
 import shutil
+import stat
+import sys
 import tempfile
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -16,30 +18,76 @@ LOCATIONS = {
     "claude": Path(".claude/skills"),
     "gemini": Path(".gemini/skills"),
     "codex": Path(".agents/skills"),
+    "antigravity": Path(".gemini/config/skills"),
+    "antigravity-cli": Path(".gemini/antigravity-cli/skills"),
 }
+PROJECT_LOCATIONS = {**LOCATIONS, "antigravity": Path(".agents/skills"), "antigravity-cli": Path(".agents/skills")}
+
+
+def is_link(path: Path) -> bool:
+    """Reject symbolic links and Windows junctions without following their targets."""
+    if path.is_symlink():
+        return True
+    try:
+        return getattr(path.lstat(), "st_reparse_tag", None) == getattr(stat, "IO_REPARSE_TAG_MOUNT_POINT", 0xA0000003)
+    except FileNotFoundError:
+        return False
+
+
+def has_skill_name(data: bytes, name: str) -> bool:
+    """Accept UTF-8 BOM and LF/CRLF checkouts while retaining the exact skill identity."""
+    try:
+        return data.decode("utf-8-sig").splitlines()[:2] == ["---", f"name: {name}"]
+    except UnicodeDecodeError:
+        return False
+
+
+def destination_for(tool: str, *, project: Path | None = None, home: Path | None = None) -> Path:
+    base = project.expanduser().resolve() if project is not None else (home or Path.home())
+    locations = PROJECT_LOCATIONS if project is not None else LOCATIONS
+    return base / locations[tool] / NAME
+
+
+def checked_files(root: Path) -> list[Path]:
+    """Inspect directory entries before descending into them (also for Windows junctions)."""
+    result = []
+    pending = [root]
+    while pending:
+        path = pending.pop()
+        if is_link(path):
+            raise ValueError(f"Refusing a link or junction: {path}")
+        if path.is_dir():
+            pending.extend(sorted(path.iterdir()))
+        elif path.is_file():
+            result.append(path)
+    return result
 
 
 def package_files(source: Path) -> dict[str, bytes]:
     result: dict[str, bytes] = {}
+    if is_link(source):
+        raise ValueError("Package root cannot be a link or junction")
     for entry in PACKAGE:
         path = source / entry
+        if is_link(path):
+            raise ValueError(f"Package contains a link or junction: {entry}")
         if not path.exists():
             raise ValueError(f"Missing package entry: {entry}")
-        candidates = [path, *sorted(path.rglob("*"))] if path.is_dir() else [path]
+        candidates = checked_files(path)
         for candidate in candidates:
-            if candidate.is_symlink():
+            if is_link(candidate):
                 raise ValueError(f"Package contains a symlink: {candidate.name}")
             if candidate.is_file():
                 result[candidate.relative_to(source).as_posix()] = candidate.read_bytes()
-    if not result.get("SKILL.md", b"").startswith(b"---\nname: im-poet\n"):
+    if not has_skill_name(result.get("SKILL.md", b""), NAME):
         raise ValueError("Unexpected skill name or missing frontmatter")
     return result
 
 
 def existing_files(target: Path) -> dict[str, bytes]:
     result: dict[str, bytes] = {}
-    for path in target.rglob("*"):
-        if path.is_symlink():
+    for path in checked_files(target):
+        if is_link(path):
             raise FileExistsError(f"Refusing to replace symlink inside {target}")
         if path.is_file():
             result[path.relative_to(target).as_posix()] = path.read_bytes()
@@ -48,7 +96,7 @@ def existing_files(target: Path) -> dict[str, bytes]:
 
 def install(source: Path, target: Path, *, dry_run: bool = False, update: bool = False) -> str:
     files = package_files(source)
-    if target.is_symlink():
+    if is_link(target):
         raise FileExistsError(f"Refusing to replace symlink: {target}")
     updating = target.exists()
     if updating:
@@ -63,7 +111,7 @@ def install(source: Path, target: Path, *, dry_run: bool = False, update: bool =
                 "Use --update to keep a backup and replace it, or choose --destination. "
                 "Nothing was overwritten."
             )
-        if not previous.get("SKILL.md", b"").startswith(b"---\nname: im-poet\n"):
+        if not has_skill_name(previous.get("SKILL.md", b""), NAME):
             raise ValueError(f"Existing destination is not an im-poet skill: {target}")
     if dry_run:
         verb = "update with backup" if updating else "install"
@@ -77,7 +125,7 @@ def install(source: Path, target: Path, *, dry_run: bool = False, update: bool =
             destination.write_bytes(data)
         if updating:
             # Preserve all existing files, including user additions, before replacing.
-            if target.is_symlink() or not target.is_dir() or existing_files(target) != previous:
+            if is_link(target) or not target.is_dir() or existing_files(target) != previous:
                 raise FileExistsError(f"Destination changed during installation: {target}")
             backup = Path(tempfile.mkdtemp(prefix=".im-poet-backup-", dir=target.parent))
             backup.rmdir()
@@ -102,6 +150,9 @@ def install(source: Path, target: Path, *, dry_run: bool = False, update: bool =
 
 
 def main() -> int:
+    for stream in (sys.stdout, sys.stderr):
+        if hasattr(stream, "reconfigure"):
+            stream.reconfigure(encoding="utf-8", errors="backslashreplace")
     parser = argparse.ArgumentParser(description=__doc__)
     choice = parser.add_mutually_exclusive_group(required=True)
     choice.add_argument("--target", choices=sorted(LOCATIONS))
@@ -112,11 +163,10 @@ def main() -> int:
     args = parser.parse_args()
     if args.destination and args.project:
         parser.error("--project cannot be combined with --destination")
-    base = args.project.expanduser().resolve() if args.project else Path.home()
     target = (
         args.destination.expanduser().absolute()
         if args.destination
-        else base / LOCATIONS[args.target] / NAME
+        else destination_for(args.target, project=args.project)
     )
     try:
         print(install(ROOT, target, dry_run=args.dry_run, update=args.update))

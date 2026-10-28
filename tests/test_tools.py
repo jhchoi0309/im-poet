@@ -101,7 +101,10 @@ class InstallerTests(unittest.TestCase):
         other = self.base / "other"
         other.mkdir()
         self.target.parent.mkdir()
-        self.target.symlink_to(other, target_is_directory=True)
+        try:
+            self.target.symlink_to(other, target_is_directory=True)
+        except OSError as exc:
+            self.skipTest(f"Symbolic links unavailable: {exc}")
         with self.assertRaises(FileExistsError):
             install(ROOT, self.target)
         self.assertEqual(list(other.iterdir()), [])
@@ -112,7 +115,7 @@ class InstallerTests(unittest.TestCase):
         ):
             completed = subprocess.run(
                 [sys.executable, str(ROOT / "scripts/install.py"), "--target", target,
-                 "--project", str(self.base)], text=True, capture_output=True
+                 "--project", str(self.base)], text=True, encoding="utf-8", capture_output=True
             )
             self.assertEqual(completed.returncode, 0, completed.stderr)
             self.assertTrue((self.base / directory / "skills/im-poet/SKILL.md").is_file())
@@ -130,6 +133,13 @@ class PromptTests(unittest.TestCase):
     def test_removes_only_frontmatter_and_native_reference_block(self):
         text = "---\nname: example\n---\n\nKeep me.\n<!-- portable:omit:start -->\nNative only\n<!-- portable:omit:end -->\nKeep this too.\n"
         self.assertEqual(render(text), "Keep me.\nKeep this too.\n")
+
+    def test_gemini_app_prompt_is_self_contained_and_matches_the_source(self):
+        skill = (ROOT / "SKILL.md").read_text(encoding="utf-8")
+        prompt = (ROOT / "prompts/gemini-app.txt").read_text(encoding="utf-8")
+        self.assertEqual(prompt, render(skill))
+        self.assertNotIn("references/", prompt)
+        self.assertNotIn("portable:omit", prompt)
 
     def test_malformed_omission_is_rejected(self):
         for tail in ("<!-- portable:omit:start -->", "<!-- portable:omit:end -->"):
@@ -154,7 +164,7 @@ class ByteCountTests(unittest.TestCase):
         self.path.write_bytes(content.encode("utf-8"))
         return subprocess.run(
             [sys.executable, str(ROOT / "scripts/count_text.py"), str(self.path), *args],
-            text=True, capture_output=True,
+            text=True, encoding="utf-8", capture_output=True,
         )
 
     def test_utf8_counts_actual_bytes_spaces_and_mixed_newlines(self):

@@ -1,5 +1,20 @@
 # im-poet
 
+## 링크만 주고 설치 요청하기
+
+파일을 설치할 수 있는 **Codex·Claude Code·Gemini CLI·Antigravity** 대화에 다음 한 줄을 보내세요.
+
+```text
+https://github.com/jhchoi0309/im-poet 이 스킬 설치해줘.
+```
+
+세 CLI(Codex·Claude Code·Gemini CLI)와 Antigravity가 현재 도구에 맞는 경로에 이 스킬을 설치하도록 [에이전트 설치 안내](docs/agent-install.md)를 제공합니다. 기본은 사용자 범위이며, “이 프로젝트에만 설치해줘”라고 하면 프로젝트 범위로 설치합니다. 기존 설치본은 백업하고 실제 설치 파일을 확인하도록 했습니다.
+
+**Gemini 앱에서도 사용:** 앱의 Skills 생성 기능에 연결하는 [앱용 안내](docs/gemini-app.md)와 [단일 지침](prompts/gemini-app.txt)을 제공합니다. 앱에서는 계정 스킬을 생성하고, CLI에서는 컴퓨터의 스킬 폴더에 설치합니다. 링크 내용을 읽고 Skills를 생성할 수 있는 앱에서는 같은 설치 요청으로 진행하도록 안내했습니다. 직접 가져올 수 있는 앱용 폴더도 배포 패키지에 포함합니다.
+
+**설치를 수행하는 에이전트에게:** `docs/agent-install.md`를 읽고 설치·검증을 완료하세요. `SKILL.md`만 읽고 설치가 끝났다고 보고하지 마세요. Python이 있으면 제공된 설치기를, 없으면 안내된 파일 복사 절차를 사용하세요. 호스트의 파일 접근·권한 정책을 따르세요.
+
+
 **원문의 뜻과 목소리를 지키며, 한국어 글에 문학적인 시선과 시적인 호흡을 더하는 윤문 스킬입니다.**
 
 무엇을 오래 바라볼지, 같은 말이 돌아올 때 무엇이 달라지는지, 어디에서 문장을 멈출지 살핍니다. 사물의 관계와 말의 리듬을 다루어 에세이·사진 글부터 메시지·자기소개서·안내문·보고서·기술 설명까지 문학적인 산문으로 다듬습니다.
@@ -67,6 +82,24 @@
 
 일반적 효과를 가능성으로 낮추는 것은 원문의 주장 강도를 바꾸는 선택입니다. 시적으로 다듬으라는 요청만으로 모든 내용을 덜 확실하게 바꾸지는 않습니다. 변경 이유와 전후 비교는 요청한 경우에만 보여줍니다.
 
+## Windows · macOS · Linux
+
+Python 3.10 이상에서 동일한 설치기를 사용합니다. macOS·Linux에서는 `python3`, Windows PowerShell에서는 `py -3`로 실행하세요. Windows에서도 설치·업로드 도구를 Python으로 직접 실행할 수 있습니다.
+
+```powershell
+# Windows: 이 저장소 폴더에서 실행
+py -3 scripts/install.py --target codex --update
+```
+
+```bash
+# macOS · Linux: 이 저장소 폴더에서 실행
+python3 scripts/install.py --target codex --update
+```
+
+`codex` 대신 `claude`, `gemini`, `antigravity`(App·IDE), `antigravity-cli`를 선택할 수 있습니다. 패키지의 공통 `install.py`는 두 스킬을 함께 설치하고, `upload.py`는 GitHub 업로드를 처리합니다. 전체 소스와 번들이 함께 제공되므로 설치만 할 때 Git이나 GitHub CLI는 필요하지 않습니다. 자세한 운영체제별 명령은 [공통 패키지 안내](docs/package-usage.md)를 참고하세요.
+
+LF/CRLF와 UTF-8 BOM, 한글·공백 경로를 처리하고 설치 대상의 심볼릭 링크·Windows junction은 교체하지 않습니다. 현재 직접 실행한 환경은 Linux이며, Windows·macOS 검사는 함께 제공하는 CI에서 실행하도록 구성했습니다. [검증 범위](docs/evaluation.md)를 확인하세요.
+
 ## 설치
 
 Python 3.10 이상이 필요합니다. 설치기는 네트워크를 사용하지 않고, 선택한 도구의 스킬 경로로 필요한 파일만 복사합니다. API 키는 필요하지 않습니다.
@@ -86,6 +119,8 @@ python3 scripts/install.py --target codex
 | Claude Code | `~/.claude/skills/im-poet/` |
 | Gemini CLI | `~/.gemini/skills/im-poet/` |
 | Codex | `~/.agents/skills/im-poet/` |
+| Antigravity App·IDE | `~/.gemini/config/skills/im-poet/` |
+| Antigravity CLI | `~/.gemini/antigravity-cli/skills/im-poet/` |
 
 프로젝트에만 설치하려면 `--project /path/to/project`, 미리 확인하려면 `--dry-run`을 추가하세요. 다른 내용의 기존 설치본은 덮어쓰지 않습니다. 업데이트하려면 `--update`를 사용하며 이전 폴더 전체를 백업합니다. 다른 스킬이나 심볼릭 링크는 교체하지 않습니다.
 
@@ -94,7 +129,7 @@ python3 scripts/install.py --target codex --dry-run
 python3 scripts/install.py --target codex --update
 ```
 
-ChatGPT 개인 스킬 설치와 맥의 도구별 설치본은 별개입니다. 서비스별 사용 방식은 [호환성 안내](docs/compatibility.md)를 참고하세요.
+ChatGPT 개인 스킬 설치와 각 컴퓨터의 도구별 설치본은 별개입니다. 서비스별 사용 방식은 [호환성 안내](docs/compatibility.md)를 참고하세요.
 
 ## 문학 자료에서 가져온 기준
 
