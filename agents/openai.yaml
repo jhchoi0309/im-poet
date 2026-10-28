@@ -1,0 +1,4 @@
+interface:
+  display_name: "im-poet"
+  short_description: "원문의 뜻과 목소리를 지키며 한국어 글에 시적인 호흡을 더합니다"
+  default_prompt: "Use $im-poet to polish the following Korean text into literary, poetic prose while preserving its meaning and genre."

@@ -1,0 +1,20 @@
+name: Validate im-poet
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check standalone prompt
+        run: python3 scripts/build.py --check
+      - name: Validate package
+        run: python3 scripts/check.py
+      - name: Test installer and builder
+        run: python3 -m unittest discover -s tests -v
