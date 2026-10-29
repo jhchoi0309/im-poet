@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Install the skill; updates require --update and preserve the previous folder."""
+"""Install the skill; updates back up the previous folder unless explicitly disabled."""
 
 from __future__ import annotations
 
@@ -95,7 +95,10 @@ def existing_files(target: Path) -> dict[str, bytes]:
     return result
 
 
-def install(source: Path, target: Path, *, dry_run: bool = False, update: bool = False) -> str:
+def install(source: Path, target: Path, *, dry_run: bool = False, update: bool = False,
+            no_backup: bool = False) -> str:
+    if no_backup and not update:
+        raise ValueError("--no-backup requires --update")
     files = package_files(source)
     if is_link(target):
         raise FileExistsError(f"Refusing to replace symlink: {target}")
@@ -115,7 +118,7 @@ def install(source: Path, target: Path, *, dry_run: bool = False, update: bool =
         if not has_skill_name(previous.get("SKILL.md", b""), NAME):
             raise ValueError(f"Existing destination is not an im-poet skill: {target}")
     if dry_run:
-        verb = "update with backup" if updating else "install"
+        verb = ("update without backup" if no_backup else "update with backup") if updating else "install"
         return f"Would {verb} {len(files)} files: {target}"
     target.parent.mkdir(parents=True, exist_ok=True)
     stage = Path(tempfile.mkdtemp(prefix=".im-poet-stage-", dir=target.parent))
@@ -125,21 +128,37 @@ def install(source: Path, target: Path, *, dry_run: bool = False, update: bool =
             destination.parent.mkdir(parents=True, exist_ok=True)
             destination.write_bytes(data)
         if updating:
-            # Preserve all existing files, including user additions, before replacing.
+            # Keep the old folder until the new folder is in place, so a failed
+            # swap can restore it even when persistent backup was disabled.
             if is_link(target) or not target.is_dir() or existing_files(target) != previous:
                 raise FileExistsError(f"Destination changed during installation: {target}")
-            backup = Path(tempfile.mkdtemp(prefix=".im-poet-backup-", dir=target.parent))
-            backup.rmdir()
-            target.rename(backup)
+            prefix = ".im-poet-previous-" if no_backup else ".im-poet-backup-"
+            previous_folder = Path(tempfile.mkdtemp(prefix=prefix, dir=target.parent))
+            previous_folder.rmdir()
+            target.rename(previous_folder)
             try:
                 if os.path.lexists(target):
                     raise FileExistsError(f"Destination appeared during installation: {target}")
                 stage.rename(target)
-            except BaseException:
+            except BaseException as exc:
                 if not os.path.lexists(target):
-                    backup.rename(target)
+                    try:
+                        previous_folder.rename(target)
+                    except OSError as restore_exc:
+                        raise OSError(f"Could not restore previous skill; it remains at {previous_folder}") from restore_exc
+                else:
+                    raise FileExistsError(
+                        f"Destination appeared during installation: {target}. "
+                        f"Previous skill remains at {previous_folder}"
+                    ) from exc
                 raise
-            return f"Updated: {target}\nBackup: {backup}"
+            if no_backup:
+                try:
+                    shutil.rmtree(previous_folder)
+                except OSError as exc:
+                    raise OSError(f"Updated, but could not remove previous folder: {previous_folder}: {exc}") from exc
+                return f"Updated without backup: {target}"
+            return f"Updated: {target}\nBackup: {previous_folder}"
         # Refuse a destination that appeared during copying, including broken links.
         if os.path.lexists(target):
             raise FileExistsError(f"Destination appeared during installation: {target}")
@@ -161,16 +180,19 @@ def main() -> int:
     parser.add_argument("--project", type=Path, help="Project root; default is the user home")
     parser.add_argument("--dry-run", action="store_true")
     parser.add_argument("--update", action="store_true", help="Back up and replace an existing im-poet skill")
+    parser.add_argument("--no-backup", action="store_true", help="With --update, remove the previous skill after a successful replacement")
     args = parser.parse_args()
     if args.destination and args.project:
         parser.error("--project cannot be combined with --destination")
+    if args.no_backup and not args.update:
+        parser.error("--no-backup requires --update")
     target = (
         args.destination.expanduser().absolute()
         if args.destination
         else destination_for(args.target, project=args.project)
     )
     try:
-        print(install(ROOT, target, dry_run=args.dry_run, update=args.update))
+        print(install(ROOT, target, dry_run=args.dry_run, update=args.update, no_backup=args.no_backup))
     except (OSError, ValueError) as exc:
         parser.exit(1, f"Installation stopped: {exc}\n")
     return 0

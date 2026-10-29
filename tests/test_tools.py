@@ -93,6 +93,70 @@ class InstallerTests(unittest.TestCase):
         self.assertEqual(existing_files(self.target), before)
         self.assertFalse(list(self.target.parent.glob(".im-poet-stage-*")))
 
+    def test_update_without_backup_replaces_the_old_skill_and_removes_old_folder(self):
+        install(ROOT, self.target)
+        (self.target / "notes.txt").write_text("old extra file", encoding="utf-8")
+        message = install(ROOT, self.target, update=True, no_backup=True)
+        self.assertIn("Updated without backup", message)
+        self.assertEqual(existing_files(self.target), package_files(ROOT))
+        self.assertFalse(list(self.target.parent.glob(".im-poet-backup-*")))
+        self.assertFalse(list(self.target.parent.glob(".im-poet-previous-*")))
+
+    def test_update_without_backup_restores_the_old_skill_if_swap_fails(self):
+        install(ROOT, self.target)
+        (self.target / "notes.txt").write_text("keep on failure", encoding="utf-8")
+        before = existing_files(self.target)
+        original_rename = Path.rename
+
+        def fail_stage_rename(path, destination):
+            if path.name.startswith(".im-poet-stage-"):
+                raise OSError("simulated failure")
+            return original_rename(path, destination)
+
+        with patch.object(Path, "rename", autospec=True, side_effect=fail_stage_rename):
+            with self.assertRaises(OSError):
+                install(ROOT, self.target, update=True, no_backup=True)
+        self.assertEqual(existing_files(self.target), before)
+        self.assertFalse(list(self.target.parent.glob(".im-poet-previous-*")))
+
+    def test_no_backup_requires_update_and_dry_run_has_no_effect(self):
+        install(ROOT, self.target)
+        (self.target / "notes.txt").write_text("keep during dry run", encoding="utf-8")
+        before = existing_files(self.target)
+        with self.assertRaises(ValueError):
+            install(ROOT, self.target, no_backup=True)
+        message = install(ROOT, self.target, dry_run=True, update=True, no_backup=True)
+        self.assertIn("Would update without backup", message)
+        self.assertEqual(existing_files(self.target), before)
+        self.assertFalse(list(self.target.parent.glob(".im-poet-previous-*")))
+        completed = subprocess.run(
+            [sys.executable, str(ROOT / "scripts/install.py"), "--destination", str(self.target),
+             "--no-backup"], capture_output=True
+        )
+        self.assertNotEqual(completed.returncode, 0)
+        self.assertEqual(existing_files(self.target), before)
+
+    def test_no_backup_keeps_previous_folder_if_another_destination_appears(self):
+        install(ROOT, self.target)
+        (self.target / "notes.txt").write_text("keep on collision", encoding="utf-8")
+        before = existing_files(self.target)
+        original_rename = Path.rename
+
+        def collide_with_stage(path, destination):
+            if path.name.startswith(".im-poet-stage-"):
+                destination.mkdir()
+                (destination / "other.txt").write_text("new arrival", encoding="utf-8")
+                raise FileExistsError("simulated collision")
+            return original_rename(path, destination)
+
+        with patch.object(Path, "rename", autospec=True, side_effect=collide_with_stage):
+            with self.assertRaisesRegex(FileExistsError, "Previous skill remains at"):
+                install(ROOT, self.target, update=True, no_backup=True)
+        previous_folders = list(self.target.parent.glob(".im-poet-previous-*"))
+        self.assertEqual(len(previous_folders), 1)
+        self.assertEqual(existing_files(previous_folders[0]), before)
+        self.assertEqual((self.target / "other.txt").read_text(), "new arrival")
+
     def test_dry_run_creates_nothing(self):
         install(ROOT, self.target, dry_run=True)
         self.assertEqual(list(self.base.iterdir()), [])

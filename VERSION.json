@@ -3,20 +3,21 @@
   "revised_on": "2026-10-29",
   "schema_version": 1,
   "sha256": {
-    "SKILL.md": "b4d6238b0be54aa908c993a7d054cf6981fde328a3794ebaafbfbd809e62dbcd",
-    "prompts/gemini-app.txt": "a336905f22cc6eeaeb1835854312047d7a5aad0579b90d36b625154cd0881598",
-    "prompts/im-poet.md": "a336905f22cc6eeaeb1835854312047d7a5aad0579b90d36b625154cd0881598",
+    "SKILL.md": "5ed09e44bbb889b1cc4f655bfc40a9d8ff52c7b8f65bcfc9d1c8c0d07d685616",
+    "prompts/gemini-app.txt": "90142d0b5cbb4e31ab79f2a000ae06667b0a1aea98527915fd4c44c9ae8646b2",
+    "prompts/im-poet.md": "90142d0b5cbb4e31ab79f2a000ae06667b0a1aea98527915fd4c44c9ae8646b2",
     "references/craft.md": "b5496605a6603e03980575fecfe9daeb680d5b9975894f71f4c970d4b064da5f",
     "references/editorial-judgment.md": "0527072cd4eafcc539ed77a70d37ea06d2b7d997ae84451faaeb5145fd8617f8",
+    "references/endings.md": "e82cd0a8f1fa0f4c5b348d22bb60135427397251e82982f6dab9e463524b5bb3",
     "references/examples.md": "a88bbb884bf984c8c328290947106cde8daec61e9e137842d7cbf883c482023a",
     "references/genres.md": "550bcf6710e3fdcb8abb3ec015b0b98a7015c34bc977ec249c32ebeabc724956",
     "references/recasting.md": "76bb6ed5bbcfb1c81b52b55a994750d942270b950524299ba809b42383ad6a5b",
     "references/research.md": "a9ebcbdc4efd331474fcc99bee01cdebf568378c6a2c4fa4dc005b638c2cd46d",
-    "references/revision.md": "295031c1e4aac063005648dc17eeaa139e86f0925aaadb91975231b6b62b6b35",
+    "references/revision.md": "bcdc9209ac35f83568d8d114f4a5eeef2aaea007ff63a3ca298436ad18d3d1f4",
     "references/source-catalog.json": "2bfaa6e5bcc2e54e888295cfd948001657bdb1519b8f13c9a101f8c78a011d57",
     "references/word-choice.md": "249f77ed0dffe006e21c1a9d6043271bf0a53b64af8bbc77274cd1e512308a26",
     "scripts/check_output.py": "720a0fb8c2d0df008e13b67e432ee675fe8a37edd9f37ec69fde4a914f8d29d7",
     "scripts/count_text.py": "4b954968cd48ff9ada919fb687cfe2ec9d0d650bd83a128debc009059d826b10"
   },
-  "version": "0.4.0"
+  "version": "0.5.0"
 }
