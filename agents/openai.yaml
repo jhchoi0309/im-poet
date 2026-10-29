@@ -1,4 +1,4 @@
 interface:
   display_name: "im-poet"
-  short_description: "문학적인 어휘와 아름다운 서술로 원고의 뜻을 풍성하게 펼치는 윤문"
-  default_prompt: "Use $im-poet to rewrite the following Korean prose with rich literary diction, beautiful narration, and varied rhythm, preserving its meaning and style and removing all middle-dot separators."
+  short_description: "원문의 뜻을 지키며 문학적인 어휘와 아름다운 문체로 전면 재서술"
+  default_prompt: "Use $im-poet to fully recast the following Korean prose with beautiful literary diction and varied narrative rhythm, preserving facts and meaning and removing all middle-dot separators."
