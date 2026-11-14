@@ -17,6 +17,8 @@ im-poet을 사용하는 자리는 컴퓨터의 설치 폴더일 수도, 계정�
 
 `python3 scripts/diagnose_installations.py --project /path/to/project`는 공용, Claude, Gemini의 사용자 및 지정 프로젝트 경로를 이 저장소의 버전과 지문에 비교합니다. Windows에서는 `py -3`을 사용하세요. 이 검사는 파일을 수정하지 않으며 CLI의 실제 선택이나 계정 동기화 상태는 확인하지 못합니다. `--json`으로 기계가 읽을 수 있는 결과를 받을 수 있습니다. 사용자 경로만 확인할 때는 `--project`를 생략하세요.
 
+링크로 설치를 요청받은 로컬 에이전트는 `scripts/install_for_agent.py --host codex`, `claude`, `gemini` 중 현재 도구를 지정해 설치할 수 있습니다. 기존 Gemini 공용 경로가 있으면 그 경로를 우선합니다. 자동 감지가 모호하면 임의 선택하지 않습니다. 관리형 계정, 사용자 지정 경로, 실제 스킬 목록은 별도 확인합니다.
+
 패키지 공통 설치, 업로드, 압축 해제와 이전 스킬 제거는 [공통 패키지 안내](package-usage.md)를 참고하세요. 핵심 동작은 Python 표준 라이브러리로 구현했고 GitHub 업로드에만 Git, GitHub CLI가 필요합니다. 각 모델 도구 자체의 Windows 실행 환경은 제공자의 요구 사항을 따릅니다.
 
 ## Antigravity와 Gemini 앱

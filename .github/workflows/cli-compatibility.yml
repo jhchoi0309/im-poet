@@ -36,11 +36,20 @@ jobs:
           claude --version
       - name: Verify Codex skill discovery
         run: |
-          python scripts/install.py --target codex --project "$RUNNER_TEMP/impoet-codex"
+          python scripts/install_for_agent.py --host codex --project "$RUNNER_TEMP/impoet-codex"
           python scripts/probe_codex_skill.py "$RUNNER_TEMP/impoet-codex"
+      - name: Verify Claude installation files
+        run: python scripts/install_for_agent.py --host claude --project "$RUNNER_TEMP/impoet-claude"
       - name: Verify Gemini skill discovery
         run: |
-          python scripts/install.py --target gemini
+          python scripts/install_for_agent.py --host gemini
           gemini skills list --all > "$RUNNER_TEMP/gemini-skills.txt"
           cat "$RUNNER_TEMP/gemini-skills.txt"
           python -c "import os,pathlib,re; text=(pathlib.Path(os.environ['RUNNER_TEMP'])/'gemini-skills.txt').read_text(encoding='utf-8'); expected=str(pathlib.Path.home()/'.gemini'/'skills'/'im-poet'/'SKILL.md'); assert re.search(r'(?m)^im-poet\s+\[Enabled\]', text) and expected in text, 'Expected enabled user skill was not discovered'"
+      - name: Verify Gemini shared alias precedence
+        run: |
+          python scripts/install_for_agent.py --host codex
+          python scripts/install_for_agent.py --host gemini
+          gemini skills list --all > "$RUNNER_TEMP/gemini-shared-skills.txt"
+          cat "$RUNNER_TEMP/gemini-shared-skills.txt"
+          python -c "import os,pathlib,re; text=(pathlib.Path(os.environ['RUNNER_TEMP'])/'gemini-shared-skills.txt').read_text(encoding='utf-8'); expected=str(pathlib.Path.home()/'.agents'/'skills'/'im-poet'/'SKILL.md'); assert re.search(r'(?m)^im-poet\s+\[Enabled\]', text) and expected in text, 'Expected enabled shared skill was not discovered'"
