@@ -103,7 +103,7 @@ python3 scripts/install.py --target codex --update
 
 `codex` 대신 `claude`, `gemini`, `antigravity` 또는 `antigravity-cli`를 선택할 수 있습니다. 두 스킬을 함께 배포하는 패키지의 설치와 업로드 방법은 [공통 패키지 안내](docs/package-usage.md)에 있습니다.
 
-설치기는 LF와 CRLF, UTF-8 BOM, 한글과 공백이 포함된 경로를 처리합니다. 설치 대상의 심볼릭 링크와 Windows junction은 교체하지 않습니다. 이번에 직접 실행한 환경은 Linux이며, Windows와 macOS 검사는 CI에서 실행하도록 구성했습니다. 실제 확인 범위는 [평가 기록](docs/evaluation.md)에 남겼습니다.
+설치기는 LF와 CRLF, UTF-8 BOM, 한글과 공백이 포함된 경로를 처리합니다. 설치 대상의 심볼릭 링크와 Windows junction은 교체하지 않습니다. 과거 Linux 검사와 이번 macOS 검사를 구별해 기록했으며 Windows 검사는 CI에서 실행하도록 구성했습니다. 실제 확인 범위는 [평가 기록](docs/evaluation.md)에 남겼습니다.
 
 ## 직접 설치하기
 
@@ -139,18 +139,21 @@ ChatGPT 개인 스킬과 컴퓨터의 도구별 설치본은 각각 갱신합니
 
 ## 문학 자료에서 길어 올린 기준
 
-출발점은 공개 문학 작품을 살핀 선행 조사입니다. 2000년부터 2022년까지의 중심 자료 37편과 2023년 비교 자료 2편, 모두 39편의 시와 지하철 시, 수필, 단편소설을 다루었습니다. 관련 논문 6편은 본문과 표를 확인한 1편, 본문 일부를 읽은 1편, 초록을 확인한 4편으로 범위를 구분했습니다.
+문학 작품 140편과 논문 74편을 목록으로 정리했습니다. 작품은 기존 조사 기록 39편과 이번에 게시 페이지의 서지와 본문 일부를 확인한 101편입니다. 논문은 이번에 서지와 초록 일부를 확인한 69편과 기존 연구 기록 5편입니다. 작품과 논문을 모두 전문 정독한 것은 아닙니다.
 
-그 자료에서 살핀 화자의 거리와 사물, 이어지는 이미지와 반복, 멈춤을 편집 지침으로 옮겼습니다. 관찰을 글쓰기의 선택지로 삼은 것이며, 이 표본을 한국 문학 전체의 대표 분포로 보지는 않습니다. 연도만으로 개별 작품의 AI 사용 여부를 판단할 수도 없습니다.
+그 자료에서 살핀 화자의 거리와 사물, 이어지는 이미지와 반복, 멈춤을 편집 지침의 선택지로 옮겼습니다. 표본은 공개된 당선작과 일부 문학 매체, 단편소설에 치우쳐 있어 한국 문학 전체의 대표 분포로 보지 않습니다. 연도만으로 개별 작품의 AI 사용 여부를 판단할 수도 없습니다.
 
-- [조사 근거와 논문 6편](references/research.md)
-- [작품 39편의 원문 링크와 서지, 관찰 메모](references/source-catalog.json)
+- [확장 조사에서 고른 편집 판단](references/research-2026-11-14.md)
+- [작품 140편과 논문 74편의 서지, 링크, 확인 범위](references/research-catalog-2026-11-14.json)
+- [선행 조사 근거](references/research.md)와 [기존 작품 39편의 기록](references/source-catalog.json)
 
 논문에서 확인한 관점과 편집 과정의 해석, 사용자 피드백으로 정한 규칙은 구별해 기록했습니다. 모델 학습이나 파인튜닝은 수행하지 않았습니다. 패키지에는 원문 링크와 서지, 자체 관찰을 담았으며 작품 전문과 이미지, 논문 PDF는 배포하지 않습니다.
 
 ## 구성과 검증
 
-현재 개정본은 **0.5.0**입니다. `VERSION.json`의 개정 번호와 지침 파일별 SHA-256 지문으로 설치본을 대조할 수 있습니다. 같은 이름의 스킬이 여러 곳에 있다면 실제 설치 경로의 버전을 확인해 주세요.
+현재 개정본은 **0.6.0**입니다. `VERSION.json`의 개정 번호와 설치되는 지침 파일별 SHA-256 지문으로 설치본을 대조할 수 있습니다. 독립 프롬프트의 생성 일치는 빌드 검사로 확인합니다. 같은 이름의 스킬이 여러 곳에 있다면 실제 설치 경로와 버전을 확인해 주세요.
+
+이번 개정은 다른 윤문 지침과 함께 쓸 때의 순서, 저자 목소리와 의미의 보존, 문학적 변화의 별도 평가를 보강했습니다. 원문 그대로의 인용이 금지 문자와 충돌하면 인용을 변조하지 않고 해당 출력을 보류합니다. [변경 이력](CHANGELOG.md)과 [평가 기록](docs/evaluation.md)에서 적용 범위를 확인할 수 있습니다.
 
 | 경로 | 담긴 내용 |
 | --- | --- |
@@ -160,6 +163,9 @@ ChatGPT 개인 스킬과 컴퓨터의 도구별 설치본은 각각 갱신합니
 | [references/word-choice.md](references/word-choice.md) | 뜻과 문맥에 어울리는 단어와 서술을 찾는 방법 |
 | [references/endings.md](references/endings.md) | 어미의 다양성, 말의 거리와 확실성을 함께 살피는 방법 |
 | [references/editorial-judgment.md](references/editorial-judgment.md) | 저자 교정과 문단의 초점을 살피는 사례 |
+| [references/editorial-evaluation-2026.md](references/editorial-evaluation-2026.md) | 의미와 문학적 효과를 나누어 살피는 평가 설계 |
+| [references/research-2026-11-14.md](references/research-2026-11-14.md) | 확장 조사에서 고른 편집 판단과 한계 |
+| [references/research-catalog-2026-11-14.json](references/research-catalog-2026-11-14.json) | 작품과 논문의 서지, 링크, 확인 범위 |
 | [references/genres.md](references/genres.md) | 에세이와 편지, 지원서와 기술 설명 등 장르별 적용 |
 | [references/examples.md](references/examples.md) | 긴 호흡과 짧은 멈춤을 비교하는 예문, 의미가 달라지는 실패 사례 |
 | [references/revision.md](references/revision.md) | 문단 재구성과 글 전체의 속도, 두 차례 검수 |
@@ -167,6 +173,7 @@ ChatGPT 개인 스킬과 컴퓨터의 도구별 설치본은 각각 갱신합니
 | [prompts/im-poet.md](prompts/im-poet.md) | 대화창에 붙여 넣는 독립 프롬프트 |
 | [evals/cases.json](evals/cases.json) | 의미 보존과 문학적 변화를 살피는 평가 사례 |
 | [docs/evaluation.md](docs/evaluation.md) | 실제 실행 결과와 검증 범위 |
+| [evals/results/manual-0.6.0-2026-11-14.json](evals/results/manual-0.6.0-2026-11-14.json) | 직접 작성한 12개 사례의 출력과 검토 |
 
 ```bash
 python3 scripts/build.py --check
@@ -174,7 +181,7 @@ python3 scripts/check.py
 python3 -m unittest discover -s tests -v
 ```
 
-자동 검사는 설치와 백업, 패키지와 프롬프트의 일치를 살핍니다. 문학적인 효과는 원고와 결과를 나란히 읽으며 따로 판단합니다. AI 탐지기 통과나 특정 모델의 성능은 보장하지 않습니다.
+자동 검사는 설치와 백업, 패키지와 프롬프트의 일치를 살핍니다. 0.6.0은 같은 대화의 작성자가 12개 사례를 실행하고 직접 대조했습니다. 과거 0.5.0과 같은 입력 두 개도 있으나 실행 환경이 통제되지 않아 성능 향상을 결론낼 수 없습니다. 문학적인 효과와 저자 선호는 별도로 판단해야 하며 AI 탐지기 통과를 보장하지 않습니다.
 
 [MIT License](LICENSE). 참고 문학 작품과 논문의 저작권은 각 권리자에게 있습니다.
 
