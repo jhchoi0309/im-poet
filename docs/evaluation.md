@@ -26,7 +26,9 @@ python3 -m unittest discover -s tests -v
 
 macOS arm64에서 Codex CLI 0.166.0의 app-server가 임시 프로젝트에 설치한 0.6.1 스킬을 활성화 가능한 항목으로 발견했다. 계정 인증이나 모델 요청을 사용하지 않았으므로 실제 윤문을 실행했다는 뜻은 아니다. 사용자 범위에 같은 이름의 다른 설치본도 함께 발견됐다.
 
-별도 CLI 호환성 워크플로는 Windows, macOS, Ubuntu에서 각 CLI의 시작, Codex와 Gemini의 스킬 발견을 확인하도록 구성했다. Claude는 CLI 시작만 확인하며 스킬 발견은 확인하지 않는다. 실제 성공 여부는 해당 커밋의 Actions 실행 결과를 확인해야 한다. 세 모델에 원고를 보내는 인증 후 윤문 평가나 블라인드 선호 평가는 포함하지 않는다.
+[CLI 호환성 실행](https://github.com/jhchoi0309/im-poet/actions/runs/43587063163)에서 Windows, macOS, Ubuntu 각각의 Codex CLI 0.166.0, Gemini CLI 0.68.0, Claude Code 2.1.325가 시작됐다. Codex는 임시 프로젝트의 스킬을, Gemini는 사용자 범위의 스킬을 활성화 가능한 항목으로 발견했다. [설치기와 패키지 검사](https://github.com/jhchoi0309/im-poet/actions/runs/43587063224)는 세 운영체제와 Python 3.10, 3.13의 조합 6개에서 통과했다. 이 기록은 해당 실행과 버전의 결과다. 최신 커밋은 별도의 Actions 결과를 확인해야 한다.
+
+Claude는 CLI 시작만 확인했으며 스킬 발견은 확인하지 않았다. 세 모델에 원고를 보내는 인증 후 윤문 평가나 블라인드 선호 평가는 포함하지 않는다.
 
 ## 2026-10-28 초기 출력 확인
 
