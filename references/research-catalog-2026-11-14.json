@@ -1,0 +1,2446 @@
+{
+  "created": "2026-11-14",
+  "method": "저작권 보호를 위해 제목, 저자, 서지, 링크, 확인 범위만 수록. 작품과 논문 전문 재배포 없음.",
+  "works": [
+    {
+      "id": "W001",
+      "title": "고래",
+      "author": "이승수",
+      "year": 2000,
+      "genre": "시",
+      "url": "https://sinchoon.donga.com/View?cid=4477075",
+      "scope": "기존 조사 목록의 관찰 기록, 이번 조사에서 재독하지 않음",
+      "cohort": "주요",
+      "existing_note": "전철과 바다의 이미지가 맞물린다. 타인을 바라보는 화자의 거리도 움직인다."
+    },
+    {
+      "id": "W002",
+      "title": "이층에서 본 거리",
+      "author": "김지혜",
+      "year": 2001,
+      "genre": "시",
+      "url": "https://sinchoon.donga.com/View?cid=4455547",
+      "scope": "기존 조사 목록의 관찰 기록, 이번 조사에서 재독하지 않음",
+      "cohort": "주요",
+      "existing_note": "이층의 시점이 거리의 열기와 몸의 감각을 조직한다."
+    },
+    {
+      "id": "W003",
+      "title": "가문비냉장고",
+      "author": "김중일",
+      "year": 2002,
+      "genre": "시",
+      "url": "https://sinchoon.donga.com/View?cid=4455325",
+      "scope": "기존 조사 목록의 관찰 기록, 이번 조사에서 재독하지 않음",
+      "cohort": "주요",
+      "existing_note": "버려진 냉장고와 가문비나무의 생명·기계 이미지를 충돌시킨다."
+    },
+    {
+      "id": "W004",
+      "title": "꽃 피는 공중전화",
+      "author": "김경주",
+      "year": 2003,
+      "genre": "시",
+      "url": "https://www.seoul.co.kr/news/2003/01/03/20030103018002",
+      "scope": "기존 조사 목록의 관찰 기록, 이번 조사에서 재독하지 않음",
+      "cohort": "주요",
+      "existing_note": "노동의 구체적 사물과 통화를 꽃의 이미지로 연결한다."
+    },
+    {
+      "id": "W005",
+      "title": "독산동 반지하동굴 유적지",
+      "author": "김성규",
+      "year": 2004,
+      "genre": "시",
+      "url": "https://sinchoon.donga.com/View?cid=4455112",
+      "scope": "기존 조사 목록의 관찰 기록, 이번 조사에서 재독하지 않음",
+      "cohort": "주요",
+      "existing_note": "발굴의 언어를 반지하 가족의 현실에 겹쳐 읽게 한다."
+    },
+    {
+      "id": "W006",
+      "title": "단단한 뼈",
+      "author": "이영옥",
+      "year": 2005,
+      "genre": "시",
+      "url": "https://sinchoon.donga.com/View?cid=4455049",
+      "scope": "기존 조사 목록의 관찰 기록, 이번 조사에서 재독하지 않음",
+      "cohort": "주요",
+      "existing_note": "죽음의 현장을 밀집된 문장과 단어를 끊는 행 분절로 보여준다."
+    },
+    {
+      "id": "W007",
+      "title": "개기월식",
+      "author": "곽은영",
+      "year": 2006,
+      "genre": "시",
+      "url": "https://sinchoon.donga.com/View?cid=4454950",
+      "scope": "기존 조사 목록의 관찰 기록, 이번 조사에서 재독하지 않음",
+      "cohort": "주요",
+      "existing_note": "정육점의 일상과 월식을 겹치며 해요체와 수치를 사용한다."
+    },
+    {
+      "id": "W008",
+      "title": "비행",
+      "author": "문혜진",
+      "year": 2006,
+      "genre": "시",
+      "url": "https://munjang.or.kr/board.es?act=view&bid=0002&list_no=96749&mid=a20102000000",
+      "scope": "기존 조사 목록의 관찰 기록, 이번 조사에서 재독하지 않음",
+      "cohort": "주요",
+      "existing_note": "감각적 장면에 혼잣말 같은 어미와 머뭇거림을 결합한다."
+    },
+    {
+      "id": "W009",
+      "title": "유마경 - 물의 가족",
+      "author": "이원규",
+      "year": 2006,
+      "genre": "시",
+      "url": "https://munjang.or.kr/board.es?act=view&bid=0002&list_no=96618&mid=a20102000000",
+      "scope": "기존 조사 목록의 관찰 기록, 이번 조사에서 재독하지 않음",
+      "cohort": "주요",
+      "existing_note": "물과 생물·가족을 잇는 일관된 이미지망을 만든다."
+    },
+    {
+      "id": "W010",
+      "title": "추운 바람을 신으로 모신 자들의 經典",
+      "author": "이은규",
+      "year": 2008,
+      "genre": "시",
+      "url": "https://sinchoon.donga.com/View?cid=4453372",
+      "scope": "기존 조사 목록의 관찰 기록, 이번 조사에서 재독하지 않음",
+      "cohort": "주요",
+      "existing_note": "바람과 유목의 이미지에 추측·전언의 어미를 섞는다."
+    },
+    {
+      "id": "W011",
+      "title": "술빵 냄새의 시간",
+      "author": "김은주",
+      "year": 2009,
+      "genre": "시",
+      "url": "https://sinchoon.donga.com/View?cid=4453309",
+      "scope": "기존 조사 목록의 관찰 기록, 이번 조사에서 재독하지 않음",
+      "cohort": "주요",
+      "existing_note": "실업의 거리와 냄새·몸의 감각, 대중문화 인용을 연결한다."
+    },
+    {
+      "id": "W012",
+      "title": "붉은 호수에 흰 병 하나",
+      "author": "유병록",
+      "year": 2010,
+      "genre": "시",
+      "url": "https://sinchoon.donga.com/View?cid=4453237",
+      "scope": "기존 조사 목록의 관찰 기록, 이번 조사에서 재독하지 않음",
+      "cohort": "주요",
+      "existing_note": "도축 장면을 오리의 이동과 목마름으로 다시 보게 한다."
+    },
+    {
+      "id": "W013",
+      "title": "오늘의 운세",
+      "author": "권민경",
+      "year": 2011,
+      "genre": "시",
+      "url": "https://sinchoon.donga.com/View?cid=4453045",
+      "scope": "기존 조사 목록의 관찰 기록, 이번 조사에서 재독하지 않음",
+      "cohort": "주요",
+      "existing_note": "어제·오늘의 반복을 바꾸어 출생과 죽음의 시간을 뒤집는다."
+    },
+    {
+      "id": "W014",
+      "title": "나의 고아원",
+      "author": "안미옥",
+      "year": 2012,
+      "genre": "시",
+      "url": "https://sinchoon.donga.com/View?cid=4452952",
+      "scope": "기존 조사 목록의 관찰 기록, 이번 조사에서 재독하지 않음",
+      "cohort": "주요",
+      "existing_note": "집·벽·식탁 같은 생활 사물과 끊긴 문장으로 불안을 구성한다."
+    },
+    {
+      "id": "W015",
+      "title": "식탁에서",
+      "author": "안미옥",
+      "year": 2012,
+      "genre": "시",
+      "url": "https://sinchoon.donga.com/View?cid=4452952",
+      "scope": "기존 조사 목록의 관찰 기록, 이번 조사에서 재독하지 않음",
+      "cohort": "주요",
+      "existing_note": "집·벽·식탁 같은 생활 사물과 끊긴 문장으로 불안을 구성한다."
+    },
+    {
+      "id": "W016",
+      "title": "가난한 오늘",
+      "author": "이병국",
+      "year": 2013,
+      "genre": "시",
+      "url": "https://sinchoon.donga.com/View?cid=4452727",
+      "scope": "기존 조사 목록의 관찰 기록, 이번 조사에서 재독하지 않음",
+      "cohort": "주요",
+      "existing_note": "손의 상처와 꽃나무의 이미지를 짧은 산문 블록으로 압축한다."
+    },
+    {
+      "id": "W017",
+      "title": "오리시계",
+      "author": "이서빈",
+      "year": 2014,
+      "genre": "시",
+      "url": "https://sinchoon.donga.com/View?cid=4452607",
+      "scope": "기존 조사 목록의 관찰 기록, 이번 조사에서 재독하지 않음",
+      "cohort": "주요",
+      "existing_note": "오리의 발자국과 시계의 움직임을 하나의 이미지로 이어간다."
+    },
+    {
+      "id": "W018",
+      "title": "쌈",
+      "author": "조창규",
+      "year": 2015,
+      "genre": "시",
+      "url": "https://sinchoon.donga.com/View?cid=4452541",
+      "scope": "기존 조사 목록의 관찰 기록, 이번 조사에서 재독하지 않음",
+      "cohort": "주요",
+      "existing_note": "먹고 싸는 행위를 확장하며 존댓말로 기이한 화자의 목소리를 만든다."
+    },
+    {
+      "id": "W019",
+      "title": "입과 뿌리에 대한 식물학",
+      "author": "조상호",
+      "year": 2016,
+      "genre": "시",
+      "url": "https://sinchoon.donga.com/View?cid=4452322",
+      "scope": "기존 조사 목록의 관찰 기록, 이번 조사에서 재독하지 않음",
+      "cohort": "주요",
+      "existing_note": "몸·식물·해안의 이미지와 지명을 접속하며 호흡을 늘인다."
+    },
+    {
+      "id": "W020",
+      "title": "손의 에세이",
+      "author": "김기형",
+      "year": 2017,
+      "genre": "시",
+      "url": "https://sinchoon.donga.com/View?cid=4451056",
+      "scope": "기존 조사 목록의 관찰 기록, 이번 조사에서 재독하지 않음",
+      "cohort": "주요",
+      "existing_note": "손을 되풀이하되 행위와 관계를 바꾸어 의존과 공포를 누적한다."
+    },
+    {
+      "id": "W021",
+      "title": "복도",
+      "author": "변선우",
+      "year": 2018,
+      "genre": "시",
+      "url": "https://sinchoon.donga.com/View?cid=4450933",
+      "scope": "기존 조사 목록의 관찰 기록, 이번 조사에서 재독하지 않음",
+      "cohort": "주요",
+      "existing_note": "질문을 연쇄시키며 몸·복도·고래 사이에서 대상을 이동시킨다."
+    },
+    {
+      "id": "W022",
+      "title": "캉캉",
+      "author": "최인호",
+      "year": 2019,
+      "genre": "시",
+      "url": "https://sinchoon.donga.com/View?cid=4450879",
+      "scope": "기존 조사 목록의 관찰 기록, 이번 조사에서 재독하지 않음",
+      "cohort": "주요",
+      "existing_note": "춤의 신체와 뉴스·근심을 교차시키며 어미와 말의 속도를 바꾼다."
+    },
+    {
+      "id": "W023",
+      "title": "우유를 따르는 사람",
+      "author": "김동균",
+      "year": 2020,
+      "genre": "시",
+      "url": "https://sinchoon.donga.com/View?cid=4450810",
+      "scope": "기존 조사 목록의 관찰 기록, 이번 조사에서 재독하지 않음",
+      "cohort": "주요",
+      "existing_note": "같은 동작의 반복 속에서 우유가 실내 밖까지 넘치게 한다."
+    },
+    {
+      "id": "W024",
+      "title": "여름의 돌",
+      "author": "이근석",
+      "year": 2021,
+      "genre": "시",
+      "url": "https://sinchoon.donga.com/View?cid=4450594",
+      "scope": "기존 조사 목록의 관찰 기록, 이번 조사에서 재독하지 않음",
+      "cohort": "주요",
+      "existing_note": "돌·미래·여름·전화벨을 되풀이하며 시제를 겹친다."
+    },
+    {
+      "id": "W025",
+      "title": "소설",
+      "author": "박연준",
+      "year": 2022,
+      "genre": "시",
+      "url": "https://munjang.or.kr/board.es?act=view&bid=0002&list_no=1543&mid=a20102000000",
+      "scope": "기존 조사 목록의 관찰 기록, 이번 조사에서 재독하지 않음",
+      "cohort": "주요",
+      "existing_note": "같은 구절이 되돌아오지만 앞선 장면이 달라져 울림이 바뀐다."
+    },
+    {
+      "id": "W026",
+      "title": "경유지에서",
+      "author": "채윤희",
+      "year": 2022,
+      "genre": "시",
+      "url": "https://sinchoon.donga.com/View?cid=4450489",
+      "scope": "기존 조사 목록의 관찰 기록, 이번 조사에서 재독하지 않음",
+      "cohort": "주요",
+      "existing_note": "박물관의 부채에서 재료가 된 생명과 문화적 이동으로 시점을 바꾼다."
+    },
+    {
+      "id": "W027",
+      "title": "묘목원",
+      "author": "권승섭",
+      "year": 2023,
+      "genre": "시",
+      "url": "https://sinchoon.donga.com/View?cid=4450246",
+      "scope": "기존 조사 목록의 관찰 기록, 이번 조사에서 재독하지 않음",
+      "cohort": "비교",
+      "existing_note": "질문과 대답의 빈틈, 침묵과 미완의 끝으로 부재를 남긴다."
+    },
+    {
+      "id": "W028",
+      "title": "비",
+      "author": "최준수",
+      "year": 2015,
+      "genre": "지하철 시",
+      "url": "https://www.news21tongsin.co.kr/news/183242",
+      "scope": "기존 조사 목록의 관찰 기록, 이번 조사에서 재독하지 않음",
+      "cohort": "주요",
+      "existing_note": "비가 일인칭으로 말하며 너에게 다가간다. 반복이 틀을 이룬다."
+    },
+    {
+      "id": "W029",
+      "title": "좀도리 쌀",
+      "author": "박헌정",
+      "year": 2018,
+      "genre": "지하철 시",
+      "url": "https://mediahub.seoul.go.kr/archives/2002034",
+      "scope": "기존 조사 목록의 관찰 기록, 이번 조사에서 재독하지 않음",
+      "cohort": "주요",
+      "existing_note": "쌀을 덜어 모으는 습속을 마음의 축적에 겹친다."
+    },
+    {
+      "id": "W030",
+      "title": "바람의 길",
+      "author": "호미숙",
+      "year": 2018,
+      "genre": "지하철 시",
+      "url": "https://www.ezday.co.kr/bbs/view_board.html?q_sq_board=8487903",
+      "scope": "기존 조사 목록의 관찰 기록, 이번 조사에서 재독하지 않음",
+      "cohort": "주요",
+      "existing_note": "바람과 길의 관계를 먼저 놓고 사람에게 향하는 마음으로 옮긴다."
+    },
+    {
+      "id": "W031",
+      "title": "놓고 보니 꽃",
+      "author": "김용옥",
+      "year": 2019,
+      "genre": "지하철 시",
+      "url": "https://mediahub.seoul.go.kr/archives/2002034",
+      "scope": "기존 조사 목록의 관찰 기록, 이번 조사에서 재독하지 않음",
+      "cohort": "주요",
+      "existing_note": "끌어안은 짐을 내려놓는 동작이 사물을 다시 보게 한다."
+    },
+    {
+      "id": "W032",
+      "title": "고향집터 감나무",
+      "author": "이광치",
+      "year": 2000,
+      "genre": "수필",
+      "url": "https://www.nongmin.com/article/20000207188005",
+      "scope": "기존 조사 목록의 관찰 기록, 이번 조사에서 재독하지 않음",
+      "cohort": "주요",
+      "existing_note": "감나무의 계절과 접붙이기가 집터·아버지·후손의 시간을 묶는다."
+    },
+    {
+      "id": "W033",
+      "title": "영혼의 집",
+      "author": "어현",
+      "year": 2005,
+      "genre": "수필",
+      "url": "https://www.nongmin.com/article/20050101141957",
+      "scope": "기존 조사 목록의 관찰 기록, 이번 조사에서 재독하지 않음",
+      "cohort": "주요",
+      "existing_note": "집수리와 금 간 화분이 부재와 기억에 관한 사유를 움직인다."
+    },
+    {
+      "id": "W034",
+      "title": "화투",
+      "author": "임병숙",
+      "year": 2012,
+      "genre": "수필",
+      "url": "https://www.imaeil.com/page/view/2012010208234939750",
+      "scope": "기존 조사 목록의 관찰 기록, 이번 조사에서 재독하지 않음",
+      "cohort": "주요",
+      "existing_note": "소리·손의 힘·머리카락과 화투의 색으로 불안의 변화를 보여준다."
+    },
+    {
+      "id": "W035",
+      "title": "막사발의 철학",
+      "author": "복진세",
+      "year": 2022,
+      "genre": "수필",
+      "url": "https://www.imaeil.com/page/view/2021122223232743906",
+      "scope": "기존 조사 목록의 관찰 기록, 이번 조사에서 재독하지 않음",
+      "cohort": "주요",
+      "existing_note": "두 그릇의 대비를 가족 경험과 사회적 주장으로 확장한다."
+    },
+    {
+      "id": "W036",
+      "title": "종(種)을 사랑하는 법",
+      "author": "강동우",
+      "year": 2023,
+      "genre": "수필",
+      "url": "https://www.imaeil.com/page/view/2022121915501321528",
+      "scope": "기존 조사 목록의 관찰 기록, 이번 조사에서 재독하지 않음",
+      "cohort": "비교",
+      "existing_note": "반려견과 박새의 경험을 환경을 위한 실천으로 옮긴다."
+    },
+    {
+      "id": "W037",
+      "title": "바늘",
+      "author": "천운영",
+      "year": 2000,
+      "genre": "단편소설",
+      "url": "https://sinchoon.donga.com/View?cid=4477072",
+      "scope": "기존 조사 목록의 관찰 기록, 이번 조사에서 재독하지 않음",
+      "cohort": "주요",
+      "existing_note": "문신과 바느질, 몸과 무기의 감각이 하나의 사물을 통해 얽힌다."
+    },
+    {
+      "id": "W038",
+      "title": "담요",
+      "author": "손보미",
+      "year": 2011,
+      "genre": "단편소설",
+      "url": "https://sinchoon.donga.com/View?cid=4453042",
+      "scope": "기존 조사 목록의 관찰 기록, 이번 조사에서 재독하지 않음",
+      "cohort": "주요",
+      "existing_note": "전해 듣는 이야기와 직접 듣는 이야기가 담요의 의미를 바꾼다."
+    },
+    {
+      "id": "W039",
+      "title": "무겁고 높은",
+      "author": "김기태",
+      "year": 2022,
+      "genre": "단편소설",
+      "url": "https://sinchoon.donga.com/View?cid=4450363",
+      "scope": "기존 조사 목록의 관찰 기록, 이번 조사에서 재독하지 않음",
+      "cohort": "주요",
+      "existing_note": "역도의 동작과 감각을 가족·지역의 삶에 겹치며 같은 동사를 변주한다."
+    },
+    {
+      "id": "W040",
+      "title": "뻘",
+      "author": "박시윤",
+      "year": 2022,
+      "genre": "수필 및 산문",
+      "url": "https://munjang.or.kr/board.es?act=view&bid=0011&list_no=4587&mid=a20204000000",
+      "scope": "게시 페이지의 서지 및 본문 일부 확인, 전문 정독은 아님",
+      "cohort": "추가"
+    },
+    {
+      "id": "W041",
+      "title": "산속의 미아",
+      "author": "이양섭",
+      "year": 2022,
+      "genre": "수필 및 산문",
+      "url": "https://munjang.or.kr/board.es?act=view&bid=0011&list_no=4590&mid=a20204000000",
+      "scope": "게시 페이지의 서지 및 본문 일부 확인, 전문 정독은 아님",
+      "cohort": "추가"
+    },
+    {
+      "id": "W042",
+      "title": "뜬쇠, 소리비에 젖다",
+      "author": "김순경",
+      "year": 2022,
+      "genre": "수필 및 산문",
+      "url": "https://munjang.or.kr/board.es?act=view&bid=0011&list_no=4577&mid=a20204000000",
+      "scope": "게시 페이지의 서지 및 본문 일부 확인, 전문 정독은 아님",
+      "cohort": "추가"
+    },
+    {
+      "id": "W043",
+      "title": "메아쿨파",
+      "author": "민혜",
+      "year": 2022,
+      "genre": "수필 및 산문",
+      "url": "https://munjang.or.kr/board.es?act=view&bid=0011&list_no=4570&mid=a20204000000",
+      "scope": "게시 페이지의 서지 및 본문 일부 확인, 전문 정독은 아님",
+      "cohort": "추가"
+    },
+    {
+      "id": "W044",
+      "title": "살풀이춤, 액을 막다",
+      "author": "김순경",
+      "year": 2022,
+      "genre": "수필 및 산문",
+      "url": "https://munjang.or.kr/board.es?act=view&bid=0011&list_no=4578&mid=a20204000000&nPage=1",
+      "scope": "게시 페이지의 서지 및 본문 일부 확인, 전문 정독은 아님",
+      "cohort": "추가"
+    },
+    {
+      "id": "W045",
+      "title": "심각한 질문",
+      "author": "장미숙",
+      "year": 2022,
+      "genre": "수필 및 산문",
+      "url": "https://munjang.or.kr/board.es?act=view&bid=0011&list_no=4586&mid=a20204000000",
+      "scope": "게시 페이지의 서지 및 본문 일부 확인, 전문 정독은 아님",
+      "cohort": "추가"
+    },
+    {
+      "id": "W046",
+      "title": "자전거, 로맨스를 꿈꾸다",
+      "author": "장미숙",
+      "year": 2022,
+      "genre": "수필 및 산문",
+      "url": "https://munjang.or.kr/board.es?act=view&bid=0011&list_no=4585&mid=a20204000000",
+      "scope": "게시 페이지의 서지 및 본문 일부 확인, 전문 정독은 아님",
+      "cohort": "추가"
+    },
+    {
+      "id": "W047",
+      "title": "꽃지지 않는 봄",
+      "author": "이남희",
+      "year": 2022,
+      "genre": "수필 및 산문",
+      "url": "https://munjang.or.kr/board.es?act=view&bid=0011&list_no=4572&mid=a20204000000&nPage=1",
+      "scope": "게시 페이지의 서지 및 본문 일부 확인, 전문 정독은 아님",
+      "cohort": "추가"
+    },
+    {
+      "id": "W048",
+      "title": "간절 풍화(風化)",
+      "author": "채선후",
+      "year": 2022,
+      "genre": "수필 및 산문",
+      "url": "https://munjang.or.kr/board.es?act=view&bid=0011&list_no=4576&mid=a20204000000",
+      "scope": "게시 페이지의 서지 및 본문 일부 확인, 전문 정독은 아님",
+      "cohort": "추가"
+    },
+    {
+      "id": "W049",
+      "title": "주황색 거짓말",
+      "author": "권담희",
+      "year": 2022,
+      "genre": "수필 및 산문",
+      "url": "https://munjang.or.kr/board.es?act=view&bid=0011&list_no=4582&mid=a20204000000",
+      "scope": "게시 페이지의 서지 및 본문 일부 확인, 전문 정독은 아님",
+      "cohort": "추가"
+    },
+    {
+      "id": "W050",
+      "title": "괜찮아, 괜찮아",
+      "author": "조여선",
+      "year": 2022,
+      "genre": "수필 및 산문",
+      "url": "https://munjang.or.kr/board.es?act=view&bid=0011&list_no=4591&mid=a20204000000",
+      "scope": "게시 페이지의 서지 및 본문 일부 확인, 전문 정독은 아님",
+      "cohort": "추가"
+    },
+    {
+      "id": "W051",
+      "title": "적적(寂寂)아, 꽃구경이나 하자",
+      "author": "조여선",
+      "year": 2022,
+      "genre": "수필 및 산문",
+      "url": "https://munjang.or.kr/board.es?act=view&bid=0011&list_no=4592&mid=a20204000000",
+      "scope": "게시 페이지의 서지 및 본문 일부 확인, 전문 정독은 아님",
+      "cohort": "추가"
+    },
+    {
+      "id": "W052",
+      "title": "물의 지문",
+      "author": "이남희",
+      "year": 2022,
+      "genre": "수필 및 산문",
+      "url": "https://munjang.or.kr/board.es?act=view&bid=0011&list_no=4571&mid=a20204000000",
+      "scope": "게시 페이지의 서지 및 본문 일부 확인, 전문 정독은 아님",
+      "cohort": "추가"
+    },
+    {
+      "id": "W053",
+      "title": "너와 나의 밤 산책",
+      "author": "하리타",
+      "year": 2022,
+      "genre": "수필 및 산문",
+      "url": "https://munjang.or.kr/board.es?act=view&bid=0011&list_no=4574&mid=a20204000000",
+      "scope": "게시 페이지의 서지 및 본문 일부 확인, 전문 정독은 아님",
+      "cohort": "추가"
+    },
+    {
+      "id": "W054",
+      "title": "바람, 바람",
+      "author": "이양섭",
+      "year": 2022,
+      "genre": "수필 및 산문",
+      "url": "https://munjang.or.kr/board.es?act=view&bid=0011&list_no=4589&mid=a20204000000&nPage=1",
+      "scope": "게시 페이지의 서지 및 본문 일부 확인, 전문 정독은 아님",
+      "cohort": "추가"
+    },
+    {
+      "id": "W055",
+      "title": "그녀에게 시간이 있는가?: <화차>",
+      "author": "유서연",
+      "year": 2022,
+      "genre": "수필 및 산문",
+      "url": "https://munjang.or.kr/board.es?act=view&bid=0011&list_no=4580&mid=a20204000000&nPage=1",
+      "scope": "게시 페이지의 서지 및 본문 일부 확인, 전문 정독은 아님",
+      "cohort": "추가"
+    },
+    {
+      "id": "W056",
+      "title": "다음에는 날 도와줄 거야?",
+      "author": "하리타",
+      "year": 2022,
+      "genre": "수필 및 산문",
+      "url": "https://munjang.or.kr/board.es?act=view&bid=0011&list_no=4573&mid=a20204000000&nPage=1",
+      "scope": "게시 페이지의 서지 및 본문 일부 확인, 전문 정독은 아님",
+      "cohort": "추가"
+    },
+    {
+      "id": "W057",
+      "title": "그날이 오면",
+      "author": "민혜",
+      "year": 2022,
+      "genre": "수필 및 산문",
+      "url": "https://munjang.or.kr/board.es?act=view&bid=0011&c_page=&list_no=4569&mid=a20204000000&nPage=1&ord=B",
+      "scope": "게시 페이지의 서지 및 본문 일부 확인, 전문 정독은 아님",
+      "cohort": "추가"
+    },
+    {
+      "id": "W058",
+      "title": "성재심간기(聲在心間記)",
+      "author": "채선후",
+      "year": 2022,
+      "genre": "수필 및 산문",
+      "url": "https://munjang.or.kr/board.es?act=view&bid=0011&c_page=1&c_type=&list_no=4575&mid=a20204000000&nPage=1&ord=",
+      "scope": "게시 페이지의 서지 및 본문 일부 확인, 전문 정독은 아님",
+      "cohort": "추가"
+    },
+    {
+      "id": "W059",
+      "title": "불가능한 문법",
+      "author": "전미경",
+      "year": 2020,
+      "genre": "단편소설",
+      "url": "https://munjang.or.kr/board.es?act=view&bid=0003&list_no=2254&mid=a20101000000",
+      "scope": "게시 페이지의 서지 및 본문 일부 확인, 전문 정독은 아님",
+      "cohort": "추가"
+    },
+    {
+      "id": "W060",
+      "title": "부용에서",
+      "author": "남현정",
+      "year": 2021,
+      "genre": "단편소설",
+      "url": "https://munjang.or.kr/board.es?act=view&bid=0003&c_page=&c_type=A&list_no=2303&mid=a20103000000&nPage=1&ord=B",
+      "scope": "게시 페이지의 서지 및 본문 일부 확인, 전문 정독은 아님",
+      "cohort": "추가"
+    },
+    {
+      "id": "W061",
+      "title": "아직 새를 몰라서",
+      "author": "고수경",
+      "year": 2020,
+      "genre": "단편소설",
+      "url": "https://munjang.or.kr/board.es?act=view&bid=0003&list_no=2253&mid=a20101000000&nPage=1",
+      "scope": "게시 페이지의 서지 및 본문 일부 확인, 전문 정독은 아님",
+      "cohort": "추가"
+    },
+    {
+      "id": "W062",
+      "title": "위해",
+      "author": "이주란",
+      "year": 2021,
+      "genre": "단편소설",
+      "url": "https://munjang.or.kr/board.es?act=view&bid=0003&list_no=2295&mid=a20103000000",
+      "scope": "게시 페이지의 서지 및 본문 일부 확인, 전문 정독은 아님",
+      "cohort": "추가"
+    },
+    {
+      "id": "W063",
+      "title": "호텔 해운대",
+      "author": "오선영",
+      "year": 2019,
+      "genre": "단편소설",
+      "url": "https://munjang.or.kr/board.es?act=view&bid=0003&list_no=2205&mid=a20103000000",
+      "scope": "게시 페이지의 서지 및 본문 일부 확인, 전문 정독은 아님",
+      "cohort": "추가"
+    },
+    {
+      "id": "W064",
+      "title": "없는 순간",
+      "author": "박송아",
+      "year": 2019,
+      "genre": "단편소설",
+      "url": "https://munjang.or.kr/board.es?act=view&bid=0003&list_no=2212&mid=a20101000000&nPage=1",
+      "scope": "게시 페이지의 서지 및 본문 일부 확인, 전문 정독은 아님",
+      "cohort": "추가"
+    },
+    {
+      "id": "W065",
+      "title": "태풍을 기다리는 저녁",
+      "author": "서장원",
+      "year": 2020,
+      "genre": "단편소설",
+      "url": "https://munjang.or.kr/board.es?act=view&bid=0003&list_no=2256&mid=a20101000000&nPage=1",
+      "scope": "게시 페이지의 서지 및 본문 일부 확인, 전문 정독은 아님",
+      "cohort": "추가"
+    },
+    {
+      "id": "W066",
+      "title": "최소주의",
+      "author": "김개영",
+      "year": 2022,
+      "genre": "단편소설",
+      "url": "https://munjang.or.kr/board.es?act=view&bid=0003&list_no=2360&mid=a21300000000",
+      "scope": "게시 페이지의 서지 및 본문 일부 확인, 전문 정독은 아님",
+      "cohort": "추가"
+    },
+    {
+      "id": "W067",
+      "title": "겨울 동화",
+      "author": "강기희",
+      "year": 2022,
+      "genre": "단편소설",
+      "url": "https://munjang.or.kr/board.es?act=view&bid=0003&list_no=2361&mid=a21300000000",
+      "scope": "게시 페이지의 서지 및 본문 일부 확인, 전문 정독은 아님",
+      "cohort": "추가"
+    },
+    {
+      "id": "W068",
+      "title": "적바림",
+      "author": "권담희",
+      "year": 2022,
+      "genre": "수필 및 산문",
+      "url": "https://munjang.or.kr/board.es?act=view&bid=0011&c_page=&c_type=A&list_no=4581&mid=a20204000000&nPage=1&ord=B",
+      "scope": "게시 페이지의 서지 및 본문 일부 확인, 전문 정독은 아님",
+      "cohort": "추가"
+    },
+    {
+      "id": "W069",
+      "title": "오픈워터",
+      "author": "정지향",
+      "year": 2022,
+      "genre": "단편소설",
+      "url": "https://munjang.or.kr/board.es?act=view&bid=0003&list_no=2330&mid=a21200000000",
+      "scope": "게시 페이지의 서지 및 본문 일부 확인, 전문 정독은 아님",
+      "cohort": "추가"
+    },
+    {
+      "id": "W070",
+      "title": "베개를 사러 간 사람들",
+      "author": "한유주",
+      "year": 2022,
+      "genre": "단편소설",
+      "url": "https://munjang.or.kr/board.es?act=view&bid=0003&list_no=2326&mid=a20103000000",
+      "scope": "게시 페이지의 서지 및 본문 일부 확인, 전문 정독은 아님",
+      "cohort": "추가"
+    },
+    {
+      "id": "W071",
+      "title": "내부순환",
+      "author": "정지돈",
+      "year": 2022,
+      "genre": "단편소설",
+      "url": "https://munjang.or.kr/board.es?act=view&bid=0003&list_no=2322&mid=a21300000000",
+      "scope": "게시 페이지의 서지 및 본문 일부 확인, 전문 정독은 아님",
+      "cohort": "추가"
+    },
+    {
+      "id": "W072",
+      "title": "Little Boy",
+      "author": "김솔",
+      "year": 2022,
+      "genre": "단편소설",
+      "url": "https://munjang.or.kr/board.es?act=view&bid=0003&c_page=&c_type=A&list_no=2329&mid=a21300000000&nPage=1&ord=B",
+      "scope": "게시 페이지의 서지 및 본문 일부 확인, 전문 정독은 아님",
+      "cohort": "추가"
+    },
+    {
+      "id": "W073",
+      "title": "여름의 단어",
+      "author": "박민경",
+      "year": 2022,
+      "genre": "단편소설",
+      "url": "https://munjang.or.kr/board.es?act=view&bid=0003&list_no=2350&mid=a21300000000",
+      "scope": "게시 페이지의 서지 및 본문 일부 확인, 전문 정독은 아님",
+      "cohort": "추가"
+    },
+    {
+      "id": "W074",
+      "title": "구유로舊遊路",
+      "author": "함윤이",
+      "year": 2022,
+      "genre": "단편소설",
+      "url": "https://munjang.or.kr/board.es?act=view&bid=0003&list_no=2349&mid=a21300000000",
+      "scope": "게시 페이지의 서지 및 본문 일부 확인, 전문 정독은 아님",
+      "cohort": "추가"
+    },
+    {
+      "id": "W075",
+      "title": "팔월의 이안류",
+      "author": "임은영",
+      "year": 2022,
+      "genre": "단편소설",
+      "url": "https://munjang.or.kr/board.es?act=view&bid=0003&list_no=2343&mid=a21300000000",
+      "scope": "게시 페이지의 서지 및 본문 일부 확인, 전문 정독은 아님",
+      "cohort": "추가"
+    },
+    {
+      "id": "W076",
+      "title": "손을 그리는 손",
+      "author": "이언주",
+      "year": 2022,
+      "genre": "단편소설",
+      "url": "https://munjang.or.kr/board.es?act=view&bid=0003&list_no=2346&mid=a21300000000",
+      "scope": "게시 페이지의 서지 및 본문 일부 확인, 전문 정독은 아님",
+      "cohort": "추가"
+    },
+    {
+      "id": "W077",
+      "title": "성실한 사람들",
+      "author": "문은강",
+      "year": 2022,
+      "genre": "단편소설",
+      "url": "https://munjang.or.kr/board.es?act=view&bid=0003&c_page=1&c_type=&list_no=2340&mid=a21300000000&nPage=1&ord=B",
+      "scope": "게시 페이지의 서지 및 본문 일부 확인, 전문 정독은 아님",
+      "cohort": "추가"
+    },
+    {
+      "id": "W078",
+      "title": "the seaside",
+      "author": "유주현",
+      "year": 2022,
+      "genre": "단편소설",
+      "url": "https://munjang.or.kr/board.es?act=view&bid=0003&list_no=2345&mid=a21300000000",
+      "scope": "게시 페이지의 서지 및 본문 일부 확인, 전문 정독은 아님",
+      "cohort": "추가"
+    },
+    {
+      "id": "W079",
+      "title": "등대가 보이는 밤",
+      "author": "유시연",
+      "year": 2022,
+      "genre": "단편소설",
+      "url": "https://munjang.or.kr/board.es?act=view&bid=0003&list_no=2337&mid=a21300000000",
+      "scope": "게시 페이지의 서지 및 본문 일부 확인, 전문 정독은 아님",
+      "cohort": "추가"
+    },
+    {
+      "id": "W080",
+      "title": "까마귀를 머리에 얹은 소녀와 그 남자",
+      "author": "신이현",
+      "year": 2022,
+      "genre": "단편소설",
+      "url": "https://munjang.or.kr/board.es?act=view&bid=0003&c_page=1&c_type=&list_no=2339&mid=a21300000000&nPage=1&ord=",
+      "scope": "게시 페이지의 서지 및 본문 일부 확인, 전문 정독은 아님",
+      "cohort": "추가"
+    },
+    {
+      "id": "W081",
+      "title": "두 사람의 인터내셔널",
+      "author": "김기태",
+      "year": 2022,
+      "genre": "단편소설",
+      "url": "https://munjang.or.kr/board.es?act=view&bid=0003&c_page=&list_no=2348&mid=a20103000000&nPage=1&ord=B",
+      "scope": "게시 페이지의 서지 및 본문 일부 확인, 전문 정독은 아님",
+      "cohort": "추가"
+    },
+    {
+      "id": "W082",
+      "title": "임상소설",
+      "author": "김갑용",
+      "year": 2022,
+      "genre": "단편소설",
+      "url": "https://munjang.or.kr/board.es?act=view&bid=0003&c_page=&c_type=A&list_no=2338&mid=a21300000000&nPage=1&ord=B",
+      "scope": "게시 페이지의 서지 및 본문 일부 확인, 전문 정독은 아님",
+      "cohort": "추가"
+    },
+    {
+      "id": "W083",
+      "title": "미래의 윤리",
+      "author": "박민정",
+      "year": 2022,
+      "genre": "단편소설",
+      "url": "https://munjang.or.kr/board.es?act=view&bid=0003&c_page=1&c_type=&list_no=2335&mid=a21300000000&nPage=1&ord=",
+      "scope": "게시 페이지의 서지 및 본문 일부 확인, 전문 정독은 아님",
+      "cohort": "추가"
+    },
+    {
+      "id": "W084",
+      "title": "식소다 낙뢰",
+      "author": "양기연",
+      "year": 2022,
+      "genre": "단편소설",
+      "url": "https://munjang.or.kr/board.es?act=view&bid=0003&list_no=2352&mid=a21200000000&nPage=1",
+      "scope": "게시 페이지의 서지 및 본문 일부 확인, 전문 정독은 아님",
+      "cohort": "추가"
+    },
+    {
+      "id": "W085",
+      "title": "봄방학",
+      "author": "도수영",
+      "year": 2022,
+      "genre": "단편소설",
+      "url": "https://munjang.or.kr/board.es?act=view&bid=0003&list_no=2342&mid=a21300000000",
+      "scope": "게시 페이지의 서지 및 본문 일부 확인, 전문 정독은 아님",
+      "cohort": "추가"
+    },
+    {
+      "id": "W086",
+      "title": "빛 가운데 걷기",
+      "author": "김채원",
+      "year": 2022,
+      "genre": "단편소설",
+      "url": "https://munjang.or.kr/board.es?act=view&bid=0003&c_page=1&c_type=&list_no=2344&mid=a21200000000&nPage=1&ord=",
+      "scope": "게시 페이지의 서지 및 본문 일부 확인, 전문 정독은 아님",
+      "cohort": "추가"
+    },
+    {
+      "id": "W087",
+      "title": "내 이름 묻지 마세요",
+      "author": "이지영",
+      "year": 2022,
+      "genre": "단편소설",
+      "url": "https://munjang.or.kr/board.es?act=view&bid=0003&c_page=1&c_type=&list_no=2341&mid=a21300000000&nPage=1&ord=",
+      "scope": "게시 페이지의 서지 및 본문 일부 확인, 전문 정독은 아님",
+      "cohort": "추가"
+    },
+    {
+      "id": "W088",
+      "title": "얼굴을 비울 때까지",
+      "author": "최윤",
+      "year": 2021,
+      "genre": "단편소설",
+      "url": "https://munjang.or.kr/board.es?act=view&bid=0003&list_no=2276&mid=a21300000000",
+      "scope": "게시 페이지의 서지 및 본문 일부 확인, 전문 정독은 아님",
+      "cohort": "추가"
+    },
+    {
+      "id": "W089",
+      "title": "강물의 깊이",
+      "author": "이승우",
+      "year": 2021,
+      "genre": "단편소설",
+      "url": "https://munjang.or.kr/board.es?act=view&bid=0003&list_no=2285&mid=a21300000000",
+      "scope": "게시 페이지의 서지 및 본문 일부 확인, 전문 정독은 아님",
+      "cohort": "추가"
+    },
+    {
+      "id": "W090",
+      "title": "낮은 해상도로부터",
+      "author": "서이제",
+      "year": 2021,
+      "genre": "단편소설",
+      "url": "https://munjang.or.kr/board.es?act=view&bid=0003&list_no=2283&mid=a21200000000",
+      "scope": "게시 페이지의 서지 및 본문 일부 확인, 전문 정독은 아님",
+      "cohort": "추가"
+    },
+    {
+      "id": "W091",
+      "title": "바늘 끝에는 몇 개의 불행이",
+      "author": "안보윤",
+      "year": 2021,
+      "genre": "단편소설",
+      "url": "https://munjang.or.kr/board.es?act=view&bid=0003&list_no=2282&mid=a21300000000",
+      "scope": "게시 페이지의 서지 및 본문 일부 확인, 전문 정독은 아님",
+      "cohort": "추가"
+    },
+    {
+      "id": "W092",
+      "title": "구독과 좋아요",
+      "author": "원종국",
+      "year": 2021,
+      "genre": "단편소설",
+      "url": "https://munjang.or.kr/board.es?act=view&bid=0003&c_page=1&c_type=&list_no=2281&mid=a21300000000&nPage=1&ord=",
+      "scope": "게시 페이지의 서지 및 본문 일부 확인, 전문 정독은 아님",
+      "cohort": "추가"
+    },
+    {
+      "id": "W093",
+      "title": "그라나다의 유기견",
+      "author": "한지수",
+      "year": 2021,
+      "genre": "단편소설",
+      "url": "https://munjang.or.kr/board.es?act=view&bid=0003&list_no=2287&mid=a21200000000&nPage=1",
+      "scope": "게시 페이지의 서지 및 본문 일부 확인, 전문 정독은 아님",
+      "cohort": "추가"
+    },
+    {
+      "id": "W094",
+      "title": "샐리와 케이와 그런 여자들",
+      "author": "조남주",
+      "year": 2021,
+      "genre": "단편소설",
+      "url": "https://munjang.or.kr/board.es?act=view&bid=0003&list_no=2277&mid=a21200000000",
+      "scope": "게시 페이지의 서지 및 본문 일부 확인, 전문 정독은 아님",
+      "cohort": "추가"
+    },
+    {
+      "id": "W095",
+      "title": "흐흐흐",
+      "author": "김남숙",
+      "year": 2021,
+      "genre": "단편소설",
+      "url": "https://munjang.or.kr/board.es?act=view&bid=0003&c_page=&c_type=A&list_no=2278&mid=a21300000000&nPage=1&ord=B",
+      "scope": "게시 페이지의 서지 및 본문 일부 확인, 전문 정독은 아님",
+      "cohort": "추가"
+    },
+    {
+      "id": "W096",
+      "title": "나는 누구와 에드워드 양의 영화를 봤을까",
+      "author": "조수경",
+      "year": 2021,
+      "genre": "단편소설",
+      "url": "https://munjang.or.kr/board.es?act=view&bid=0003&c_page=&c_type=A&list_no=2280&mid=a21300000000&nPage=1&ord=B",
+      "scope": "게시 페이지의 서지 및 본문 일부 확인, 전문 정독은 아님",
+      "cohort": "추가"
+    },
+    {
+      "id": "W097",
+      "title": "참새 잡기",
+      "author": "정한아",
+      "year": 2021,
+      "genre": "단편소설",
+      "url": "https://munjang.or.kr/board.es?act=view&bid=0003&list_no=2279&mid=a21300000000",
+      "scope": "게시 페이지의 서지 및 본문 일부 확인, 전문 정독은 아님",
+      "cohort": "추가"
+    },
+    {
+      "id": "W098",
+      "title": "모피방",
+      "author": "전석순",
+      "year": 2021,
+      "genre": "단편소설",
+      "url": "https://munjang.or.kr/board.es?act=view&bid=0003&list_no=2284&mid=a21200000000",
+      "scope": "게시 페이지의 서지 및 본문 일부 확인, 전문 정독은 아님",
+      "cohort": "추가"
+    },
+    {
+      "id": "W099",
+      "title": "도서관은 마지노선",
+      "author": "백민석",
+      "year": 2021,
+      "genre": "단편소설",
+      "url": "https://munjang.or.kr/board.es?act=view&bid=0003&list_no=2275&mid=a21200000000",
+      "scope": "게시 페이지의 서지 및 본문 일부 확인, 전문 정독은 아님",
+      "cohort": "추가"
+    },
+    {
+      "id": "W100",
+      "title": "386번지",
+      "author": "이광재",
+      "year": 2021,
+      "genre": "단편소설",
+      "url": "https://munjang.or.kr/board.es?act=view&bid=0003&c_page=1&c_type=&list_no=2289&mid=a21300000000&nPage=1&ord=",
+      "scope": "게시 페이지의 서지 및 본문 일부 확인, 전문 정독은 아님",
+      "cohort": "추가"
+    },
+    {
+      "id": "W101",
+      "title": "모두에게 전부였던",
+      "author": "임현",
+      "year": 2021,
+      "genre": "단편소설",
+      "url": "https://munjang.or.kr/board.es?act=view&bid=0003&list_no=2294&mid=a21300000000",
+      "scope": "게시 페이지의 서지 및 본문 일부 확인, 전문 정독은 아님",
+      "cohort": "추가"
+    },
+    {
+      "id": "W102",
+      "title": "피팅",
+      "author": "박규숙",
+      "year": 2021,
+      "genre": "단편소설",
+      "url": "https://munjang.or.kr/board.es?act=view&bid=0003&list_no=2304&mid=a21300000000",
+      "scope": "게시 페이지의 서지 및 본문 일부 확인, 전문 정독은 아님",
+      "cohort": "추가"
+    },
+    {
+      "id": "W103",
+      "title": "귀를 찾아서",
+      "author": "이지은",
+      "year": 2021,
+      "genre": "단편소설",
+      "url": "https://munjang.or.kr/board.es?act=view&bid=0003&list_no=2305&mid=a21300000000",
+      "scope": "게시 페이지의 서지 및 본문 일부 확인, 전문 정독은 아님",
+      "cohort": "추가"
+    },
+    {
+      "id": "W104",
+      "title": "겨울나그네 발굴단",
+      "author": "양지예",
+      "year": 2021,
+      "genre": "단편소설",
+      "url": "https://munjang.or.kr/board.es?act=view&bid=0003&list_no=2302&mid=a21300000000",
+      "scope": "게시 페이지의 서지 및 본문 일부 확인, 전문 정독은 아님",
+      "cohort": "추가"
+    },
+    {
+      "id": "W105",
+      "title": "그래비테이션",
+      "author": "윤치규",
+      "year": 2021,
+      "genre": "단편소설",
+      "url": "https://munjang.or.kr/board.es?act=view&bid=0003&c_page=&c_type=A&list_no=2297&mid=a21300000000&nPage=1&ord=B",
+      "scope": "게시 페이지의 서지 및 본문 일부 확인, 전문 정독은 아님",
+      "cohort": "추가"
+    },
+    {
+      "id": "W106",
+      "title": "프렌치프레스",
+      "author": "이서안",
+      "year": 2021,
+      "genre": "단편소설",
+      "url": "https://munjang.or.kr/board.es?act=view&bid=0003&list_no=2301&mid=a21300000000",
+      "scope": "게시 페이지의 서지 및 본문 일부 확인, 전문 정독은 아님",
+      "cohort": "추가"
+    },
+    {
+      "id": "W107",
+      "title": "용납",
+      "author": "이현석",
+      "year": 2021,
+      "genre": "단편소설",
+      "url": "https://munjang.or.kr/board.es?act=view&bid=0003&list_no=2291&mid=a21300000000",
+      "scope": "게시 페이지의 서지 및 본문 일부 확인, 전문 정독은 아님",
+      "cohort": "추가"
+    },
+    {
+      "id": "W108",
+      "title": "반려",
+      "author": "라유경",
+      "year": 2021,
+      "genre": "단편소설",
+      "url": "https://munjang.or.kr/board.es?act=view&bid=0003&c_page=&c_type=A&list_no=2296&mid=a21300000000&nPage=1&ord=B",
+      "scope": "게시 페이지의 서지 및 본문 일부 확인, 전문 정독은 아님",
+      "cohort": "추가"
+    },
+    {
+      "id": "W109",
+      "title": "새 이야기",
+      "author": "김화진",
+      "year": 2021,
+      "genre": "단편소설",
+      "url": "https://munjang.or.kr/board.es?act=view&bid=0003&c_page=&c_type=A&list_no=2300&mid=a21300000000&nPage=1&ord=B",
+      "scope": "게시 페이지의 서지 및 본문 일부 확인, 전문 정독은 아님",
+      "cohort": "추가"
+    },
+    {
+      "id": "W110",
+      "title": "수영장",
+      "author": "이소정",
+      "year": 2021,
+      "genre": "단편소설",
+      "url": "https://munjang.or.kr/board.es?act=view&bid=0003&list_no=2299&mid=a21300000000",
+      "scope": "게시 페이지의 서지 및 본문 일부 확인, 전문 정독은 아님",
+      "cohort": "추가"
+    },
+    {
+      "id": "W111",
+      "title": "가장 오래된 포털",
+      "author": "윤해서",
+      "year": 2021,
+      "genre": "단편소설",
+      "url": "https://munjang.or.kr/board.es?act=view&bid=0003&list_no=2290&mid=a21300000000&nPage=1",
+      "scope": "게시 페이지의 서지 및 본문 일부 확인, 전문 정독은 아님",
+      "cohort": "추가"
+    },
+    {
+      "id": "W112",
+      "title": "사랑해요, 옛날 사람",
+      "author": "한정현",
+      "year": 2020,
+      "genre": "단편소설",
+      "url": "https://munjang.or.kr/board.es?act=view&bid=0003&list_no=2236&mid=a21300000000",
+      "scope": "게시 페이지의 서지 및 본문 일부 확인, 전문 정독은 아님",
+      "cohort": "추가"
+    },
+    {
+      "id": "W113",
+      "title": "궤도 밖 고라니",
+      "author": "이한솔",
+      "year": 2020,
+      "genre": "단편소설",
+      "url": "https://munjang.or.kr/board.es?act=view&bid=0003&list_no=2257&mid=a21300000000",
+      "scope": "게시 페이지의 서지 및 본문 일부 확인, 전문 정독은 아님",
+      "cohort": "추가"
+    },
+    {
+      "id": "W114",
+      "title": "은행나무는 그 자리에",
+      "author": "안준원",
+      "year": 2020,
+      "genre": "단편소설",
+      "url": "https://munjang.or.kr/board.es?act=view&bid=0003&list_no=2235&mid=a21300000000",
+      "scope": "게시 페이지의 서지 및 본문 일부 확인, 전문 정독은 아님",
+      "cohort": "추가"
+    },
+    {
+      "id": "W115",
+      "title": "언두",
+      "author": "성해나",
+      "year": 2020,
+      "genre": "단편소설",
+      "url": "https://munjang.or.kr/board.es?act=view&bid=0003&list_no=2242&mid=a21300000000&nPage=1",
+      "scope": "게시 페이지의 서지 및 본문 일부 확인, 전문 정독은 아님",
+      "cohort": "추가"
+    },
+    {
+      "id": "W116",
+      "title": "너무 많은 날들",
+      "author": "임선우",
+      "year": 2020,
+      "genre": "단편소설",
+      "url": "https://munjang.or.kr/board.es?act=view&bid=0003&list_no=2221&mid=a21300000000",
+      "scope": "게시 페이지의 서지 및 본문 일부 확인, 전문 정독은 아님",
+      "cohort": "추가"
+    },
+    {
+      "id": "W117",
+      "title": "철(鐵)의 사랑",
+      "author": "김숨",
+      "year": 2020,
+      "genre": "단편소설",
+      "url": "https://munjang.or.kr/board.es?act=view&bid=0003&list_no=2243&mid=a21200000000&nPage=1",
+      "scope": "게시 페이지의 서지 및 본문 일부 확인, 전문 정독은 아님",
+      "cohort": "추가"
+    },
+    {
+      "id": "W118",
+      "title": "옴",
+      "author": "홍성욱",
+      "year": 2020,
+      "genre": "단편소설",
+      "url": "https://munjang.or.kr/board.es?act=view&bid=0003&list_no=2224&mid=a21200000000",
+      "scope": "게시 페이지의 서지 및 본문 일부 확인, 전문 정독은 아님",
+      "cohort": "추가"
+    },
+    {
+      "id": "W119",
+      "title": "[사라][케인]",
+      "author": "박소희",
+      "year": 2020,
+      "genre": "단편소설",
+      "url": "https://munjang.or.kr/board.es?act=view&bid=0003&c_page=1&c_type=&list_no=2233&mid=a21300000000&nPage=1&ord=",
+      "scope": "게시 페이지의 서지 및 본문 일부 확인, 전문 정독은 아님",
+      "cohort": "추가"
+    },
+    {
+      "id": "W120",
+      "title": "오늘의 시가",
+      "author": "이원석",
+      "year": 2020,
+      "genre": "단편소설",
+      "url": "https://munjang.or.kr/board.es?act=view&bid=0003&list_no=2225&mid=a21200000000",
+      "scope": "게시 페이지의 서지 및 본문 일부 확인, 전문 정독은 아님",
+      "cohort": "추가"
+    },
+    {
+      "id": "W121",
+      "title": "산 사람은 살지",
+      "author": "김종광",
+      "year": 2020,
+      "genre": "단편소설",
+      "url": "https://munjang.or.kr/board.es?act=view&bid=0003&list_no=2234&mid=a21200000000&nPage=1",
+      "scope": "게시 페이지의 서지 및 본문 일부 확인, 전문 정독은 아님",
+      "cohort": "추가"
+    },
+    {
+      "id": "W122",
+      "title": "이지의 다카코",
+      "author": "정은우",
+      "year": 2020,
+      "genre": "단편소설",
+      "url": "https://munjang.or.kr/board.es?act=view&bid=0003&list_no=2223&mid=a21300000000",
+      "scope": "게시 페이지의 서지 및 본문 일부 확인, 전문 정독은 아님",
+      "cohort": "추가"
+    },
+    {
+      "id": "W123",
+      "title": "잭슨 폭포에서 온 영수증",
+      "author": "박세회",
+      "year": 2020,
+      "genre": "단편소설",
+      "url": "https://munjang.or.kr/board.es?act=view&bid=0003&c_page=1&c_type=&list_no=2255&mid=a21300000000&nPage=1&ord=",
+      "scope": "게시 페이지의 서지 및 본문 일부 확인, 전문 정독은 아님",
+      "cohort": "추가"
+    },
+    {
+      "id": "W124",
+      "title": "인물과 식물",
+      "author": "류시은",
+      "year": 2019,
+      "genre": "단편소설",
+      "url": "https://munjang.or.kr/board.es?act=view&bid=0003&list_no=2194&mid=a21300000000",
+      "scope": "게시 페이지의 서지 및 본문 일부 확인, 전문 정독은 아님",
+      "cohort": "추가"
+    },
+    {
+      "id": "W125",
+      "title": "건널목의 말",
+      "author": "박솔뫼",
+      "year": 2019,
+      "genre": "단편소설",
+      "url": "https://munjang.or.kr/board.es?act=view&bid=0003&list_no=2174&mid=a21300000000",
+      "scope": "게시 페이지의 서지 및 본문 일부 확인, 전문 정독은 아님",
+      "cohort": "추가"
+    },
+    {
+      "id": "W126",
+      "title": "담배",
+      "author": "함지연",
+      "year": 2019,
+      "genre": "단편소설",
+      "url": "https://munjang.or.kr/board.es?act=view&bid=0003&list_no=2190&mid=a21300000000",
+      "scope": "게시 페이지의 서지 및 본문 일부 확인, 전문 정독은 아님",
+      "cohort": "추가"
+    },
+    {
+      "id": "W127",
+      "title": "픽",
+      "author": "박송아",
+      "year": 2019,
+      "genre": "단편소설",
+      "url": "https://munjang.or.kr/board.es?act=view&bid=0003&list_no=2206&mid=a21300000000",
+      "scope": "게시 페이지의 서지 및 본문 일부 확인, 전문 정독은 아님",
+      "cohort": "추가"
+    },
+    {
+      "id": "W128",
+      "title": "수아",
+      "author": "윤이형",
+      "year": 2019,
+      "genre": "단편소설",
+      "url": "https://munjang.or.kr/board.es?act=view&bid=0003&c_page=&c_type=A&list_no=2183&mid=a21300000000&nPage=1&ord=B",
+      "scope": "게시 페이지의 서지 및 본문 일부 확인, 전문 정독은 아님",
+      "cohort": "추가"
+    },
+    {
+      "id": "W129",
+      "title": "거짓말",
+      "author": "최유안",
+      "year": 2019,
+      "genre": "단편소설",
+      "url": "https://munjang.or.kr/board.es?act=view&bid=0003&list_no=2182&mid=a21300000000",
+      "scope": "게시 페이지의 서지 및 본문 일부 확인, 전문 정독은 아님",
+      "cohort": "추가"
+    },
+    {
+      "id": "W130",
+      "title": "도둑맞은 반지",
+      "author": "오선호",
+      "year": 2019,
+      "genre": "단편소설",
+      "url": "https://munjang.or.kr/board.es?act=view&bid=0003&list_no=2192&mid=a21200000000",
+      "scope": "게시 페이지의 서지 및 본문 일부 확인, 전문 정독은 아님",
+      "cohort": "추가"
+    },
+    {
+      "id": "W131",
+      "title": "크리스마스 택배",
+      "author": "서동욱",
+      "year": 2019,
+      "genre": "단편소설",
+      "url": "https://munjang.or.kr/board.es?act=view&bid=0003&list_no=2193&mid=a21200000000",
+      "scope": "게시 페이지의 서지 및 본문 일부 확인, 전문 정독은 아님",
+      "cohort": "추가"
+    },
+    {
+      "id": "W132",
+      "title": "어쨌거나 인류의 대변자",
+      "author": "배명훈",
+      "year": 2019,
+      "genre": "단편소설",
+      "url": "https://munjang.or.kr/board.es?act=view&bid=0003&list_no=2173&mid=a21200000000",
+      "scope": "게시 페이지의 서지 및 본문 일부 확인, 전문 정독은 아님",
+      "cohort": "추가"
+    },
+    {
+      "id": "W133",
+      "title": "바 크",
+      "author": "임국영",
+      "year": 2019,
+      "genre": "단편소설",
+      "url": "https://munjang.or.kr/board.es?act=view&bid=0003&c_page=1&c_type=&list_no=2180&mid=a21300000000&nPage=1&ord=",
+      "scope": "게시 페이지의 서지 및 본문 일부 확인, 전문 정독은 아님",
+      "cohort": "추가"
+    },
+    {
+      "id": "W134",
+      "title": "미래는 오래 지속된다",
+      "author": "김성중",
+      "year": 2019,
+      "genre": "단편소설",
+      "url": "https://munjang.or.kr/board.es?act=view&bid=0003&list_no=2203&mid=a21300000000&nPage=1",
+      "scope": "게시 페이지의 서지 및 본문 일부 확인, 전문 정독은 아님",
+      "cohort": "추가"
+    },
+    {
+      "id": "W135",
+      "title": "어둠 뒤에",
+      "author": "김멜라",
+      "year": 2019,
+      "genre": "단편소설",
+      "url": "https://munjang.or.kr/board.es?act=view&bid=0003&c_page=&c_type=A&list_no=2207&mid=a21300000000&nPage=1&ord=B",
+      "scope": "게시 페이지의 서지 및 본문 일부 확인, 전문 정독은 아님",
+      "cohort": "추가"
+    },
+    {
+      "id": "W136",
+      "title": "미완의 영화",
+      "author": "오유경",
+      "year": 2021,
+      "genre": "수필 및 산문",
+      "url": "https://munjang.or.kr/board.es?act=view&bid=0005&list_no=3572&mid=a21200000000",
+      "scope": "게시 페이지의 서지 및 본문 일부 확인, 전문 정독은 아님",
+      "cohort": "추가"
+    },
+    {
+      "id": "W137",
+      "title": "안아주는 공",
+      "author": "김미경",
+      "year": 2021,
+      "genre": "수필 및 산문",
+      "url": "https://www.imaeil.com/page/view/2020122021561365399",
+      "scope": "게시 페이지의 서지 및 본문 일부 확인, 전문 정독은 아님",
+      "cohort": "추가"
+    },
+    {
+      "id": "W138",
+      "title": "인테그랄",
+      "author": "유성은",
+      "year": 2021,
+      "genre": "수필 및 산문",
+      "url": "https://www.hankyung.com/article/2020123163831",
+      "scope": "게시 페이지의 서지 및 본문 일부 확인, 전문 정독은 아님",
+      "cohort": "추가"
+    },
+    {
+      "id": "W139",
+      "title": "연잎밥",
+      "author": "조경숙",
+      "year": 2019,
+      "genre": "수필 및 산문",
+      "url": "https://www.knnews.co.kr/news/articleView.php?idxno=1272667",
+      "scope": "게시 페이지의 서지 및 본문 일부 확인, 전문 정독은 아님",
+      "cohort": "추가"
+    },
+    {
+      "id": "W140",
+      "title": "등을 돌려보면",
+      "author": "김현숙",
+      "year": 2018,
+      "genre": "수필 및 산문",
+      "url": "https://www.knnews.co.kr/news/articleView.php?idxno=1236340",
+      "scope": "게시 페이지의 서지 및 본문 일부 확인, 전문 정독은 아님",
+      "cohort": "추가"
+    }
+  ],
+  "papers": [
+    {
+      "id": "P001",
+      "title": "A Study on the Characteristics of Writing Style of Jung Ji-yong’s Essay",
+      "year": 2018,
+      "authors": [
+        "이정인"
+      ],
+      "url": "https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART002358261",
+      "topic": "한국어 문체 및 글쓰기",
+      "scope": "출판기관 서지와 초록 일부 확인, 일부 논문은 방법 또는 한계 절 추가 확인"
+    },
+    {
+      "id": "P002",
+      "title": "A Study on Aspects of the Stylistic Choice andSpecialization in the Early Modern Media－Focus on Newspaper and Book Publications－",
+      "year": 2015,
+      "authors": [
+        "강현조"
+      ],
+      "url": "https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART001986728",
+      "topic": "한국어 문체 및 글쓰기",
+      "scope": "출판기관 서지와 초록 일부 확인, 일부 논문은 방법 또는 한계 절 추가 확인"
+    },
+    {
+      "id": "P003",
+      "title": "Study on Kim Dong-seok’s Essay",
+      "year": 2022,
+      "authors": [
+        "이미나"
+      ],
+      "url": "https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART002908524",
+      "topic": "한국어 문체 및 글쓰기",
+      "scope": "출판기관 서지와 초록 일부 확인, 일부 논문은 방법 또는 한계 절 추가 확인"
+    },
+    {
+      "id": "P004",
+      "title": "번역가 문체 표지로서의 문장 분할 전략: 비문학 번역서를 중심으로",
+      "year": 2024,
+      "authors": [
+        "임진"
+      ],
+      "url": "https://www.kci.go.kr/kciportal/landing/article.kci?arti_id=ART003145407",
+      "topic": "한국어 문체 및 글쓰기",
+      "scope": "출판기관 서지와 초록 일부 확인, 일부 논문은 방법 또는 한계 절 추가 확인"
+    },
+    {
+      "id": "P005",
+      "title": "A Study on a Literary Style of an Essay Na Haeseokand Gang Gyeongae",
+      "year": 2004,
+      "authors": [
+        "정문권",
+        "이영조"
+      ],
+      "url": "https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART000929410",
+      "topic": "한국어 문체 및 글쓰기",
+      "scope": "출판기관 서지와 초록 일부 확인, 일부 논문은 방법 또는 한계 절 추가 확인"
+    },
+    {
+      "id": "P006",
+      "title": "‘수필’ 개념을 둘러싼 학술 담론과 교육 담론의 긴장",
+      "year": 2019,
+      "authors": [
+        "이윤희",
+        "김수지",
+        "류수열"
+      ],
+      "url": "https://www.kci.go.kr/kciportal/landing/article.kci?arti_id=ART002552091",
+      "topic": "한국어 문체 및 글쓰기",
+      "scope": "출판기관 서지와 초록 일부 확인, 일부 논문은 방법 또는 한계 절 추가 확인"
+    },
+    {
+      "id": "P007",
+      "title": "번역가 문체의 코퍼스 주도적 연구- ‘as if’ 비유 번역을 중심으로 -",
+      "year": 2021,
+      "authors": [
+        "신혜정"
+      ],
+      "url": "https://www.kci.go.kr/kciportal/landing/article.kci?arti_id=ART002743779",
+      "topic": "한국어 문체 및 글쓰기",
+      "scope": "출판기관 서지와 초록 일부 확인, 일부 논문은 방법 또는 한계 절 추가 확인"
+    },
+    {
+      "id": "P008",
+      "title": "A study of sentence style for modern Korean language",
+      "year": 2017,
+      "authors": [
+        "장은하"
+      ],
+      "url": "https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART002226417",
+      "topic": "한국어 문체 및 글쓰기",
+      "scope": "출판기관 서지와 초록 일부 확인, 일부 논문은 방법 또는 한계 절 추가 확인"
+    },
+    {
+      "id": "P009",
+      "title": "은유를 활용한 자기표현적 글쓰기의 효과와 의의",
+      "year": 2024,
+      "authors": [
+        "박지학",
+        "서현석",
+        "김승연"
+      ],
+      "url": "https://www.kci.go.kr/kciportal/landing/article.kci?arti_id=ART003140412",
+      "topic": "한국어 문체 및 글쓰기",
+      "scope": "출판기관 서지와 초록 일부 확인, 일부 논문은 방법 또는 한계 절 추가 확인"
+    },
+    {
+      "id": "P010",
+      "title": "한국어 학습자를 위한 은유 표현 교육 연구 ―‘사랑’의 개념적 은유를 중심으로―",
+      "year": 2020,
+      "authors": [
+        "박은미",
+        "이병운"
+      ],
+      "url": "https://www.kci.go.kr/kciportal/landing/article.kci?arti_id=ART002555542",
+      "topic": "한국어 문체 및 글쓰기",
+      "scope": "출판기관 서지와 초록 일부 확인, 일부 논문은 방법 또는 한계 절 추가 확인"
+    },
+    {
+      "id": "P011",
+      "title": "상호적 쓰기 전략과 텍스트 재구조화를 통한 한국어 쓰기 교육 연구 - 한국어 고급과정 수업 사례를 중심으로 -",
+      "year": 2019,
+      "authors": [
+        "서효원"
+      ],
+      "url": "https://www.kci.go.kr/kciportal/landing/article.kci?arti_id=ART002468596",
+      "topic": "한국어 문체 및 글쓰기",
+      "scope": "출판기관 서지와 초록 일부 확인, 일부 논문은 방법 또는 한계 절 추가 확인"
+    },
+    {
+      "id": "P012",
+      "title": "한국어 은유 표현의 체면 위협 연구: 한국 문화의 집단주의 및 권력 거리 특성을 고려한 분석",
+      "year": 2021,
+      "authors": [
+        "김영상",
+        "김한샘"
+      ],
+      "url": "https://www.kci.go.kr/kciportal/landing/article.kci?arti_id=ART002718964",
+      "topic": "한국어 문체 및 글쓰기",
+      "scope": "출판기관 서지와 초록 일부 확인, 일부 논문은 방법 또는 한계 절 추가 확인"
+    },
+    {
+      "id": "P013",
+      "title": "A Study of Mood Metaphors in Korean from the Perspective of Systemic Functional Linguistics",
+      "year": 2019,
+      "authors": [
+        "진염평",
+        "송향근"
+      ],
+      "url": "https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART002470891",
+      "topic": "한국어 문체 및 글쓰기",
+      "scope": "출판기관 서지와 초록 일부 확인, 일부 논문은 방법 또는 한계 절 추가 확인"
+    },
+    {
+      "id": "P014",
+      "title": "(한)국어교육 분야의 개념적 은유 연구 동향 분석",
+      "year": 2024,
+      "authors": [
+        "박재현",
+        "김호정",
+        "남가영",
+        "김은성"
+      ],
+      "url": "https://kci.go.kr/kciportal/landing/article.kci?arti_id=ART003071021",
+      "topic": "한국어 문체 및 글쓰기",
+      "scope": "출판기관 서지와 초록 일부 확인, 일부 논문은 방법 또는 한계 절 추가 확인"
+    },
+    {
+      "id": "P015",
+      "title": "A study on the rhythm in Kim Soo-young's poetry",
+      "year": 2008,
+      "authors": [
+        "김영희"
+      ],
+      "url": "https://kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART001250449",
+      "topic": "한국어 문체 및 글쓰기",
+      "scope": "출판기관 서지와 초록 일부 확인, 일부 논문은 방법 또는 한계 절 추가 확인"
+    },
+    {
+      "id": "P016",
+      "title": "수능 문항을 통해 본 시점-서술 교육 내용 탐구",
+      "year": 2019,
+      "authors": [
+        "박기범"
+      ],
+      "url": "https://kci.go.kr/kciportal/landing/article.kci?arti_id=ART002510133",
+      "topic": "한국어 문체 및 글쓰기",
+      "scope": "출판기관 서지와 초록 일부 확인, 일부 논문은 방법 또는 한계 절 추가 확인"
+    },
+    {
+      "id": "P017",
+      "title": "Analysis of coherence in text 54 of Chinese learners’ Test of Proficiency in Korean writing",
+      "year": 2024,
+      "authors": [
+        "문효빙",
+        "민정호"
+      ],
+      "url": "https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART003164373",
+      "topic": "한국어 문체 및 글쓰기",
+      "scope": "출판기관 서지와 초록 일부 확인, 일부 논문은 방법 또는 한계 절 추가 확인"
+    },
+    {
+      "id": "P018",
+      "title": "The Idea of Literature(Literary Writing)",
+      "year": 2014,
+      "authors": [
+        "백지은"
+      ],
+      "url": "https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART001934126",
+      "topic": "한국어 문체 및 글쓰기",
+      "scope": "출판기관 서지와 초록 일부 확인, 일부 논문은 방법 또는 한계 절 추가 확인"
+    },
+    {
+      "id": "P019",
+      "title": "한국 현대소설의 문체 분석을 위한 계량적 연구 시론 - 1930년대 김남천, 이기영, 채만식 소설을 중심으로 -",
+      "year": 2014,
+      "authors": [
+        "문한별",
+        "김일환"
+      ],
+      "url": "https://www.kci.go.kr/kciportal/landing/article.kci?arti_id=ART001873138",
+      "topic": "한국어 문체 및 글쓰기",
+      "scope": "출판기관 서지와 초록 일부 확인, 일부 논문은 방법 또는 한계 절 추가 확인"
+    },
+    {
+      "id": "P020",
+      "title": "Exploring Textual Features in Assessing Argumentative Writing - A Focus on Coherence",
+      "year": 2024,
+      "authors": [
+        "김혜영",
+        "이상훈",
+        "신현규",
+        "김미주",
+        "곽수범"
+      ],
+      "url": "https://kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART003123663",
+      "topic": "한국어 문체 및 글쓰기",
+      "scope": "출판기관 서지와 초록 일부 확인, 일부 논문은 방법 또는 한계 절 추가 확인"
+    },
+    {
+      "id": "P021",
+      "title": "Evaluating Text Style Transfer Evaluation: Are There Any Reliable Metrics?",
+      "year": 2025,
+      "authors": [
+        "Sourabrata Mukherjee",
+        "Atul Kr. Ojha",
+        "John P. McCrae",
+        "Ondřej Dušek"
+      ],
+      "url": "https://aclanthology.org/2025.naacl-srw.41/",
+      "topic": "문체 변환 및 평가",
+      "scope": "출판기관 서지와 초록 일부 확인, 일부 논문은 방법 또는 한계 절 추가 확인"
+    },
+    {
+      "id": "P022",
+      "title": "Text Style Transfer Evaluation Using Large Language Models",
+      "year": 2024,
+      "authors": [
+        "Phil Ostheimer",
+        "Mayank Nagda",
+        "Marius Kloft",
+        "Sophie Fellenz"
+      ],
+      "url": "https://aclanthology.org/2024.lrec-main.1373/",
+      "topic": "문체 변환 및 평가",
+      "scope": "출판기관 서지와 초록 일부 확인, 일부 논문은 방법 또는 한계 절 추가 확인"
+    },
+    {
+      "id": "P023",
+      "title": "Human Judgement as a Compass to Navigate Automatic Metrics for Formality Transfer",
+      "year": 2022,
+      "authors": [
+        "Huiyuan Lai",
+        "Jiali Mao",
+        "Antonio Toral",
+        "Malvina Nissim"
+      ],
+      "url": "https://aclanthology.org/2022.humeval-1.9/",
+      "topic": "저자성 및 창작 협업",
+      "scope": "출판기관 서지와 초록 일부 확인, 일부 논문은 방법 또는 한계 절 추가 확인"
+    },
+    {
+      "id": "P024",
+      "title": "Rethinking Sentiment Style Transfer",
+      "year": 2021,
+      "authors": [
+        "Ping Yu",
+        "Yang Zhao",
+        "Chunyuan Li",
+        "Changyou Chen"
+      ],
+      "url": "https://aclanthology.org/2021.findings-emnlp.135/",
+      "topic": "문체 변환 및 평가",
+      "scope": "출판기관 서지와 초록 일부 확인, 일부 논문은 방법 또는 한계 절 추가 확인"
+    },
+    {
+      "id": "P025",
+      "title": "A Study on Manual and Automatic Evaluation for Text Style Transfer: The Case of Detoxification",
+      "year": 2022,
+      "authors": [
+        "Varvara Logacheva",
+        "Daryna Dementieva",
+        "Irina Krotova",
+        "Alena Fenogenova",
+        "Irina Nikishina",
+        "Tatiana Shavrina",
+        "Alexander Panchenko"
+      ],
+      "url": "https://aclanthology.org/2022.humeval-1.8/",
+      "topic": "문체 변환 및 평가",
+      "scope": "출판기관 서지와 초록 일부 확인, 일부 논문은 방법 또는 한계 절 추가 확인"
+    },
+    {
+      "id": "P026",
+      "title": "Enhancing Content Preservation in Text Style Transfer Using Reverse Attention and Conditional Layer Normalization",
+      "year": 2021,
+      "authors": [
+        "Dongkyu Lee",
+        "Zhiliang Tian",
+        "Lanqing Xue",
+        "Nevin L. Zhang"
+      ],
+      "url": "https://aclanthology.org/2021.acl-long.8/",
+      "topic": "문체 변환 및 평가",
+      "scope": "출판기관 서지와 초록 일부 확인, 일부 논문은 방법 또는 한계 절 추가 확인"
+    },
+    {
+      "id": "P027",
+      "title": "PSST: A Benchmark for Evaluation-driven Text Public-Speaking Style Transfer",
+      "year": 2024,
+      "authors": [
+        "Huashan Sun",
+        "Yixiao Wu",
+        "Yizhe Yang",
+        "Yinghao Li",
+        "Jiawei Li",
+        "Yuhao Ye",
+        "Yang Gao"
+      ],
+      "url": "https://aclanthology.org/2024.findings-emnlp.495/",
+      "topic": "문체 변환 및 평가",
+      "scope": "출판기관 서지와 초록 일부 확인, 일부 논문은 방법 또는 한계 절 추가 확인"
+    },
+    {
+      "id": "P028",
+      "title": "ReproHum #0669-08: Reproducing Sentiment Transfer Evaluation",
+      "year": 2025,
+      "authors": [
+        "Kristýna Onderková",
+        "Mateusz Lango",
+        "Patrícia Schmidtová",
+        "Ondrej Dusek"
+      ],
+      "url": "https://aclanthology.org/2025.gem-1.55/",
+      "topic": "문체 변환 및 평가",
+      "scope": "출판기관 서지와 초록 일부 확인, 일부 논문은 방법 또는 한계 절 추가 확인"
+    },
+    {
+      "id": "P029",
+      "title": "Prompt-Based Editing for Text Style Transfer",
+      "year": 2023,
+      "authors": [
+        "Guoqing Luo",
+        "Yu Han",
+        "Lili Mou",
+        "Mauajama Firdaus"
+      ],
+      "url": "https://aclanthology.org/2023.findings-emnlp.381/",
+      "topic": "문체 변환 및 평가",
+      "scope": "출판기관 서지와 초록 일부 확인, 일부 논문은 방법 또는 한계 절 추가 확인"
+    },
+    {
+      "id": "P030",
+      "title": "Are Large Language Models Actually Good at Text Style Transfer?",
+      "year": 2024,
+      "authors": [
+        "Sourabrata Mukherjee",
+        "Atul Kr. Ojha",
+        "Ondrej Dusek"
+      ],
+      "url": "https://aclanthology.org/2024.inlg-main.42/",
+      "topic": "문체 변환 및 평가",
+      "scope": "출판기관 서지와 초록 일부 확인, 일부 논문은 방법 또는 한계 절 추가 확인"
+    },
+    {
+      "id": "P031",
+      "title": "Style Transfer with Multi-iteration Preference Optimization",
+      "year": 2025,
+      "authors": [
+        "Shuai Liu",
+        "Jonathan May"
+      ],
+      "url": "https://aclanthology.org/2025.naacl-long.135/",
+      "topic": "문체 변환 및 평가",
+      "scope": "출판기관 서지와 초록 일부 확인, 일부 논문은 방법 또는 한계 절 추가 확인"
+    },
+    {
+      "id": "P032",
+      "title": "SC2: Towards Enhancing Content Preservation and Style Consistency in Long Text Style Transfer",
+      "year": 2024,
+      "authors": [
+        "Jie Zhao",
+        "Ziyu Guan",
+        "Cai Xu",
+        "Wei Zhao",
+        "Yue Jiang"
+      ],
+      "url": "https://aclanthology.org/2024.acl-long.535/",
+      "topic": "문체 변환 및 평가",
+      "scope": "출판기관 서지와 초록 일부 확인, 일부 논문은 방법 또는 한계 절 추가 확인"
+    },
+    {
+      "id": "P033",
+      "title": "Emulating Author Style: A Feasibility Study of Prompt-enabled Text Stylization with Off-the-Shelf LLMs",
+      "year": 2024,
+      "authors": [
+        "Avanti Bhandarkar",
+        "Ronald Wilson",
+        "Anushka Swarup",
+        "Damon Woodard"
+      ],
+      "url": "https://aclanthology.org/2024.personalize-1.6/",
+      "topic": "저자성 및 창작 협업",
+      "scope": "출판기관 서지와 초록 일부 확인, 일부 논문은 방법 또는 한계 절 추가 확인"
+    },
+    {
+      "id": "P034",
+      "title": "StyleKQC: A Style-Variant Paraphrase Corpus for Korean Questions and Commands",
+      "year": 2022,
+      "authors": [
+        "Won Ik Cho",
+        "Sangwhan Moon",
+        "Jongin Kim",
+        "Seokmin Kim",
+        "Nam Soo Kim"
+      ],
+      "url": "https://aclanthology.org/2022.lrec-1.771/",
+      "topic": "한국어 및 화용",
+      "scope": "출판기관 서지와 초록 일부 확인, 일부 논문은 방법 또는 한계 절 추가 확인"
+    },
+    {
+      "id": "P035",
+      "title": "Making Sense of Korean Sentences: A Comprehensive Evaluation of LLMs through KoSEnd Dataset",
+      "year": 2025,
+      "authors": [
+        "Seunguk Yu",
+        "Kyeonghyun Kim",
+        "JungMin Yun",
+        "YoungBin Kim"
+      ],
+      "url": "https://aclanthology.org/2025.acl-srw.29/",
+      "topic": "한국어 및 화용",
+      "scope": "출판기관 서지와 초록 일부 확인, 일부 논문은 방법 또는 한계 절 추가 확인"
+    },
+    {
+      "id": "P036",
+      "title": "Dear Sir or Madam, May I Introduce the GYAFC Dataset: Corpus, Benchmarks and Metrics for Formality Style Transfer",
+      "year": 2018,
+      "authors": [
+        "Sudha Rao",
+        "Joel Tetreault"
+      ],
+      "url": "https://aclanthology.org/N18-1012/",
+      "topic": "문체 변환 및 평가",
+      "scope": "출판기관 서지와 초록 일부 확인, 일부 논문은 방법 또는 한계 절 추가 확인"
+    },
+    {
+      "id": "P037",
+      "title": "Benchmarking Korean Idiom Understanding: A Comparative Analysis of Local and Global Models",
+      "year": 2025,
+      "authors": [
+        "Xiaonan Wang",
+        "Seoyoon Park",
+        "Hansaem Kim"
+      ],
+      "url": "https://aclanthology.org/2025.ranlp-1.156/",
+      "topic": "한국어 및 화용",
+      "scope": "출판기관 서지와 초록 일부 확인, 일부 논문은 방법 또는 한계 절 추가 확인"
+    },
+    {
+      "id": "P038",
+      "title": "Verifying Claims About Metaphors with Large-Scale Automatic Metaphor Identification",
+      "year": 2024,
+      "authors": [
+        "Kotaro Aono",
+        "Ryohei Sasano",
+        "Koichi Takeda"
+      ],
+      "url": "https://aclanthology.org/2024.naacl-short.62/",
+      "topic": "비유 및 관용",
+      "scope": "출판기관 서지와 초록 일부 확인, 일부 논문은 방법 또는 한계 절 추가 확인"
+    },
+    {
+      "id": "P039",
+      "title": "Kosmic: Korean Text Similarity Metric Reflecting Honorific Distinctions",
+      "year": 2024,
+      "authors": [
+        "Yerin Hwang",
+        "Yongil Kim",
+        "Hyunkyung Bae",
+        "Jeesoo Bang",
+        "Hwanhee Lee",
+        "Kyomin Jung"
+      ],
+      "url": "https://aclanthology.org/2024.lrec-main.870/",
+      "topic": "한국어 및 화용",
+      "scope": "출판기관 서지와 초록 일부 확인, 일부 논문은 방법 또는 한계 절 추가 확인"
+    },
+    {
+      "id": "P040",
+      "title": "Semi-Supervised Formality Style Transfer with Consistency Training",
+      "year": 2022,
+      "authors": [
+        "Ao Liu",
+        "An Wang",
+        "Naoaki Okazaki"
+      ],
+      "url": "https://aclanthology.org/2022.acl-long.321/",
+      "topic": "문체 변환 및 평가",
+      "scope": "출판기관 서지와 초록 일부 확인, 일부 논문은 방법 또는 한계 절 추가 확인"
+    },
+    {
+      "id": "P041",
+      "title": "Contextual Text Style Transfer",
+      "year": 2020,
+      "authors": [
+        "Yu Cheng",
+        "Zhe Gan",
+        "Yizhe Zhang",
+        "Oussama Elachqar",
+        "Dianqi Li",
+        "Jingjing Liu"
+      ],
+      "url": "https://aclanthology.org/2020.findings-emnlp.263/",
+      "topic": "문체 변환 및 평가",
+      "scope": "출판기관 서지와 초록 일부 확인, 일부 논문은 방법 또는 한계 절 추가 확인"
+    },
+    {
+      "id": "P042",
+      "title": "Olá, Bonjour, Salve! XFORMAL: A Benchmark for Multilingual Formality Style Transfer",
+      "year": 2021,
+      "authors": [
+        "Eleftheria Briakou",
+        "Di Lu",
+        "Ke Zhang",
+        "Joel Tetreault"
+      ],
+      "url": "https://aclanthology.org/2021.naacl-main.256/",
+      "topic": "문체 변환 및 평가",
+      "scope": "출판기관 서지와 초록 일부 확인, 일부 논문은 방법 또는 한계 절 추가 확인"
+    },
+    {
+      "id": "P043",
+      "title": "Metaphor Understanding Challenge Dataset for LLMs",
+      "year": 2024,
+      "authors": [
+        "Xiaoyu Tong",
+        "Rochelle Choenni",
+        "Martha Lewis",
+        "Ekaterina Shutova"
+      ],
+      "url": "https://aclanthology.org/2024.acl-long.193/",
+      "topic": "비유 및 관용",
+      "scope": "출판기관 서지와 초록 일부 확인, 일부 논문은 방법 또는 한계 절 추가 확인"
+    },
+    {
+      "id": "P044",
+      "title": "FLUID QA: A Multilingual Benchmark for Figurative Language Usage in Dialogue across English, Chinese, and Korean",
+      "year": 2025,
+      "authors": [
+        "Seoyoon Park",
+        "Hyeji Choi",
+        "Minseon Kim",
+        "Subin An",
+        "Xiaonan Wang",
+        "Gyuri Choi",
+        "Hansaem Kim"
+      ],
+      "url": "https://aclanthology.org/2025.emnlp-main.1540/",
+      "topic": "한국어 및 화용",
+      "scope": "출판기관 서지와 초록 일부 확인, 일부 논문은 방법 또는 한계 절 추가 확인"
+    },
+    {
+      "id": "P045",
+      "title": "KoDialogBench: Evaluating Conversational Understanding of Language Models with Korean Dialogue Benchmark",
+      "year": 2024,
+      "authors": [
+        "Seongbo Jang",
+        "Seonghyeon Lee",
+        "Hwanjo Yu"
+      ],
+      "url": "https://aclanthology.org/2024.lrec-main.865/",
+      "topic": "한국어 및 화용",
+      "scope": "출판기관 서지와 초록 일부 확인, 일부 논문은 방법 또는 한계 절 추가 확인"
+    },
+    {
+      "id": "P046",
+      "title": "Consistency Rating of Semantic Transparency: an Evaluation Method for Metaphor Competence in Idiom Understanding Tasks",
+      "year": 2025,
+      "authors": [
+        "Hui Gao",
+        "Jing Zhang",
+        "Peng Zhang",
+        "Chang Yang"
+      ],
+      "url": "https://aclanthology.org/2025.coling-main.697/",
+      "topic": "비유 및 관용",
+      "scope": "출판기관 서지와 초록 일부 확인, 일부 논문은 방법 또는 한계 절 추가 확인"
+    },
+    {
+      "id": "P047",
+      "title": "Testing English News Articles for Lexical Homogenization Due to Widespread Use of Large Language Models",
+      "year": 2025,
+      "authors": [
+        "Sarah Fitterer",
+        "Dominik Gangl",
+        "Jannes Ulbrich"
+      ],
+      "url": "https://aclanthology.org/2025.acl-srw.95/",
+      "topic": "저자성 및 창작 협업",
+      "scope": "출판기관 서지와 초록 일부 확인, 일부 논문은 방법 또는 한계 절 추가 확인"
+    },
+    {
+      "id": "P048",
+      "title": "Diverse, not Short: A Length-Controlled Data Selection Strategy for Improving Response Diversity of Language Models",
+      "year": 2025,
+      "authors": [
+        "Vijeta Deshpande",
+        "Debasmita Ghose",
+        "John D Patterson",
+        "Roger E. Beaty",
+        "Anna Rumshisky"
+      ],
+      "url": "https://aclanthology.org/2025.emnlp-main.1721/",
+      "topic": "저자성 및 창작 협업",
+      "scope": "출판기관 서지와 초록 일부 확인, 일부 논문은 방법 또는 한계 절 추가 확인"
+    },
+    {
+      "id": "P049",
+      "title": "The Price of Format: Diversity Collapse in LLMs",
+      "year": 2025,
+      "authors": [
+        "Longfei Yun",
+        "Chenyang An",
+        "Zilong Wang",
+        "Letian Peng",
+        "Jingbo Shang"
+      ],
+      "url": "https://aclanthology.org/2025.findings-emnlp.836/",
+      "topic": "저자성 및 창작 협업",
+      "scope": "출판기관 서지와 초록 일부 확인, 일부 논문은 방법 또는 한계 절 추가 확인"
+    },
+    {
+      "id": "P050",
+      "title": "Linguistic and Embedding-Based Profiling of Texts Generated by Humans and Large Language Models",
+      "year": 2025,
+      "authors": [
+        "Sergio E. Zanotto",
+        "Segun Aroyehun"
+      ],
+      "url": "https://aclanthology.org/2025.emnlp-main.1163/",
+      "topic": "저자성 및 창작 협업",
+      "scope": "출판기관 서지와 초록 일부 확인, 일부 논문은 방법 또는 한계 절 추가 확인"
+    },
+    {
+      "id": "P051",
+      "title": "Prototypical Human-AI Collaboration Behaviors from LLM-Assisted Writing in the Wild",
+      "year": 2025,
+      "authors": [
+        "Sheshera Mysore",
+        "Debarati Das",
+        "Hancheng Cao",
+        "Bahareh Sarrafzadeh"
+      ],
+      "url": "https://aclanthology.org/2025.emnlp-main.852/",
+      "topic": "저자성 및 창작 협업",
+      "scope": "출판기관 서지와 초록 일부 확인, 일부 논문은 방법 또는 한계 절 추가 확인"
+    },
+    {
+      "id": "P052",
+      "title": "Investigating Agency of LLMs in Human-AI Collaboration Tasks",
+      "year": 2024,
+      "authors": [
+        "Ashish Sharma",
+        "Sudha Rao",
+        "Chris Brockett",
+        "Akanksha Malhotra",
+        "Nebojsa Jojic",
+        "Bill Dolan"
+      ],
+      "url": "https://aclanthology.org/2024.eacl-long.119/",
+      "topic": "저자성 및 창작 협업",
+      "scope": "출판기관 서지와 초록 일부 확인, 일부 논문은 방법 또는 한계 절 추가 확인"
+    },
+    {
+      "id": "P053",
+      "title": "A Confederacy of Models: a Comprehensive Evaluation of LLMs on Creative Writing",
+      "year": 2023,
+      "authors": [
+        "Carlos Gómez-Rodríguez",
+        "Paul Williams"
+      ],
+      "url": "https://aclanthology.org/2023.findings-emnlp.966/",
+      "topic": "저자성 및 창작 협업",
+      "scope": "출판기관 서지와 초록 일부 확인, 일부 논문은 방법 또는 한계 절 추가 확인"
+    },
+    {
+      "id": "P054",
+      "title": "Fiction-Writing Mode: An Effective Control for Human-Machine Collaborative Writing",
+      "year": 2023,
+      "authors": [
+        "Wenjie Zhong",
+        "Jason Naradowsky",
+        "Hiroya Takamura",
+        "Ichiro Kobayashi",
+        "Yusuke Miyao"
+      ],
+      "url": "https://aclanthology.org/2023.eacl-main.128/",
+      "topic": "저자성 및 창작 협업",
+      "scope": "출판기관 서지와 초록 일부 확인, 일부 논문은 방법 또는 한계 절 추가 확인"
+    },
+    {
+      "id": "P055",
+      "title": "How Does the Disclosure of AI Assistance Affect the Perceptions of Writing?",
+      "year": 2024,
+      "authors": [
+        "Zhuoyan Li",
+        "Chen Liang",
+        "Jing Peng",
+        "Ming Yin"
+      ],
+      "url": "https://aclanthology.org/2024.emnlp-main.279/?trk=article-ssr-frontend-pulse_little-text-block",
+      "topic": "문체 변환 및 평가",
+      "scope": "출판기관 서지와 초록 일부 확인, 일부 논문은 방법 또는 한계 절 추가 확인"
+    },
+    {
+      "id": "P056",
+      "title": "IGA: An Intent-Guided Authoring Assistant",
+      "year": 2021,
+      "authors": [
+        "Simeng Sun",
+        "Wenlong Zhao",
+        "Varun Manjunatha",
+        "Rajiv Jain",
+        "Vlad Morariu",
+        "Franck Dernoncourt",
+        "Balaji Vasan Srinivasan",
+        "Mohit Iyyer"
+      ],
+      "url": "https://aclanthology.org/2021.emnlp-main.483/",
+      "topic": "저자성 및 창작 협업",
+      "scope": "출판기관 서지와 초록 일부 확인, 일부 논문은 방법 또는 한계 절 추가 확인"
+    },
+    {
+      "id": "P057",
+      "title": "From Model-centered to Human-Centered: Revision Distance as a Metric for Text Evaluation in LLMs-based Applications",
+      "year": 2024,
+      "authors": [
+        "Yongqiang Ma",
+        "Lizhi Qing",
+        "Jiawei Liu",
+        "Yangyang Kang",
+        "Yue Zhang",
+        "Wei Lu",
+        "Xiaozhong Liu",
+        "Qikai Cheng"
+      ],
+      "url": "https://aclanthology.org/2024.findings-acl.126/",
+      "topic": "저자성 및 창작 협업",
+      "scope": "출판기관 서지와 초록 일부 확인, 일부 논문은 방법 또는 한계 절 추가 확인"
+    },
+    {
+      "id": "P058",
+      "title": "A Review of Human Evaluation for Style Transfer",
+      "year": 2021,
+      "authors": [
+        "Eleftheria Briakou",
+        "Sweta Agrawal",
+        "Ke Zhang",
+        "Joel Tetreault",
+        "Marine Carpuat"
+      ],
+      "url": "https://aclanthology.org/2021.gem-1.6/",
+      "topic": "저자성 및 창작 협업",
+      "scope": "출판기관 서지와 초록 일부 확인, 일부 논문은 방법 또는 한계 절 추가 확인"
+    },
+    {
+      "id": "P059",
+      "title": "Evaluating Style Transfer for Text",
+      "year": 2019,
+      "authors": [
+        "Remi Mir",
+        "Bjarke Felbo",
+        "Nick Obradovich",
+        "Iyad Rahwan"
+      ],
+      "url": "https://aclanthology.org/N19-1049/",
+      "topic": "문체 변환 및 평가",
+      "scope": "출판기관 서지와 초록 일부 확인, 일부 논문은 방법 또는 한계 절 추가 확인"
+    },
+    {
+      "id": "P060",
+      "title": "Mind the Style Gap: Meta-Evaluation of Style and Attribute Transfer Metrics",
+      "year": 2025,
+      "authors": [
+        "Amalie Brogaard Pauli",
+        "Isabelle Augenstein",
+        "Ira Assent"
+      ],
+      "url": "https://aclanthology.org/2025.findings-emnlp.1175/",
+      "topic": "문체 변환 및 평가",
+      "scope": "출판기관 서지와 초록 일부 확인, 일부 논문은 방법 또는 한계 절 추가 확인"
+    },
+    {
+      "id": "P061",
+      "title": "Evaluating the Evaluation Metrics for Style Transfer: A Case Study in Multilingual Formality Transfer",
+      "year": 2021,
+      "authors": [
+        "Eleftheria Briakou",
+        "Sweta Agrawal",
+        "Joel Tetreault",
+        "Marine Carpuat"
+      ],
+      "url": "https://aclanthology.org/2021.emnlp-main.100/",
+      "topic": "문체 변환 및 평가",
+      "scope": "출판기관 서지와 초록 일부 확인, 일부 논문은 방법 또는 한계 절 추가 확인"
+    },
+    {
+      "id": "P062",
+      "title": "Consistency Is the Key: Detecting Hallucinations in LLM Generated Text By Checking Inconsistencies About Key Facts",
+      "year": 2025,
+      "authors": [
+        "Raavi Gupta",
+        "Pranav Hari Panicker",
+        "Sumit Bhatia",
+        "Ganesh Ramakrishnan"
+      ],
+      "url": "https://aclanthology.org/2025.findings-ijcnlp.129/",
+      "topic": "의미 및 사실 보존",
+      "scope": "출판기관 서지와 초록 일부 확인, 일부 논문은 방법 또는 한계 절 추가 확인"
+    },
+    {
+      "id": "P063",
+      "title": "Style Transfer for Texts: Retrain, Report Errors, Compare with Rewrites",
+      "year": 2019,
+      "authors": [
+        "Alexey Tikhonov",
+        "Viacheslav Shibaev",
+        "Aleksander Nagaev",
+        "Aigul Nugmanova",
+        "Ivan P. Yamshchikov"
+      ],
+      "url": "https://aclanthology.org/D19-1406/",
+      "topic": "문체 변환 및 평가",
+      "scope": "출판기관 서지와 초록 일부 확인, 일부 논문은 방법 또는 한계 절 추가 확인"
+    },
+    {
+      "id": "P064",
+      "title": "Chain-of-Verification Reduces Hallucination in Large Language Models",
+      "year": 2024,
+      "authors": [
+        "Shehzaad Dhuliawala",
+        "Mojtaba Komeili",
+        "Jing Xu",
+        "Roberta Raileanu",
+        "Xian Li",
+        "Asli Celikyilmaz",
+        "Jason Weston"
+      ],
+      "url": "https://aclanthology.org/2024.findings-acl.212/",
+      "topic": "의미 및 사실 보존",
+      "scope": "출판기관 서지와 초록 일부 확인, 일부 논문은 방법 또는 한계 절 추가 확인"
+    },
+    {
+      "id": "P065",
+      "title": "Hallucinated but Factual! Inspecting the Factuality of Hallucinations in Abstractive Summarization",
+      "year": 2022,
+      "authors": [
+        "Meng Cao",
+        "Yue Dong",
+        "Jackie Cheung"
+      ],
+      "url": "https://aclanthology.org/2022.acl-long.236/",
+      "topic": "의미 및 사실 보존",
+      "scope": "출판기관 서지와 초록 일부 확인, 일부 논문은 방법 또는 한계 절 추가 확인"
+    },
+    {
+      "id": "P066",
+      "title": "Evaluating Factuality in Generation with Dependency-level Entailment",
+      "year": 2020,
+      "authors": [
+        "Tanya Goyal",
+        "Greg Durrett"
+      ],
+      "url": "https://aclanthology.org/2020.findings-emnlp.322/",
+      "topic": "의미 및 사실 보존",
+      "scope": "출판기관 서지와 초록 일부 확인, 일부 논문은 방법 또는 한계 절 추가 확인"
+    },
+    {
+      "id": "P067",
+      "title": "Evaluating Paraphrastic Robustness in Textual Entailment Models",
+      "year": 2023,
+      "authors": [
+        "Dhruv Verma",
+        "Yash Kumar Lal",
+        "Shreyashee Sinha",
+        "Benjamin Van Durme",
+        "Adam Poliak"
+      ],
+      "url": "https://aclanthology.org/2023.acl-short.76/",
+      "topic": "의미 및 사실 보존",
+      "scope": "출판기관 서지와 초록 일부 확인, 일부 논문은 방법 또는 한계 절 추가 확인"
+    },
+    {
+      "id": "P068",
+      "title": "Catch Me If You Can? Not Yet: LLMs Still Struggle to Imitate the Implicit Writing Styles of Everyday Authors",
+      "year": 2025,
+      "authors": [
+        "Zhengxiang Wang",
+        "Nafis Irtiza Tripto",
+        "Solha Park",
+        "Zhenzhen Li",
+        "Jiawei Zhou"
+      ],
+      "url": "https://aclanthology.org/2025.findings-emnlp.532/",
+      "topic": "저자성 및 창작 협업",
+      "scope": "출판기관 서지와 초록 일부 확인, 일부 논문은 방법 또는 한계 절 추가 확인"
+    },
+    {
+      "id": "P069",
+      "title": "A Ship of Theseus: Curious Cases of Paraphrasing in LLM-Generated Texts",
+      "year": 2024,
+      "authors": [
+        "Nafis Irtiza Tripto",
+        "Saranya Venkatraman",
+        "Dominik Macko",
+        "Robert Moro",
+        "Ivan Srba",
+        "Adaku Uchendu",
+        "Thai Le",
+        "Dongwon Lee"
+      ],
+      "url": "https://aclanthology.org/2024.acl-long.357/",
+      "topic": "의미 및 사실 보존",
+      "scope": "출판기관 서지와 초록 일부 확인, 일부 논문은 방법 또는 한계 절 추가 확인"
+    },
+    {
+      "id": "P070",
+      "title": "2000년대 신춘문예 시의 담화 전략",
+      "year": 2023,
+      "authors": [
+        "서덕민"
+      ],
+      "url": "https://www.kci.go.kr/kciportal/landing/article.kci?arti_id=ART003042510",
+      "topic": "기존 한국어 문체 연구",
+      "scope": "기존 조사에서 본문과 표 확인"
+    },
+    {
+      "id": "P071",
+      "title": "현대시 음운의 의미론적 기능 연구",
+      "year": 2009,
+      "authors": [
+        "권혁웅"
+      ],
+      "url": "https://www.kci.go.kr/kciportal/landing/article.kci?arti_id=ART001387547",
+      "topic": "기존 한국어 문체 연구",
+      "scope": "기존 조사에서 본문 일부 확인"
+    },
+    {
+      "id": "P072",
+      "title": "한국 현대소설의 기계적 문체 분석 가능성을 위한 계량적 방법론",
+      "year": 2015,
+      "authors": [
+        "문한별"
+      ],
+      "url": "https://www.kci.go.kr/kciportal/landing/article.kci?arti_id=ART001981370",
+      "topic": "기존 한국어 문체 연구",
+      "scope": "기존 조사에서 초록 확인"
+    },
+    {
+      "id": "P073",
+      "title": "헤지 문법 항목으로서의 -고요, -거든요, -는데요 연구",
+      "year": 2017,
+      "authors": [
+        "김강희"
+      ],
+      "url": "https://www.kci.go.kr/kciportal/landing/article.kci?arti_id=ART002247186",
+      "topic": "기존 한국어 문체 연구",
+      "scope": "기존 조사에서 초록 확인"
+    },
+    {
+      "id": "P074",
+      "title": "시 교육과 문화콘텐츠",
+      "year": 2016,
+      "authors": [
+        "김한성"
+      ],
+      "url": "https://m.earticle.net/Article/A276983",
+      "topic": "기존 한국어 문체 연구",
+      "scope": "기존 조사에서 초록 및 서지 확인"
+    }
+  ]
+}
