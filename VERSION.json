@@ -20,5 +20,5 @@
     "scripts/check_output.py": "720a0fb8c2d0df008e13b67e432ee675fe8a37edd9f37ec69fde4a914f8d29d7",
     "scripts/count_text.py": "4b954968cd48ff9ada919fb687cfe2ec9d0d650bd83a128debc009059d826b10"
   },
-  "version": "0.6.0"
+  "version": "0.6.1"
 }

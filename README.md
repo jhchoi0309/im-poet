@@ -103,7 +103,18 @@ python3 scripts/install.py --target codex --update
 
 `codex` 대신 `claude`, `gemini`, `antigravity` 또는 `antigravity-cli`를 선택할 수 있습니다. 두 스킬을 함께 배포하는 패키지의 설치와 업로드 방법은 [공통 패키지 안내](docs/package-usage.md)에 있습니다.
 
-설치기는 LF와 CRLF, UTF-8 BOM, 한글과 공백이 포함된 경로를 처리합니다. 설치 대상의 심볼릭 링크와 Windows junction은 교체하지 않습니다. 과거 Linux 검사와 이번 macOS 검사를 구별해 기록했으며 Windows 검사는 CI에서 실행하도록 구성했습니다. 실제 확인 범위는 [평가 기록](docs/evaluation.md)에 남겼습니다.
+설치기는 LF와 CRLF, UTF-8 BOM, 한글과 공백이 포함된 경로를 처리합니다. 설치 대상의 심볼릭 링크와 Windows junction은 교체하지 않습니다. 각 운영체제의 설치기 검사와 실제 CLI 검사, 모델 출력 평가를 구별해 [평가 기록](docs/evaluation.md)에 남겼습니다.
+
+### 설치 상태 확인
+
+저장소 폴더에서 아래 명령을 실행하면 사용자 경로의 세 설치본을 현재 저장소와 비교합니다. 파일을 바꾸지 않습니다. Windows에서는 `python3` 대신 `py -3`을 사용하세요.
+
+```bash
+python3 scripts/diagnose_installations.py
+python3 scripts/diagnose_installations.py --project /path/to/project
+```
+
+`unversioned`는 버전 정보가 없어 버전을 알 수 없다는 뜻입니다. `different`는 저장소와 버전 또는 파일이 다르다는 뜻입니다. Gemini는 같은 범위에 이름이 같은 스킬이 있으면 `.agents/skills`의 공용 경로를 우선할 수 있습니다. 실행 중인 도구가 실제로 어떤 스킬을 발견하고 활성화하는지도 [호환성 안내](docs/compatibility.md)에 따라 확인하세요.
 
 ## 직접 설치하기
 
@@ -151,7 +162,7 @@ ChatGPT 개인 스킬과 컴퓨터의 도구별 설치본은 각각 갱신합니
 
 ## 구성과 검증
 
-현재 개정본은 **0.6.0**입니다. `VERSION.json`의 개정 번호와 설치되는 지침 파일별 SHA-256 지문으로 설치본을 대조할 수 있습니다. 독립 프롬프트의 생성 일치는 빌드 검사로 확인합니다. 같은 이름의 스킬이 여러 곳에 있다면 실제 설치 경로와 버전을 확인해 주세요.
+현재 개정본은 **0.6.1**입니다. `VERSION.json`의 개정 번호와 설치되는 지침 파일별 SHA-256 지문으로 설치본을 대조할 수 있습니다. 독립 프롬프트의 생성 일치는 빌드 검사로 확인합니다. 같은 이름의 스킬이 여러 곳에 있다면 실제 설치 경로와 버전을 확인해 주세요.
 
 이번 개정은 다른 윤문 지침과 함께 쓸 때의 순서, 저자 목소리와 의미의 보존, 문학적 변화의 별도 평가를 보강했습니다. 원문 그대로의 인용이 금지 문자와 충돌하면 인용을 변조하지 않고 해당 출력을 보류합니다. [변경 이력](CHANGELOG.md)과 [평가 기록](docs/evaluation.md)에서 적용 범위를 확인할 수 있습니다.
 
