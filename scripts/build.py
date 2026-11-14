@@ -11,8 +11,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 START = "<!-- portable:omit:start -->"
 END = "<!-- portable:omit:end -->"
-SKILL_VERSION = "0.5.0"
-REVISED_ON = "2026-10-29"
+SKILL_VERSION = "0.6.0"
+REVISED_ON = "2026-11-14"
 
 
 def render(skill: str) -> str:
@@ -51,9 +51,6 @@ def manifest_text(root: Path) -> str:
             raise ValueError("Version manifest cannot follow symbolic links")
         if path.is_file():
             hashes[path.relative_to(root).as_posix()] = hashlib.sha256(path.read_bytes()).hexdigest()
-    prompt = render((root / "SKILL.md").read_text(encoding="utf-8")).encode("utf-8")
-    hashes["prompts/im-poet.md"] = hashlib.sha256(prompt).hexdigest()
-    hashes["prompts/gemini-app.txt"] = hashes["prompts/im-poet.md"]
     return json.dumps(
         {"schema_version": 1, "name": "im-poet", "version": SKILL_VERSION,
          "revised_on": REVISED_ON, "sha256": hashes},
