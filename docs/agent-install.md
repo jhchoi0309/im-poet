@@ -10,11 +10,13 @@ Gemini **앱**에서 받은 요청이라면 [Gemini 앱 안내](gemini-app.md)�
 
 “설치해줘”라는 요청은 현재 실행 중인 도구에 이 스킬 하나를 설치하는 것으로 해석한다. 기본은 사용자 범위이며, 프로젝트만 지정했다면 그 프로젝트에 설치한다. 도구와 범위가 맥락에서 분명할 때에는 계획을 제시하는 데서 멈추지 말고 실제 복사와 검증까지 마친다.
 
+먼저 현재 세션이 사용자의 로컬 CLI인지, 계정의 관리형 스킬을 사용하는 클라우드 작업 공간인지 구별한다. 로컬 경로가 보인다는 사실만으로 그것이 사용자 컴퓨터의 영구 경로라고 가정하지 않는다. 관리형 계정에서는 호스트가 제공하는 개인 스킬 설치 절차를 사용하고, 로컬 CLI 파일 복사를 계정 설치로 보고하지 않는다. 설치 대상과 권한이 명확하면 사용자에게 경로나 명령을 다시 물어볼 필요는 없다.
+
 | 현재 도구 | 설치기 target | 사용자 경로 | 프로젝트 경로 |
 | --- | --- | --- | --- |
 | Codex CLI, 로컬 Codex | `codex` | `~/.agents/skills/<name>/` | `<project>/.agents/skills/<name>/` |
 | Claude Code | `claude` | `~/.claude/skills/<name>/` | `<project>/.claude/skills/<name>/` |
-| Gemini CLI | `gemini` | `~/.gemini/skills/<name>/` | `<project>/.gemini/skills/<name>/` |
+| Gemini CLI | `gemini` | 기존 `~/.agents/skills/<name>/`, 없으면 `~/.gemini/skills/<name>/` | 기존 `<project>/.agents/skills/<name>/`, 없으면 `<project>/.gemini/skills/<name>/` |
 | Antigravity App, IDE | `antigravity` | `~/.gemini/config/skills/<name>/` | `<project>/.agents/skills/<name>/` |
 | Antigravity CLI | `antigravity-cli` | `~/.gemini/antigravity-cli/skills/<name>/` | `<project>/.agents/skills/<name>/` |
 
@@ -32,21 +34,29 @@ Antigravity라고만 표현되었고 CLI라는 표시가 없으면 App, IDE targ
 
 Gemini CLI에는 `gemini skills install <repository-url>`이라는 공식 설치 명령도 있다. 새 설치에 사용할 수 있으며, 기존 설치를 교체할 때는 사용자 추가 파일을 먼저 보존하고 도구의 확인 절차를 따른다. 이 저장소는 루트 `SKILL.md`를 사용하며 앱용 가져오기 폴더는 배포 아카이브에 별도로 만든다.
 
-Python 3.10 이상을 실행할 수 있으면 테스트된 설치기를 우선 사용한다. macOS, Linux에서는 `python3`, Windows에서는 `py -3` 또는 해당 버전의 `python`을 사용한다. 셸별 경로 인용을 지켜라.
+Python 3.10 이상을 실행할 수 있으면 에이전트용 설치기를 우선 사용한다. macOS, Linux에서는 `python3`, Windows에서는 `py -3` 또는 해당 버전의 `python`을 사용한다. 셸별 경로 인용을 지켜라. 현재 도구를 대화와 호스트에서 알고 있다면 해당 `--host`를 명시한다. 설치 대상이 명확한데 다른 도구의 설치 여부를 근거로 선택을 미루지 않는다.
 
 ```bash
-# 예: Codex. source-root는 방금 확보한 저장소의 실제 경로로 바꾼다.
-python3 source-root/scripts/install.py --target codex --update
+# Codex, Claude Code, Gemini CLI 중 현재 도구 하나를 선택한다.
+python3 source-root/scripts/install_for_agent.py --host codex
+python3 source-root/scripts/install_for_agent.py --host claude
+python3 source-root/scripts/install_for_agent.py --host gemini
 ```
 
 ```powershell
 # 예: Claude Code. Windows PowerShell에서 실행.
-py -3 "source-root\scripts\install.py" --target claude --update
+py -3 "source-root\scripts\install_for_agent.py" --host claude
 ```
 
-프로젝트 설치 요청이면 `--project "실제 프로젝트 경로"`를 추가한다. `--update`는 같은 이름의 이전 설치본 전체를 백업한 뒤 교체한다. 다른 스킬이나 링크, junction인 대상은 덮어쓰지 않는다. 이미 동일한 내용이면 설치기는 현재 상태라고 보고한다.
+세 명령은 선택지이며 모두 실행하라는 뜻이 아니다. 자동 감지를 쓰려면 `--host`를 생략한다. 알려진 환경 신호가 하나일 때만 선택하며, 신호가 없거나 여러 개면 중단한다. 이때 에이전트는 자신의 호스트를 맥락에서 확인해 `--host`를 지정한다. 신호만으로 로컬 컴퓨터와 클라우드 계정의 범위를 단정하지 않는다.
 
-사용자가 기존 im-poet 설치본을 백업 없이 교체하도록 명시했다면 `--update --no-backup`을 사용할 수 있다. 해당 스킬 폴더 안에 추가된 파일도 교체되므로 그 범위를 구별하고, 다른 스킬 폴더는 건드리지 않는다. 교체에 실패하면 복원을 시도한다. 복원 위치가 새 파일로 차 있으면 덮어쓰지 않고 이전 폴더의 위치를 알린다.
+프로젝트 설치 요청이면 `--project "실제 프로젝트 경로"`를 추가한다. 사용자 범위 설치 시 Gemini의 현재 작업 공간에 같은 이름이 있는지도 확인하려면 clone하기 전의 실제 작업 공간을 `--workspace "실제 작업 공간"`으로 전달한다. 새 설치기는 같은 이름의 이전 설치본 전체를 백업한 뒤 교체하고 원본 지문과 복사된 파일을 대조한다. 다른 스킬이나 링크, junction인 대상은 덮어쓰지 않는다. 이미 동일한 내용이면 설치기는 현재 상태라고 보고한다.
+
+Gemini의 같은 범위에서 `.agents/skills`는 `.gemini/skills`보다 우선한다. 공용 경로에 기존 im-poet이 있다면 새 설치기는 그 경로를 갱신한다. 사용자 스킬보다 우선하는 작업 공간 스킬이나 비활성화 설정, 신뢰 설정은 별도로 확인한다. `gemini skills list --all`에서 실제 경로와 활성 상태를 보고, 필요하면 세션에서 `/skills reload`를 안내한다. 이전에 설치된 공용 경로가 링크이거나 다른 스킬이라 교체할 수 없다면 설치를 중단하고 원인을 보고한다.
+
+호스트가 별도의 정확한 스킬 경로를 제공하면 `--destination "정확한 스킬 폴더"`를 사용한다. Claude의 사용자 지정 설정이 발견되면 현재 Claude Code가 실제로 읽는 경로도 확인한다. 그 경로를 확인할 수 없다면 파일 복사 성공과 활성 경로 확인을 구분한다. 설치기의 `--host`는 해당 CLI의 실행이나 로그인 자체를 설치하지 않는다.
+
+사용자가 기존 im-poet 설치본을 백업 없이 교체하도록 명시했다면 기존 `scripts/install.py --target <도구> --update --no-backup`을 사용할 수 있다. 해당 스킬 폴더 안에 추가된 파일도 교체되므로 그 범위를 구별하고, 다른 스킬 폴더는 건드리지 않는다. 교체에 실패하면 복원을 시도한다. 복원 위치가 새 파일로 차 있으면 덮어쓰지 않고 이전 폴더의 위치를 알린다.
 
 ### Python을 사용할 수 없는 경우
 
@@ -75,7 +85,7 @@ scripts/check_output.py
 
 마지막 보고에는 실제로 확인한 위치를 적는다. 클라우드 임시 폴더에 복사했더라도 사용자의 컴퓨터에 접근하지 못했다면 그 컴퓨터에 설치했다고 말하지 않는다. ChatGPT의 관리형 개인 스킬은 호스트가 제공하는 관리 절차로 설치하고 로컬 CLI 설치와 구별한다. 필요한 네트워크나 쓰기 권한이 없어 멈췄다면 그 지점을 설명한다.
 
-0.6.0의 버전 지문은 설치기에 포함된 파일을 기준으로 한다. 저장소의 독립 프롬프트 두 개는 로컬 스킬 폴더에 설치하지 않으며, 저장소에서 `python3 scripts/build.py --check`로 생성 일치를 확인한다. 저장소의 개정과 각 도구 또는 앱의 설치 결과는 별개로 보고한다.
+버전 지문은 설치기에 포함된 파일을 기준으로 한다. 저장소의 독립 프롬프트 두 개는 로컬 스킬 폴더에 설치하지 않으며, 저장소에서 `python3 scripts/build.py --check`로 생성 일치를 확인한다. 저장소의 개정과 각 도구 또는 앱의 설치 결과는 별개로 보고한다.
 
 ## 출처와 확인 범위
 
