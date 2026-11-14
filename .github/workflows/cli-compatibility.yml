@@ -43,4 +43,4 @@ jobs:
           python scripts/install.py --target gemini
           gemini skills list --all > "$RUNNER_TEMP/gemini-skills.txt"
           cat "$RUNNER_TEMP/gemini-skills.txt"
-          python -c "import os,pathlib,sys; text=(pathlib.Path(os.environ['RUNNER_TEMP'])/'gemini-skills.txt').read_text(encoding='utf-8'); sys.exit(0 if 'im-poet' in text else 1)"
+          python -c "import os,pathlib,re; text=(pathlib.Path(os.environ['RUNNER_TEMP'])/'gemini-skills.txt').read_text(encoding='utf-8'); expected=str(pathlib.Path.home()/'.gemini'/'skills'/'im-poet'/'SKILL.md'); assert re.search(r'(?m)^im-poet\s+\[Enabled\]', text) and expected in text, 'Expected enabled user skill was not discovered'"
