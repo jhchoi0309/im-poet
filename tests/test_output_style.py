@@ -1,4 +1,6 @@
 from pathlib import Path
+import hashlib
+import json
 import subprocess
 import sys
 import tempfile
@@ -64,6 +66,10 @@ class OutputStyleTests(unittest.TestCase):
             install(ROOT, target)
             recorded = (target / "VERSION.json").read_text(encoding="utf-8")
             self.assertEqual(recorded, manifest_text(target))
+            for relative, expected in json.loads(recorded)["sha256"].items():
+                path = target / relative
+                self.assertTrue(path.is_file(), relative)
+                self.assertEqual(hashlib.sha256(path.read_bytes()).hexdigest(), expected, relative)
             reference = target / "references/word-choice.md"
             reference.write_text(reference.read_text(encoding="utf-8") + "\nChanged reference.\n",
                                  encoding="utf-8")
