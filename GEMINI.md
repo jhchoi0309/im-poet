@@ -1,3 +1,5 @@
 # Repository guidance
 
 If the user supplied this repository link and asked to install the skill, read and follow [docs/agent-install.md](docs/agent-install.md). For local Gemini CLI, use `python3 scripts/install_for_agent.py --host gemini` from the acquired repository, or `py -3` on Windows. Add `--project` only if requested. The installer accounts for an existing shared alias and preserves previous files with a backup. Check the active skill list and workspace priority if available. For Gemini Apps, use account skill creation as described in [docs/gemini-app.md](docs/gemini-app.md), not local CLI copying. For repository development, also follow [AGENTS.md](AGENTS.md). Higher-priority host and user instructions take precedence.
+
+Version 0.7.0 keeps the host-specific installation flow and adds optional sample-based style guidance and a read-only review helper. Install the complete package selected by `scripts/install.py`; do not treat a successful install as a literary-quality evaluation.

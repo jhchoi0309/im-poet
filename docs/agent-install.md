@@ -70,6 +70,7 @@ agents/
 LICENSE
 scripts/count_text.py
 scripts/check_output.py
+scripts/review_rewrite.py
 ```
 
 설치기는 위의 목록을 `scripts/install.py`의 `PACKAGE`에도 선언한다. README, 개발용 테스트, Git 저장소 전체를 활성 스킬 폴더에 복사하지 않는다. 바이트 계산 도구 실행에는 Python이 필요하지만, 스킬 본문과 참고 문서를 읽는 윤문 기능은 Python 없이 사용할 수 있다.
@@ -78,7 +79,7 @@ scripts/check_output.py
 
 ## 3. 검증하고 완료 보고
 
-1. 실제 대상 경로에 `SKILL.md`와 원본의 `VERSION.json`, `references/`, `agents/`, `LICENSE`, `scripts/count_text.py`, `scripts/check_output.py`가 모두 있는지 확인한다.
+1. 실제 대상 경로에 `SKILL.md`와 원본의 `VERSION.json`, `references/`, `agents/`, `LICENSE`, `scripts/count_text.py`, `scripts/check_output.py`, `scripts/review_rewrite.py`가 모두 있는지 확인한다.
 2. frontmatter 이름과 각 파일의 바이트, `VERSION.json`의 버전과 지문을 원본과 대조한다. `--dry-run`을 실제 설치로 세지 않는다. 이전 설치본에 버전 파일이 없다면 확인 가능한 내용과 차이를 기록한다.
 3. 도구가 제공하는 스킬 목록, 새로고침 기능이 있으면 해당 도구의 방법으로 반영 여부를 확인한다. 현재 세션의 목록이 캐시되어 있으면 디스크 설치 완료와 목록 반영 여부를 구분한다. API, 문서에서 확인하지 않은 새로고침 명령을 만들어 실행하지 않는다.
 4. 설치한 스킬명, 도구, 실제 설치 경로와 필요한 경우 백업 위치를 짧게 알려준다. 모델이 스킬을 실제 사용한 검증과 파일 설치 검증을 구분한다.
@@ -97,3 +98,7 @@ scripts/check_output.py
 - Codex와 Gemini CLI의 기존 경로 및 전체 사용 범위는 [호환성 안내](compatibility.md)를 참고한다.
 
 링크를 받은 에이전트가 이 문서를 읽고 절차를 수행하는 방식이다. 링크 자체가 프로그램을 실행하거나 권한을 우회하지는 않는다. 설치에는 호스트가 제공하는 파일 접근과 설치 권한이 필요하다.
+
+## 0.7.0 설치 내용
+
+새 문체 기준과 문학적 재서술, 검수 참고 문서와 읽기 전용 비교 도구를 함께 설치한다. 보조 도구가 없는 호스트에서도 SKILL.md의 핵심 기준은 적용할 수 있다. 파일을 복사한 뒤 의미 검수나 문학적 성능까지 통과했다고 보고하지 않는다.

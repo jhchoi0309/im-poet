@@ -133,3 +133,7 @@ python3 im-writing-skills/uninstall-im-poetry.py
 - [GitHub CLI 설치](https://cli.github.com/)
 - [GitHub CLI 저장소 생성](https://cli.github.com/manual/gh_repo_create)
 - [GitHub Actions 매트릭스](https://docs.github.com/en/actions/how-tos/write-workflows/choose-what-workflows-do/run-job-variations)
+
+## im-poet 0.7.0 단독 배포
+
+이 문서의 두 스킬 공통 업로드와 단독 배포를 구별한다. 0.7.0 단독 패키지는 im-poet 소스와 전체 Git 번들, 앱용 폴더와 안내를 담고 im-novelist를 갱신하지 않는다. 새 패키지의 VERSION.json과 실제 설치본을 확인한다. `scripts/review_rewrite.py`도 설치 파일과 앱용 폴더에 포함하며 외부 통신은 하지 않는다. 이전 압축 파일은 이번 지침과 도구를 자동으로 포함하지 않는다.

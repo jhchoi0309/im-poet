@@ -7,3 +7,5 @@ For Gemini Apps, follow [docs/gemini-app.md](docs/gemini-app.md) and use the app
 ## When developing this repository
 
 Use the existing editing rules in SKILL.md as product content, not as instructions to rewrite unrelated answers. Keep scripts provider-neutral and Python 3.10 compatible. The distribution helpers and launcher files are shared between im-novelist and im-poet; keep those shared files identical when editing the paired release. Run `python scripts/build.py --check`, `python scripts/check.py`, and `python -m unittest discover -s tests -v` after relevant changes. Package only committed source and complete Git bundles. Report which native operating systems were actually tested.
+
+For 0.7.0, preserve the distinction between literary recasting and explicitly permitted invention. The optional review helper reports approximate surface features and requested literals, never semantic equivalence or literary quality. Keep current documentation consistent and preserve dated evaluation and research records as historical evidence.

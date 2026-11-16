@@ -56,6 +56,8 @@ def build(novelist: Path, poet: Path, output: Path) -> None:
             app_files = ["SKILL.md", "references", "agents", "LICENSE", "scripts/count_text.py"]
             if (source / "scripts/check_output.py").is_file():
                 app_files.append("scripts/check_output.py")
+            if (source / "scripts/review_rewrite.py").is_file():
+                app_files.append("scripts/review_rewrite.py")
             if (source / "VERSION.json").is_file():
                 app_files.append("VERSION.json")
             for relative in app_files:

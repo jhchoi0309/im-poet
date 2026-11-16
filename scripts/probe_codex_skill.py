@@ -60,7 +60,7 @@ def main() -> int:
 
     try:
         send({"id": 1, "method": "initialize", "params": {
-            "clientInfo": {"name": "impoet-compat-check", "version": "0.6.2"}}})
+            "clientInfo": {"name": "impoet-compat-check", "version": "0.7.0"}}})
         response(1)
         send({"method": "initialized", "params": {}})
         send({"id": 2, "method": "skills/list", "params": {"cwds": [str(project)], "forceReload": True}})

@@ -43,6 +43,8 @@ def check(root: Path) -> list[str]:
         "references/word-choice.md", "references/editorial-judgment.md", "scripts/check_output.py",
         "docs/compatibility.md", "docs/research.md", "docs/evaluation.md",
         "prompts/im-poet.md", "evals/cases.json",
+        "references/style-profile.md", "references/literary-design.md",
+        "references/quality-review.md", "scripts/review_rewrite.py",
     )
     for name in required:
         if not (root / name).is_file():

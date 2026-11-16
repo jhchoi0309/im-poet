@@ -1,0 +1,41 @@
+{
+  "checked_on": "2026-11-16",
+  "scope": "Read public README and core skill definitions; not executed, not a comparative quality benchmark",
+  "projects": [
+    {
+      "name": "gn-voice",
+      "url": "https://github.com/gongnyang/gn-voice/blob/main/SKILL.md",
+      "blob_sha": "7814b911187383e472918a5e17f350c8c4922626"
+    },
+    {
+      "name": "personal-humanizer-maker",
+      "url": "https://github.com/TaewoooPark/personal-humanizer-maker/blob/main/skills/personal-humanizer-maker/SKILL.md",
+      "blob_sha": "d816452fc3d79c6fd44f2b4e15b4ad2c5e1cccb1"
+    },
+    {
+      "name": "simon-writing",
+      "url": "https://github.com/juliuschun/simon-writing/blob/main/SKILL.md",
+      "blob_sha": "c145ef33d7fb9119c7ae1368dd326475a995bf1f"
+    },
+    {
+      "name": "yoonmoon",
+      "url": "https://github.com/amondnet/yoonmoon/blob/main/skills/restyle/SKILL.md",
+      "blob_sha": "fad554b6bffffa06579e13443ab7e2878ef6333a"
+    },
+    {
+      "name": "korean-webnovel-prose",
+      "url": "https://github.com/ansrhkddns-web/korean-webnovel-prose/blob/main/SKILL.md",
+      "blob_sha": "c7236b7a107b22e17bc36c38d01e87637e1c9701"
+    },
+    {
+      "name": "Story Skills Line Editing",
+      "url": "https://github.com/danjdewhurst/story-skills/blob/main/skills/line-editing/SKILL.md",
+      "blob_sha": "7901fce7414969f4848d1d83e156e9c6a0c78d3b"
+    },
+    {
+      "name": "better-writing",
+      "url": "https://github.com/forjd/better-writing/blob/main/skills/better-writing/SKILL.md",
+      "blob_sha": "dc1ce3a61e7f3b2a30de1b2be58f07c74688c371"
+    }
+  ]
+}

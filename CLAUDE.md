@@ -1,3 +1,5 @@
 # Repository guidance
 
 If the user supplied this repository link and asked to install the skill, read and follow [docs/agent-install.md](docs/agent-install.md). For local Claude Code, use `python3 scripts/install_for_agent.py --host claude` from the acquired repository, or `py -3` on Windows. Add `--project` only if requested. Preserve prior installations with a backup and verify the copied files. Check the active skill list if available; do not equate copying with discovery. For repository development, also follow [AGENTS.md](AGENTS.md). Higher-priority host and user instructions take precedence.
+
+Version 0.7.0 keeps the host-specific installation flow and adds optional sample-based style guidance and a read-only review helper. Install the complete package selected by `scripts/install.py`; do not treat a successful install as a literary-quality evaluation.

@@ -11,8 +11,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 START = "<!-- portable:omit:start -->"
 END = "<!-- portable:omit:end -->"
-SKILL_VERSION = "0.6.2"
-REVISED_ON = "2026-11-14"
+SKILL_VERSION = "0.7.0"
+REVISED_ON = "2026-11-16"
 
 
 def render(skill: str) -> str:
@@ -44,7 +44,8 @@ def render(skill: str) -> str:
 
 def manifest_text(root: Path) -> str:
     paths = [root / "SKILL.md", *sorted((root / "references").rglob("*")),
-             root / "scripts/count_text.py", root / "scripts/check_output.py"]
+             root / "scripts/count_text.py", root / "scripts/check_output.py",
+             root / "scripts/review_rewrite.py"]
     hashes = {}
     for path in paths:
         if path.is_symlink():

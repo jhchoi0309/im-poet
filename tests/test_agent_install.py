@@ -35,7 +35,8 @@ class AgentInstallerTests(unittest.TestCase):
             home = self.home / host
             _, target = agent.run(ROOT, host, home)
             self.assertEqual(target, home / relative / "skills/im-poet")
-            self.assertEqual(json.loads((target / "VERSION.json").read_text(encoding="utf-8"))["version"], "0.6.2")
+            self.assertEqual(json.loads((target / "VERSION.json").read_text(encoding="utf-8"))["version"],
+                             json.loads((ROOT / "VERSION.json").read_text(encoding="utf-8"))["version"])
 
     def test_gemini_updates_existing_shared_alias_and_keeps_backup(self):
         _, native = agent.run(ROOT, "gemini", self.home)
