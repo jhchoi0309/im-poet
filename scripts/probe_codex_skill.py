@@ -24,8 +24,9 @@ def main() -> int:
     command = (["cmd.exe", "/d", "/s", "/c", "codex app-server --stdio"]
                if os.name == "nt" else ["codex", "app-server", "--stdio"])
     proc = subprocess.Popen(command, cwd=project, stdin=subprocess.PIPE, stdout=subprocess.PIPE,
-                            stderr=subprocess.DEVNULL, text=True, encoding="utf-8", bufsize=1)
+                            stderr=subprocess.PIPE, text=True, encoding="utf-8", bufsize=1)
     messages: queue.Queue = queue.Queue()
+    errors: list[str] = []
 
     def reader() -> None:
         assert proc.stdout is not None
@@ -34,6 +35,14 @@ def main() -> int:
         messages.put(None)
 
     threading.Thread(target=reader, daemon=True).start()
+
+    def error_reader() -> None:
+        assert proc.stderr is not None
+        for line in proc.stderr:
+            errors.append(line)
+            del errors[:-20]
+
+    threading.Thread(target=error_reader, daemon=True).start()
 
     def send(message: dict) -> None:
         assert proc.stdin is not None
@@ -51,7 +60,7 @@ def main() -> int:
             except queue.Empty as exc:
                 raise TimeoutError(f"Timed out waiting for Codex response {request_id}") from exc
             if line is None:
-                raise RuntimeError("Codex app-server exited before responding")
+                raise RuntimeError("Codex app-server exited before responding: " + ''.join(errors)[-1600:])
             message = json.loads(line)
             if message.get("id") == request_id:
                 if "error" in message:
@@ -60,7 +69,7 @@ def main() -> int:
 
     try:
         send({"id": 1, "method": "initialize", "params": {
-            "clientInfo": {"name": "impoet-compat-check", "version": "0.7.0"}}})
+            "clientInfo": {"name": "impoet-compat-check", "version": "0.8.0"}}})
         response(1)
         send({"method": "initialized", "params": {}})
         send({"id": 2, "method": "skills/list", "params": {"cwds": [str(project)], "forceReload": True}})

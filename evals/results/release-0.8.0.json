@@ -1,0 +1,263 @@
+{
+  "schema_version": 1,
+  "release": "0.8.0",
+  "checked_on_korea": "2026-11-17",
+  "base_commit": "b6240a7374ef4ceffcf668e85f4e2178f7613d7a",
+  "mechanical_tests": {
+    "total": 76,
+    "passed": 74,
+    "skipped": 2,
+    "scope": "Packaging, installation, portability, text helpers and validation; not literary quality",
+    "log_sha256": "618bf9f1a16d724a8bcc3ee44c3779ba6f0e4e2e3b4c536742dfd9b25587bc4b"
+  },
+  "existing_markdown_files_updated": [
+    "AGENTS.md",
+    "CHANGELOG.md",
+    "CLAUDE.md",
+    "GEMINI.md",
+    "README.md",
+    "SKILL.md",
+    "docs/agent-install.md",
+    "docs/compatibility.md",
+    "docs/evaluation.md",
+    "docs/gemini-app.md",
+    "docs/package-usage.md",
+    "docs/research.md",
+    "prompts/im-poet.md",
+    "references/craft.md",
+    "references/editorial-evaluation-2026.md",
+    "references/editorial-judgment.md",
+    "references/endings.md",
+    "references/examples.md",
+    "references/genres.md",
+    "references/literary-design.md",
+    "references/project-comparison-0.7.0.md",
+    "references/quality-review.md",
+    "references/recasting.md",
+    "references/research-2026-11-14.md",
+    "references/research.md",
+    "references/revision.md",
+    "references/style-profile.md",
+    "references/word-choice.md"
+  ],
+  "native_compatibility": [
+    {
+      "host": "codex",
+      "operating_system": "Linux",
+      "python": "3.12.14",
+      "package_version": "0.8.0",
+      "target": "<isolated-project>/.agents/skills/im-poet",
+      "fresh_install": "passed",
+      "no_backup_update": "passed",
+      "complete_file_comparison": "passed",
+      "unicode_and_space_paths": "passed",
+      "installed_helpers": "passed",
+      "unrelated_skill_preserved": true,
+      "cli_startup": "passed",
+      "native_discovery": "failed",
+      "model_generation": "not_executed",
+      "literary_quality": "not_measured",
+      "cli_version": "codex-cli 0.166.0",
+      "probe_error": "Host-managed Codex sqlite state runtime could not initialize in its read-only state directory."
+    },
+    {
+      "host": "claude",
+      "operating_system": "Linux",
+      "python": "3.12.14",
+      "package_version": "0.8.0",
+      "target": "<isolated-project>/.claude/skills/im-poet",
+      "fresh_install": "passed",
+      "no_backup_update": "passed",
+      "complete_file_comparison": "passed",
+      "unicode_and_space_paths": "passed",
+      "installed_helpers": "passed",
+      "unrelated_skill_preserved": true,
+      "cli_startup": "passed",
+      "native_discovery": "not_verified_no_authenticated_session",
+      "model_generation": "not_executed",
+      "literary_quality": "not_measured",
+      "cli_version": "2.1.325 (Claude Code)",
+      "discovery_note": "Use /skills and /im-poet in a permitted Claude Code session; no model request was made here."
+    },
+    {
+      "host": "gemini",
+      "operating_system": "Linux",
+      "python": "3.12.14",
+      "package_version": "0.8.0",
+      "target": "<isolated-project>/.gemini/skills/im-poet",
+      "fresh_install": "passed",
+      "no_backup_update": "passed",
+      "complete_file_comparison": "passed",
+      "unicode_and_space_paths": "passed",
+      "installed_helpers": "passed",
+      "unrelated_skill_preserved": true,
+      "cli_startup": "passed",
+      "native_discovery": "passed",
+      "model_generation": "not_executed",
+      "literary_quality": "not_measured",
+      "cli_version": "0.68.0",
+      "native_discovery_scope": "isolated_user",
+      "native_discovery_target": "<isolated-user>/.agents/skills/im-poet",
+      "alias_precedence": "passed"
+    }
+  ],
+  "configured_ci_combinations": [
+    {
+      "os": "ubuntu-latest",
+      "host": "codex",
+      "status": "not_executed_for_this_release_before_publication"
+    },
+    {
+      "os": "ubuntu-latest",
+      "host": "claude",
+      "status": "not_executed_for_this_release_before_publication"
+    },
+    {
+      "os": "ubuntu-latest",
+      "host": "gemini",
+      "status": "not_executed_for_this_release_before_publication"
+    },
+    {
+      "os": "macos-latest",
+      "host": "codex",
+      "status": "not_executed_for_this_release_before_publication"
+    },
+    {
+      "os": "macos-latest",
+      "host": "claude",
+      "status": "not_executed_for_this_release_before_publication"
+    },
+    {
+      "os": "macos-latest",
+      "host": "gemini",
+      "status": "not_executed_for_this_release_before_publication"
+    },
+    {
+      "os": "windows-latest",
+      "host": "codex",
+      "status": "not_executed_for_this_release_before_publication"
+    },
+    {
+      "os": "windows-latest",
+      "host": "claude",
+      "status": "not_executed_for_this_release_before_publication"
+    },
+    {
+      "os": "windows-latest",
+      "host": "gemini",
+      "status": "not_executed_for_this_release_before_publication"
+    }
+  ],
+  "forward_comparison": {
+    "scope": "Small development comparison; one output per version and case; one auxiliary AI judge; no human panel",
+    "exact_backend_model_id": "not_exposed",
+    "skill_hashes": {
+      "0.7.0": "65e88f17c25257a253b1197b43ba14d4cb9a4d0b63678c9217e87ff4bc19c61c",
+      "0.8.0": "2e556b112803adf4d9cd9c2b33b298c5b7696df62456573852752b8eda9cb7be"
+    },
+    "inputs": [
+      {
+        "id": "F01",
+        "request": "뜻과 사실을 지키며 문학적이고 아름다운 산문으로 전면 재서술해 주세요. 문장과 문단은 자유롭게 바꾸고 긴 호흡과 짧은 멈춤, 어미를 자연스럽게 다양하게 골라 주세요. 경어체를 유지하고 윤문한 글만 작성해 주세요.",
+        "text": "제가 열여덟 살이던 해, 동생과 바닷가 역에 내렸습니다. 비는 오지 않았습니다. 역 앞에는 문을 닫은 매점 하나가 있었습니다. 동생은 그쪽을 두 번 돌아보았습니다. 배가 고팠던 것 같지만 저는 묻지 않았습니다. 우리는 지나가는 열차를 몇 대 세다가 그만두었습니다. 몇 대였는지는 지금도 기억나지 않습니다. 그날 다음 기차를 탔는지도 기억하지 못합니다."
+      },
+      {
+        "id": "F02",
+        "request": "이 기술 기록을 뜻과 사실에 충실하면서도 문학적 호흡이 있는 산문으로 다시 써 주세요. 수치와 조건, 누가 한 일인지와 확인하지 못한 부분을 유지하고 경어체로 써 주세요. 윤문한 글만 작성해 주세요.",
+        "text": "팀은 실온 24 °C에서 실험을 세 번 진행했습니다. 세 번 모두 전압은 3.3 V보다 낮게 측정됐습니다. 저는 측정 기록을 정리했습니다. 잡음이 줄어든 것처럼 보였으나 잡음 진폭과 주파수 스펙트럼은 측정하지 않았습니다. 그래서 정확한 감쇠량은 확인할 수 없습니다. 우리는 배선을 바꾼 일이 결과와 관련이 있는지 더 살펴보려 합니다."
+      },
+      {
+        "id": "F03",
+        "request": "아래 소설 원고를 문학적이고 아름답게 전면 재서술해 주세요. 인물의 짐작과 의도적인 반복을 살리고 없던 사건이나 감정을 만들지 말아 주세요. 산문과 일인칭을 유지하며 윤문한 글만 작성해 주세요.",
+        "text": "그는 문을 열어 놓았고 나는 돌아갈 때까지 그 문을 닫지 않았다. 나가라는 뜻인지 머물라는 뜻인지는 알 수 없었다. 그는 내게 의자를 내주었다. 내가 앉자 그는 창밖을 보았다. 나는 그가 내 말을 기다린다고 생각했다. 정말 그랬는지는 모른다. 열린 문으로 누가 들어오지는 않았다. 문은 내가 나올 때에도 열려 있었다."
+      }
+    ],
+    "outputs": {
+      "0.7.0": [
+        {
+          "id": "F01",
+          "text": "역 앞에는 문을 닫은 매점 하나가 있었습니다. 제가 열여덟 살이던 해, 동생과 함께 내린 바닷가 역의 일입니다. 비는 오지 않았습니다. 동생은 그 매점 쪽을 한 번, 그리고 또 한 번 돌아보았습니다. 배가 고팠던 것 같습니다만, 저는 묻지 않았습니다.\n\n우리는 지나가는 열차를 몇 대 세다가 그만두었습니다. 몇 대였을까요. 지금도 그 수는 기억나지 않습니다. 그날 우리가 다음 기차를 탔는지도 기억하지 못합니다."
+        },
+        {
+          "id": "F02",
+          "text": "실온 24 °C에서 팀이 진행한 실험은 모두 세 번이었습니다. 전압은 세 번 모두 3.3 V보다 낮게 측정됐고, 저는 그 측정 기록을 정리했습니다.\n\n잡음이 줄어든 것처럼 보이기는 했습니다. 그러나 잡음 진폭과 주파수 스펙트럼을 측정하지 않은 만큼, 정확한 감쇠량은 확인할 수 없습니다. 배선을 바꾼 일과 결과 사이에 관련이 있는지, 우리는 그 점을 더 살펴보려 합니다."
+        },
+        {
+          "id": "F03",
+          "text": "문을 열어 놓은 것은 그였고, 돌아갈 때까지 그 문을 닫지 않은 것은 나였다. 문을 열어 둔 일이 나가라는 뜻이었는지, 머물라는 뜻이었는지는 알 수 없었다.\n\n그가 내준 의자에 내가 앉자, 그는 창밖을 보았다. 나는 그가 내 말을 기다리고 있으리라 생각했다. 정말 그랬는지는 모른다.\n\n열린 문으로 들어온 사람은 없었다. 내가 나올 때에도 문은 열려 있었다."
+        }
+      ],
+      "0.8.0": [
+        {
+          "id": "F01",
+          "text": "그날 다음 기차를 탔는지는 기억나지 않습니다.\n\n제가 열여덟 살이던 해, 동생과 바닷가 역에 내렸습니다. 비는 오지 않았고, 역 앞에는 문 닫은 매점 하나가 있었습니다. 동생은 그쪽을 한 번, 다시 한 번 돌아보았습니다. 배가 고팠던 것 같지만 저는 묻지 않았습니다.\n\n우리는 지나가는 열차를 몇 대 세다가 그만두었습니다. 몇 대였을까요. 지금도 그 수는 기억나지 않습니다."
+        },
+        {
+          "id": "F02",
+          "text": "실온 24 °C에서 팀이 진행한 실험은 세 번이었습니다. 전압은 세 번 모두 3.3 V보다 낮게 측정됐고, 저는 그 측정 기록을 정리했습니다.\n\n잡음이 줄어든 듯 보이기는 했습니다. 그러나 잡음 진폭과 주파수 스펙트럼은 측정하지 않았으므로, 정확한 감쇠량은 확인할 수 없습니다. 배선을 바꾼 일이 결과와 관련이 있는지, 우리는 더 살펴보려 합니다."
+        },
+        {
+          "id": "F03",
+          "text": "그가 열어 놓은 문을 나는 돌아갈 때까지 닫지 않았다. 나가라는 뜻이었을까, 머물라는 뜻이었을까. 어느 쪽인지 알 수 없었다.\n\n그가 내준 의자에 내가 앉자 그는 창밖을 보았다. 내 말을 기다리는 것이라고 나는 생각했다. 정말 그랬는지는 모른다.\n\n열린 문으로는 아무도 들어오지 않았다. 내가 나올 때에도 그 문은 열려 있었다."
+        }
+      ]
+    },
+    "blinded_assignment": {
+      "F01": {
+        "X": "a",
+        "Y": "b"
+      },
+      "F02": {
+        "X": "b",
+        "Y": "a"
+      },
+      "F03": {
+        "X": "b",
+        "Y": "a"
+      }
+    },
+    "auxiliary_judgments": [
+      {
+        "id": "F01",
+        "meaning": {
+          "X": [],
+          "Y": []
+        },
+        "literary_preference": "Y",
+        "reason": "Y는 ‘그날 다음 기차를 탔는지는 기억나지 않습니다’를 앞세워 이후의 매점과 동생, 열차를 기억의 빈자리 안에서 읽게 합니다. 끝의 ‘지금도 그 수는 기억나지 않습니다’가 그 시작에 응답하며, X의 ‘바닷가 역의 일입니다’라는 설명보다 문단 사이의 여운이 자연스럽습니다.",
+        "uncertainty": "두 안 모두 사건과 횟수, 허기라는 짐작, 묻지 않은 행동과 기억의 불확실성을 보존합니다. Y의 재배열은 정서적 초점을 바꾸지만 뜻이나 사실의 변경으로 볼 근거는 없습니다."
+      },
+      {
+        "id": "F02",
+        "meaning": {
+          "X": [],
+          "Y": []
+        },
+        "literary_preference": "tie",
+        "reason": "두 안 모두 ‘저는 그 측정 기록을 정리했습니다’에서 실험 기록을 한 번 매듭짓고, ‘잡음이 줄어든 … 보이기는 했습니다’ 뒤에 미측정 사실을 놓아 관찰과 유보의 호흡을 만듭니다. X의 ‘듯’과 Y의 ‘것처럼’, 마지막의 ‘그 점’ 유무는 이 기술 기록에서 문학적 우열을 가를 만큼 큰 차이가 아닙니다.",
+        "uncertainty": "두 안 모두 24 °C, 세 번, 3.3 V 미만이라는 수치와 조건, 팀과 화자의 역할, 미측정 항목과 감쇠량의 미확인 상태를 보존합니다. 배선 변경과 결과의 관련성도 후속 검토 대상으로 유지되어 확인된 의미 문제는 없습니다."
+      },
+      {
+        "id": "F03",
+        "meaning": {
+          "X": [],
+          "Y": []
+        },
+        "literary_preference": "Y",
+        "reason": "Y의 ‘문을 열어 놓은 것은 그였고 … 닫지 않은 것은 나였다’는 두 인물의 행위를 병렬로 놓아 관계의 긴장을 드러냅니다. ‘문을 열어 둔 일이’에서 마지막 ‘문은 열려 있었다’까지 문을 거듭 호명하는 방식도 요청한 반복을 살리며, ‘정말 그랬는지는 모른다’의 짧은 유보와 잘 어울립니다.",
+        "uncertainty": "두 안 모두 사건, 일인칭 관점, 상대의 뜻과 기다림에 대한 불확실성을 보존합니다. Y의 첫 문장은 주체의 대조를 더 강조하지만, 새 의도나 감정을 부여했다고 단정할 근거는 없습니다."
+      }
+    ],
+    "decoded_preferences": {
+      "F01": "0.8.0",
+      "F02": "tie",
+      "F03": "0.7.0"
+    },
+    "human_ratings": 0,
+    "performance_improvement_established": false,
+    "held_out_population_test": false
+  },
+  "weights_trained": false,
+  "restricted_corpus_downloaded": false,
+  "github_published_by_this_execution": false
+}

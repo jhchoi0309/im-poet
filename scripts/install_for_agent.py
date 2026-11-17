@@ -28,9 +28,15 @@ def detect_host(env: Mapping[str, str]) -> str:
     return detected[0]
 
 
-def choose_destination(host: str, home: Path, project: Path | None) -> Path:
+def choose_destination(host: str, home: Path, project: Path | None,
+                       env: Mapping[str, str] | None = None) -> Path:
     """Gemini's existing shared alias has precedence over its native folder."""
+    settings = os.environ if env is None else env
+    if host == "claude" and project is None and settings.get("CLAUDE_CONFIG_DIR"):
+        return Path(settings["CLAUDE_CONFIG_DIR"]).expanduser().absolute() / "skills" / NAME
     if host == "gemini":
+        if project is None and settings.get("GEMINI_CLI_HOME"):
+            home = Path(settings["GEMINI_CLI_HOME"]).expanduser().absolute()
         shared = destination_for("codex", project=project, home=home)
         if os.path.lexists(shared):
             return shared
@@ -45,10 +51,11 @@ def verify_source(source: Path) -> None:
 
 
 def run(source: Path, host: str, home: Path, project: Path | None = None,
-        *, destination: Path | None = None, dry_run: bool = False) -> tuple[str, Path]:
+        *, destination: Path | None = None, dry_run: bool = False,
+        no_backup: bool = False, env: Mapping[str, str] | None = None) -> tuple[str, Path]:
     verify_source(source)
-    target = destination if destination is not None else choose_destination(host, home, project)
-    message = install(source, target, update=True, dry_run=dry_run)
+    target = destination if destination is not None else choose_destination(host, home, project, env)
+    message = install(source, target, update=True, dry_run=dry_run, no_backup=no_backup)
     if not dry_run and existing_files(target) != package_files(source):
         raise ValueError(f"Installed files differ from source: {target}")
     return message, target
@@ -65,17 +72,19 @@ def main() -> int:
     scope.add_argument("--destination", type=Path, help="Exact skill directory for a custom host configuration")
     parser.add_argument("--workspace", type=Path, help="Also check this workspace for higher-priority Gemini skills")
     parser.add_argument("--dry-run", action="store_true")
+    parser.add_argument("--no-backup", action="store_true", help="Replace this skill without retaining a backup")
     args = parser.parse_args()
     try:
         host = detect_host(os.environ) if args.host == "auto" else args.host
         project = args.project.expanduser().resolve() if args.project else None
         target = args.destination.expanduser().absolute() if args.destination else None
-        message, target = run(ROOT, host, Path.home(), project, destination=target, dry_run=args.dry_run)
+        message, target = run(ROOT, host, Path.home(), project, destination=target,
+                              dry_run=args.dry_run, no_backup=args.no_backup)
         print(f"Agent: {host}\n{message}")
         if not args.dry_run:
             print(f"Verified package files against source: {target}")
         if host == "claude" and os.environ.get("CLAUDE_CONFIG_DIR"):
-            print("Note: custom Claude configuration detected; verify its active skill path in Claude Code.")
+            print("Note: CLAUDE_CONFIG_DIR was honored for user scope; verify native discovery separately.")
         if host == "gemini":
             workspace = args.workspace.expanduser().resolve() if args.workspace else None
             if project is None and workspace is not None:

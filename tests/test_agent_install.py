@@ -8,6 +8,7 @@ import subprocess
 import sys
 import tempfile
 import unittest
+from unittest.mock import patch
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
@@ -16,6 +17,9 @@ import install_for_agent as agent
 
 class AgentInstallerTests(unittest.TestCase):
     def setUp(self):
+        configuration = patch.dict(os.environ, {"CLAUDE_CONFIG_DIR": "", "GEMINI_CLI_HOME": ""})
+        configuration.start()
+        self.addCleanup(configuration.stop)
         self.temp = tempfile.TemporaryDirectory()
         self.addCleanup(self.temp.cleanup)
         self.root = Path(self.temp.name)
@@ -66,6 +70,58 @@ class AgentInstallerTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "manifest"):
             agent.run(source, "codex", self.home)
         self.assertFalse((self.home / ".agents").exists())
+
+    def test_no_backup_upgrade_replaces_extra_files_for_each_host(self):
+        for host in ("codex", "claude", "gemini"):
+            home = self.home / host
+            _, target = agent.run(ROOT, host, home, env={})
+            (target / "local-extra.txt").write_text("previous", encoding="utf-8")
+            message, again = agent.run(ROOT, host, home, no_backup=True, env={})
+            self.assertEqual(target, again)
+            self.assertIn("without backup", message)
+            self.assertFalse((target / "local-extra.txt").exists())
+            self.assertFalse(list(target.parent.glob(".im-poet-backup-*")))
+            self.assertFalse(list(target.parent.glob(".im-poet-previous-*")))
+
+    def test_custom_claude_config_and_explicit_project_are_distinct(self):
+        config = self.root / "사용자 설정 with spaces"
+        env = {"CLAUDE_CONFIG_DIR": str(config)}
+        _, user_target = agent.run(ROOT, "claude", self.home, env=env)
+        self.assertEqual(user_target, config / "skills/im-poet")
+        _, project_target = agent.run(ROOT, "claude", self.home, self.project, env=env)
+        self.assertEqual(project_target, self.project.resolve() / ".claude/skills/im-poet")
+
+    def test_custom_gemini_home_honors_shared_alias_and_project_scope(self):
+        custom_home = self.root / "제미나이 home"
+        env = {"GEMINI_CLI_HOME": str(custom_home)}
+        _, native = agent.run(ROOT, "gemini", self.home, env=env)
+        self.assertEqual(native, custom_home / ".gemini/skills/im-poet")
+        _, shared = agent.run(ROOT, "codex", custom_home, env={})
+        self.assertEqual(agent.choose_destination("gemini", self.home, None, env), shared)
+        _, project = agent.run(ROOT, "gemini", self.home, self.project, env=env)
+        self.assertEqual(project, self.project.resolve() / ".gemini/skills/im-poet")
+
+    def test_no_backup_dry_run_leaves_previous_bytes_and_extras(self):
+        _, target = agent.run(ROOT, "gemini", self.home, env={})
+        extra = target / "local-extra.txt"
+        extra.write_text("previous", encoding="utf-8")
+        before = (target / "SKILL.md").read_bytes()
+        message, _ = agent.run(ROOT, "gemini", self.home, no_backup=True, dry_run=True, env={})
+        self.assertIn("without backup", message)
+        self.assertEqual(extra.read_text(encoding="utf-8"), "previous")
+        self.assertEqual((target / "SKILL.md").read_bytes(), before)
+
+    def test_command_accepts_no_backup_for_project_upgrade(self):
+        command = [sys.executable, str(ROOT / "scripts/install_for_agent.py"),
+                   "--host", "codex", "--project", str(self.project), "--no-backup"]
+        first = subprocess.run(command, capture_output=True, text=True, encoding="utf-8")
+        self.assertEqual(first.returncode, 0, first.stderr)
+        target = self.project / ".agents/skills/im-poet"
+        (target / "local-extra.txt").write_text("old", encoding="utf-8")
+        second = subprocess.run(command, capture_output=True, text=True, encoding="utf-8")
+        self.assertEqual(second.returncode, 0, second.stderr)
+        self.assertIn("without backup", second.stdout)
+        self.assertFalse(list(target.parent.glob(".im-poet-backup-*")))
 
     def test_command_installs_to_explicit_project(self):
         completed = subprocess.run([sys.executable, str(ROOT / "scripts/install_for_agent.py"),

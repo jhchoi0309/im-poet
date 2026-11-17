@@ -60,6 +60,12 @@ class OutputStyleTests(unittest.TestCase):
         different = same.replace("윤문:\n\n> 썼다. 지웠다.", "윤문:\n\n> 썼다가 지웠다.")
         self.assertEqual(unchanged_examples(different), [])
 
+    def test_table_examples_catch_unchanged_pause_without_flagging_changed_rows(self):
+        table = ("| 선택 | 원문 | 가능한 윤문 |\n| --- | --- | --- |\n"
+                 "| 짧은 멈춤 | 썼다. 지웠다. | 썼다. 지웠다. |\n"
+                 "| 긴 호흡 | 편지를 고쳐 썼다. | 편지는 다시 썼다. |\n")
+        self.assertEqual(unchanged_examples(table), ["썼다. 지웠다."])
+
     def test_installed_version_fingerprint_detects_changed_reference(self):
         with tempfile.TemporaryDirectory() as directory:
             target = Path(directory) / "installed"

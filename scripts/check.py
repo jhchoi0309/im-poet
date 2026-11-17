@@ -22,11 +22,30 @@ def unchanged_examples(text: str) -> list[str]:
         r"(?:가능한 윤문|윤문):\n\n(?P<after>(?:>[^\n]*(?:\n|$))+)",
         re.M,
     )
-    return [
+    unchanged = [
         match.group("before").strip()
         for match in pattern.finditer(text)
         if match.group("before").strip() == match.group("after").strip()
     ]
+    columns: tuple[int, int] | None = None
+    for line in text.splitlines():
+        if not line.strip().startswith('|'):
+            columns = None
+            continue
+        cells = [cell.strip().replace('\\|', '|')
+                 for cell in re.split(r'(?<!\\)\|', line.strip().strip('|'))]
+        headings = [cell.strip('* ') for cell in cells]
+        if '원문' in headings and any(h in headings for h in ('가능한 윤문', '윤문')):
+            after = '가능한 윤문' if '가능한 윤문' in headings else '윤문'
+            columns = headings.index('원문'), headings.index(after)
+            continue
+        if columns is not None and len(cells) > max(columns):
+            if all(re.fullmatch(r':?-+:?', cell) for cell in cells):
+                continue
+            before, after = (cells[index] for index in columns)
+            if before and before == after:
+                unchanged.append(before)
+    return unchanged
 
 
 def check(root: Path) -> list[str]:
@@ -45,6 +64,9 @@ def check(root: Path) -> list[str]:
         "prompts/im-poet.md", "evals/cases.json",
         "references/style-profile.md", "references/literary-design.md",
         "references/quality-review.md", "scripts/review_rewrite.py",
+        "references/revision-decisions.md", "references/research-0.8.0.md",
+        "references/research-evidence-0.8.0.json", "scripts/verify_agent.py",
+        "scripts/package_release.py", ".github/workflows/cli-compatibility.yml",
     )
     for name in required:
         if not (root / name).is_file():

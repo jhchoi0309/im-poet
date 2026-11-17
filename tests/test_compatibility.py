@@ -1,10 +1,12 @@
 from __future__ import annotations
 
 import json
+import os
 from pathlib import Path
 import sys
 import tempfile
 import unittest
+from unittest.mock import patch
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
@@ -14,6 +16,9 @@ import install
 
 class InstallationDiagnosticsTests(unittest.TestCase):
     def setUp(self):
+        configuration = patch.dict(os.environ, {"CLAUDE_CONFIG_DIR": "", "GEMINI_CLI_HOME": ""})
+        configuration.start()
+        self.addCleanup(configuration.stop)
         self.temp = tempfile.TemporaryDirectory()
         self.addCleanup(self.temp.cleanup)
         self.root = Path(self.temp.name)
@@ -46,6 +51,28 @@ class InstallationDiagnosticsTests(unittest.TestCase):
         self.assertTrue(any("Gemini can prefer" in w for w in report["warnings"]))
         self.assertTrue(any("Codex" in w and "both exist" in w for w in report["warnings"]))
         self.assertEqual(report["locations"]["project"]["shared"]["status"], "current")
+
+    def test_custom_claude_config_is_inspected_without_redirecting_project_scope(self):
+        custom = self.root / "사용자 설정"
+        target = custom / "skills/im-poet"
+        install.install(ROOT, target)
+        report = diagnostic.audit(self.home, self.project, self.expected,
+                                  env={"CLAUDE_CONFIG_DIR": str(custom)})
+        self.assertEqual(report["locations"]["user"]["claude"]["status"], "current")
+        self.assertEqual(report["locations"]["user"]["claude"]["path"], str(target))
+        self.assertEqual(report["locations"]["project"]["claude"]["status"], "missing")
+
+    def test_custom_gemini_home_is_inspected_separately_from_codex_home(self):
+        custom = self.root / "gemini home"
+        install.install(ROOT, custom / ".agents/skills/im-poet")
+        install.install(ROOT, custom / ".gemini/skills/im-poet")
+        report = diagnostic.audit(self.home, None, self.expected,
+                                  env={"GEMINI_CLI_HOME": str(custom)})
+        entries = report["locations"]["user"]
+        self.assertEqual(entries["shared"]["status"], "missing")
+        self.assertEqual(entries["gemini_shared_override"]["status"], "current")
+        self.assertEqual(entries["gemini"]["status"], "current")
+        self.assertTrue(any("Gemini can prefer" in w for w in report["warnings"]))
 
 
 if __name__ == "__main__":

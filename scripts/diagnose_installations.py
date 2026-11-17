@@ -6,8 +6,10 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import os
 from pathlib import Path
 import sys
+from typing import Mapping
 
 from install import NAME, ROOT, has_skill_name
 
@@ -54,7 +56,8 @@ def inspect(path: Path, expected: dict) -> dict:
     return result
 
 
-def audit(home: Path, project: Path | None, expected: dict) -> dict:
+def audit(home: Path, project: Path | None, expected: dict,
+          env: Mapping[str, str] | None = None) -> dict:
     scopes = {"user": home}
     if project is not None:
         scopes["project"] = project
@@ -62,9 +65,18 @@ def audit(home: Path, project: Path | None, expected: dict) -> dict:
         scope: {name: inspect(root / relative, expected) for name, relative in LOCATIONS.items()}
         for scope, root in scopes.items()
     }
+    settings = os.environ if env is None else env
+    if settings.get("CLAUDE_CONFIG_DIR"):
+        custom = Path(settings["CLAUDE_CONFIG_DIR"]).expanduser().absolute() / "skills" / NAME
+        locations["user"]["claude"] = inspect(custom, expected)
+    if settings.get("GEMINI_CLI_HOME"):
+        custom_home = Path(settings["GEMINI_CLI_HOME"]).expanduser().absolute()
+        locations["user"]["gemini"] = inspect(custom_home / LOCATIONS["gemini"], expected)
+        locations["user"]["gemini_shared_override"] = inspect(custom_home / LOCATIONS["shared"], expected)
     warnings = []
     for scope, entries in locations.items():
-        if entries["shared"]["status"] != "missing" and entries["gemini"]["status"] != "missing":
+        alias = entries.get("gemini_shared_override", entries["shared"])
+        if alias["status"] != "missing" and entries["gemini"]["status"] != "missing":
             warnings.append(
                 f"{scope}: Gemini can prefer .agents/skills over .gemini/skills at the same scope; "
                 "verify the active skill in Gemini."
