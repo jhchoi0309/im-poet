@@ -1,4 +1,4 @@
-# 0.8.0 호환성 및 확인 범위
+# 0.8.1 호환성 및 확인 범위
 
 Windows, macOS, Linux와 Codex CLI, Claude Code, Gemini CLI의 아홉 조합을 지원 대상으로 개발한다. 각 CLI가 공식 지원하는 운영체제와 프로세서에서 사용한다. 설치와 보조 도구는 Python 3.10 이상과 표준 라이브러리를 사용하며 윤문 지침 자체는 Python이 없어도 읽을 수 있다.
 
@@ -17,13 +17,13 @@ Windows, macOS, Linux와 Codex CLI, Claude Code, Gemini CLI의 아홉 조합을 
 
 ## 이번 실행의 아홉 조합
 
-이번 개발 환경은 Linux와 Python 3.12.14다. macOS와 Windows의 현재 릴리스 네이티브 실행은 이 환경에서 수행하지 않았다. 아래 표와 기계 기록의 차이가 생기면 해당 실행의 실제 기록을 우선한다.
+이번 개발 환경은 Linux와 Python 3.12.14다. Linux 행은 실제 설치 명령으로 새 설치, 백업 없는 교체, 한글과 공백이 있는 경로, 도구를 확인한 결과다. macOS와 Windows의 0.8.1 실행은 업로드 뒤 CI에서 확인한다.
 
 | 운영체제 | CLI | 설치와 백업 없는 갱신 및 도구 | CLI 시작 | 발견과 실제 적용 |
 | --- | --- | --- | --- | --- |
-| Linux | Codex | 실제 검사 | 0.166.0 실행 | 발견은 이 호스트의 읽기 전용 상태 경로에서 초기화 중단. 모델 생성 미실행 |
-| Linux | Claude Code | 실제 검사 | 2.1.325 실행 | 계정 세션의 발견과 모델 생성 미실행 |
-| Linux | Gemini CLI | 실제 검사 | 0.68.0 실행 | 격리 사용자 경로와 공용 별칭을 별도 검사. 모델 생성 미실행 |
+| Linux | Codex | 통과 | 0.166.0 실행 | 발견 요청 전에 이 환경의 읽기 전용 상태 디렉터리에서 초기화 중단 |
+| Linux | Claude Code | 통과 | 2.1.325 실행 | 계정 세션의 발견 미실행 |
+| Linux | Gemini CLI | 통과 | 0.68.0 실행 | 격리한 사용자 경로와 공용 별칭의 발견 통과 |
 | macOS | Codex | 이번 릴리스 CI 대기 | CI에서 실행 | 이번 릴리스 결과 확인 필요 |
 | macOS | Claude Code | 이번 릴리스 CI 대기 | CI에서 실행 | 계정 세션의 실제 적용은 별도 |
 | macOS | Gemini CLI | 이번 릴리스 CI 대기 | CI에서 실행 | 이번 릴리스 결과 확인 필요 |
@@ -31,11 +31,11 @@ Windows, macOS, Linux와 Codex CLI, Claude Code, Gemini CLI의 아홉 조합을 
 | Windows | Claude Code | 이번 릴리스 CI 대기 | CI에서 실행 | 계정 세션의 실제 적용은 별도 |
 | Windows | Gemini CLI | 이번 릴리스 CI 대기 | CI에서 실행 | 이번 릴리스 결과 확인 필요 |
 
-기계 기록은 [릴리스 검증 자료](../evals/results/release-0.8.0.json)에 있다. Gemini의 검사 성공 여부는 실제 보고서의 `native_discovery`와 `alias_precedence` 값으로 확인한다. 아홉 조합 모두의 로그인 후 모델 생성이 검증됐다고 표시하지 않는다.
+세 CLI에 대한 로그인 후 모델 생성은 수행하지 않았다. [0.8.0의 공개 CI](https://github.com/jhchoi0309/im-poet/actions/runs/44085122317)에서는 아홉 작업이 통과했다. 이전 버전의 설치와 발견 검사 결과이며 현재 개정의 결과로 세지 않는다. 이번 실행의 기계 기록은 [0.8.1 릴리스 검증](../evals/results/release-0.8.1.json)에 있다.
 
 ## 자동화
 
-[CLI 호환성 워크플로](../.github/workflows/cli-compatibility.yml)는 세 운영체제와 세 CLI를 명시적으로 교차해 아홉 작업을 만든다. CLI 버전은 Codex 0.166.0, Claude Code 2.1.325, Gemini CLI 0.68.0으로 고정한다. 각 작업은 설치와 갱신, 보조 도구 및 가능한 발견 검사를 수행하고 확인 범위의 JSON을 보관한다. Claude의 계정 인증이나 유료 모델 요청은 하지 않는다.
+[CLI 호환성 워크플로](../.github/workflows/cli-compatibility.yml)는 세 운영체제와 세 CLI를 교차해 아홉 작업을 실행한다. CLI 버전은 Codex 0.166.0, Claude Code 2.1.325, Gemini CLI 0.68.0으로 고정한다. 각 작업은 설치기의 `--host`와 `--project` 명령, 백업 없는 교체, 보조 도구를 직접 실행한다. 가능한 호스트에서는 실제 발견을 확인하고 결과 JSON을 보관한다. Claude의 계정 인증이나 유료 모델 요청은 이 검사 범위 밖이다.
 
 [일반 검증 워크플로](../.github/workflows/validate.yml)는 세 운영체제와 Python 3.10, 3.13의 여섯 조합을 검사한다. Windows의 junction과 네이티브 PowerShell 검사는 해당 환경에서 실행한다. Linux에서 생략된 검사를 통과로 세지 않는다.
 

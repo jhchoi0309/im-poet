@@ -47,7 +47,10 @@ def verify(host: str, root: Path, *, discovery: bool = False) -> dict:
     work = Path(tempfile.mkdtemp(prefix=f'impoet-{host}-', dir=root)).resolve()
     home, project = work / '사용자 home', work / '프로젝트 space'
     project.mkdir()
-    _, target = install_for_agent(ROOT, host, home, project, env={})
+    target = project / {'codex': '.agents', 'claude': '.claude', 'gemini': '.gemini'}[host] / 'skills/im-poet'
+    installer = [sys.executable, str(ROOT / 'scripts/install_for_agent.py'),
+                 '--host', host, '--project', str(project)]
+    execute(installer, cwd=project)
     expected = package_files(ROOT)
     if existing_files(target) != expected:
         raise ValueError('Fresh installation differs from source')
@@ -56,7 +59,7 @@ def verify(host: str, root: Path, *, discovery: bool = False) -> dict:
     neighbor = target.parent / 'unrelated-skill'
     neighbor.mkdir()
     (neighbor / 'keep.txt').write_text('keep', encoding='utf-8')
-    install_for_agent(ROOT, host, home, project, no_backup=True, env={})
+    execute([*installer, '--no-backup'], cwd=project)
     if existing_files(target) != expected:
         raise ValueError('No-backup upgrade did not replace the complete skill')
     if list(target.parent.glob('.im-poet-backup-*')) or list(target.parent.glob('.im-poet-previous-*')):
@@ -72,7 +75,8 @@ def verify(host: str, root: Path, *, discovery: bool = False) -> dict:
              '--rewrite', str(revised)], cwd=work)
     report = dict(host=host, operating_system=platform.system(), python=platform.python_version(),
                   package_version=json.loads((target / 'VERSION.json').read_text(encoding='utf-8'))['version'],
-                  target=str(target), fresh_install='passed', no_backup_update='passed',
+                  target=str(target), installer_entry_point='command_line',
+                  fresh_install='passed', no_backup_update='passed',
                   complete_file_comparison='passed', unicode_and_space_paths='passed',
                   installed_helpers='passed', unrelated_skill_preserved=True,
                   cli_startup='not_requested', native_discovery='not_requested',

@@ -7,7 +7,6 @@ import hashlib
 import io
 import json
 from pathlib import Path, PurePosixPath
-import shutil
 import subprocess
 import sys
 import tarfile
@@ -57,7 +56,10 @@ def build(source: Path, output: Path) -> Path:
             target = app / ('LICENSE.txt' if relative == 'LICENSE' else relative)
             target.parent.mkdir(parents=True, exist_ok=True)
             target.write_bytes(data)
-        shutil.copy2(checkout / 'docs/package-usage.md', package / 'UPLOAD.md')
+        usage = (checkout / 'docs/package-usage.md').read_text(encoding='utf-8')
+        for name in ('compatibility.md', 'evaluation.md'):
+            usage = usage.replace(f']({name})', f'](im-poet/docs/{name})')
+        (package / 'UPLOAD.md').write_text(usage, encoding='utf-8', newline='\n')
         (package / 'VERSION.json').write_text(json.dumps(dict(
             package='im-poet-update', skill_version=version, source_commit=commit,
             repository='https://github.com/jhchoi0309/im-poet',

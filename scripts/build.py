@@ -11,8 +11,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 START = "<!-- portable:omit:start -->"
 END = "<!-- portable:omit:end -->"
-SKILL_VERSION = "0.8.0"
-REVISED_ON = "2026-11-17"
+SKILL_VERSION = "0.8.1"
+REVISED_ON = "2026-11-18"
 
 
 def render(skill: str) -> str:

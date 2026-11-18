@@ -37,7 +37,7 @@ jobs:
           node-version: '24'
       - name: Install the selected pinned CLI
         run: npm install --global '${{ matrix.package }}'
-      - name: Verify installation, upgrade, tools, and available discovery
+      - name: Exercise the installer command, no-backup upgrade, and available discovery
         run: python scripts/verify_agent.py --host ${{ matrix.agent }} --root "${{ runner.temp }}/impoet-${{ matrix.agent }}" --discovery --report "${{ runner.temp }}/compatibility-${{ matrix.agent }}.json"
       - name: Retain the actual verification scope
         if: always()

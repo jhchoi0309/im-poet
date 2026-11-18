@@ -212,7 +212,8 @@ class PromptTests(unittest.TestCase):
 
     def test_native_and_standalone_share_protected_examples(self):
         prompt = render((ROOT / "SKILL.md").read_text(encoding="utf-8"))
-        for phrase in ("원인을 찾으려 했다", "풍경을 발견할 수 있다", "건강을 증진할 수 있다", "24 °C"):
+        for phrase in ("원인을 찾으려 했다", "세상을 바라볼 수 있게 된다",
+                       "근거를 공개해야 한다", "공개하면 좋겠다", "24 °C"):
             self.assertIn(phrase, prompt)
         self.assertNotIn("references/", prompt)
         self.assertLessEqual(len(prompt), 8000)

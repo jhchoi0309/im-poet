@@ -1,6 +1,6 @@
-# im-poet 0.8.0 설치와 GitHub 업로드
+# im-poet 0.8.1 설치와 GitHub 업로드
 
-이 패키지는 im-poet 하나의 소스와 모든 내부 문서, 전체 main Git 이력, Gemini 앱용 스킬 폴더를 담습니다. im-novelist는 포함하지 않습니다. 새 `im-poet-update.tar.gz`를 다운로드 폴더에 저장하고 같은 이름의 이전 파일과 구별하세요.
+이 패키지는 im-poet 하나의 소스와 모든 내부 문서, 전체 main Git 이력, Gemini 앱용 스킬 폴더를 담습니다. im-novelist는 포함하지 않습니다. 0.8.1 `im-poet-update.tar.gz`를 다운로드 폴더에 저장하세요. 같은 이름의 파일이 이미 있으면 구별해 이번 파일을 선택합니다.
 
 GitHub 업로드와 Mac의 설치본 업데이트는 독립적으로 실행할 수 있습니다. Git과 Python 3.10 이상을 사용합니다. 계정 인증은 기존 GitHub HTTPS 설정을 따릅니다.
 
@@ -11,7 +11,7 @@ GitHub 업로드와 Mac의 설치본 업데이트는 독립적으로 실행할 �
   set -e
   im_poet_upload_dir=$(mktemp -d "${TMPDIR:-/tmp}/im-poet-upload.XXXXXX")
   python3 -m tarfile -e "$HOME/Downloads/im-poet-update.tar.gz" "$im_poet_upload_dir"
-  python3 -c 'import json,sys; v=json.load(open(sys.argv[1],encoding="utf-8"))["skill_version"]; sys.exit(0 if v=="0.8.0" else "0.8.0 패키지를 다시 다운로드하세요.")' "$im_poet_upload_dir/im-poet-update/VERSION.json"
+  python3 -c 'import json,sys; v=json.load(open(sys.argv[1],encoding="utf-8"))["skill_version"]; sys.exit(0 if v=="0.8.1" else "0.8.1 패키지를 다시 다운로드하세요.")' "$im_poet_upload_dir/im-poet-update/VERSION.json"
   git -c core.autocrlf=false clone --branch main "$im_poet_upload_dir/im-poet-update/im-poet.bundle" "$im_poet_upload_dir/repo"
   git -C "$im_poet_upload_dir/repo" remote set-url origin https://github.com/jhchoi0309/im-poet.git
   git -C "$im_poet_upload_dir/repo" push origin main
@@ -29,13 +29,13 @@ GitHub에 먼저 올리지 않아도 다운로드한 패키지로 설치할 수 
   set -e
   im_poet_install_dir=$(mktemp -d "${TMPDIR:-/tmp}/im-poet-install.XXXXXX")
   python3 -m tarfile -e "$HOME/Downloads/im-poet-update.tar.gz" "$im_poet_install_dir"
-  python3 -c 'import json,sys; v=json.load(open(sys.argv[1],encoding="utf-8"))["skill_version"]; sys.exit(0 if v=="0.8.0" else "0.8.0 패키지를 다시 다운로드하세요.")' "$im_poet_install_dir/im-poet-update/VERSION.json"
+  python3 -c 'import json,sys; v=json.load(open(sys.argv[1],encoding="utf-8"))["skill_version"]; sys.exit(0 if v=="0.8.1" else "0.8.1 패키지를 다시 다운로드하세요.")' "$im_poet_install_dir/im-poet-update/VERSION.json"
   python3 "$im_poet_install_dir/im-poet-update/im-poet/scripts/install_for_agent.py" --host codex --no-backup
-  python3 -c 'import json; from pathlib import Path; p=Path.home()/".agents/skills/im-poet/VERSION.json"; v=json.loads(p.read_text(encoding="utf-8"))["version"]; print("설치된 im-poet:",v); assert v=="0.8.0"'
+  python3 -c 'import json; from pathlib import Path; p=Path.home()/".agents/skills/im-poet/VERSION.json"; v=json.loads(p.read_text(encoding="utf-8"))["version"]; print("설치된 im-poet:",v); raise SystemExit(0 if v=="0.8.1" else 1)'
 )
 ```
 
-마지막에 `설치된 im-poet: 0.8.0`이 표시되는지 확인하세요. Codex의 스킬 목록에서 발견되는지도 확인합니다. 디스크의 갱신과 현재 대화가 이미 읽은 지침은 구분합니다. Skills 화면이 늦게 반영되면 새로 고칩니다.
+마지막에 `설치된 im-poet: 0.8.1`이 표시되는지 확인하세요. Codex의 스킬 목록에서 발견되는지도 확인합니다. 디스크의 갱신과 현재 대화가 이미 읽은 지침은 구분합니다. Skills 화면이 늦게 반영되면 새로 고칩니다.
 
 ## Linux와 다른 CLI
 
@@ -48,7 +48,7 @@ Linux에서는 실제 다운로드 경로에 맞추어 같은 Python 명령을 �
   set -e
   im_poet_source_dir=$(mktemp -d "${TMPDIR:-/tmp}/im-poet-source.XXXXXX")
   git -c core.autocrlf=false clone --depth 1 https://github.com/jhchoi0309/im-poet.git "$im_poet_source_dir/source"
-  python3 -c 'import json,sys; assert json.load(open(sys.argv[1],encoding="utf-8"))["version"]=="0.8.0","GitHub의 0.8.0 업로드를 먼저 확인하세요."' "$im_poet_source_dir/source/VERSION.json"
+  python3 -c 'import json,sys; v=json.load(open(sys.argv[1],encoding="utf-8"))["version"]; sys.exit(0 if v=="0.8.1" else "GitHub의 0.8.1 업로드를 먼저 확인하세요.")' "$im_poet_source_dir/source/VERSION.json"
   python3 "$im_poet_source_dir/source/scripts/install_for_agent.py" --host codex --no-backup
 )
 ```
@@ -62,7 +62,7 @@ $imPoetWork = Join-Path ([IO.Path]::GetTempPath()) ("im-poet-" + [guid]::NewGuid
 py -3 -m tarfile -e "$env:USERPROFILE\Downloads\im-poet-update.tar.gz" "$imPoetWork"
 if ($LASTEXITCODE -ne 0) { throw "압축 해제 실패" }
 $imPoetVersion = Get-Content -LiteralPath "$imPoetWork\im-poet-update\VERSION.json" -Raw -Encoding UTF8 | ConvertFrom-Json
-if ($imPoetVersion.skill_version -ne "0.8.0") { throw "0.8.0 패키지를 다시 다운로드하세요." }
+if ($imPoetVersion.skill_version -ne "0.8.1") { throw "0.8.1 패키지를 다시 다운로드하세요." }
 py -3 "$imPoetWork\im-poet-update\im-poet\scripts\install_for_agent.py" --host codex --no-backup
 if ($LASTEXITCODE -ne 0) { throw "설치 실패" }
 ```

@@ -12,6 +12,8 @@ import subprocess
 import threading
 import time
 
+from build import SKILL_VERSION
+
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
@@ -69,7 +71,7 @@ def main() -> int:
 
     try:
         send({"id": 1, "method": "initialize", "params": {
-            "clientInfo": {"name": "impoet-compat-check", "version": "0.8.0"}}})
+            "clientInfo": {"name": "impoet-compat-check", "version": SKILL_VERSION}}})
         response(1)
         send({"method": "initialized", "params": {}})
         send({"id": 2, "method": "skills/list", "params": {"cwds": [str(project)], "forceReload": True}})
