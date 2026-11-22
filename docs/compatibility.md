@@ -1,8 +1,8 @@
-# 0.8.2 호환성과 실행 기록
+# 0.8.2.1 호환성과 실행 기록
 
 Windows, macOS, Linux에서 Codex CLI, Claude Code, Gemini CLI를 쓰는 아홉 조합을 검사 대상으로 둔다. 운영체제와 프로세서의 지원 범위는 각 CLI를 따른다. 설치기와 보조 도구는 Python 3.10 이상과 표준 라이브러리를 쓰고, 핵심 윤문 지침은 텍스트로 읽을 수 있다.
 
-## 검증을 나누는 기준
+## 검증 단계
 
 | 단계 | 실제로 확인하는 것 |
 | --- | --- |
@@ -10,7 +10,7 @@ Windows, macOS, Linux에서 Codex CLI, Claude Code, Gemini CLI를 쓰는 아홉 
 | 갱신 | 내용이 다른 이전 설치를 백업 없이 교체, 임시 이전 폴더 정리, 다른 스킬 보존 |
 | 보조 도구 | 설치된 문자 검사와 바이트 계산, 표면 비교 도구의 실행 |
 | CLI 시작 | 고정한 제공자 CLI의 `--version` |
-| 네이티브 발견 | 호스트가 실제로 선택한 이름과 경로, 활성 상태 |
+| 스킬 인식 | CLI가 찾아낸 스킬의 이름과 경로, 활성 상태 |
 | 모델 적용 | 로그인한 세션에서 원고를 처리하는 실제 생성 |
 
 파일이 제자리에 놓였는지, 도구가 그 파일을 찾아 쓰는지, 실제로 원고를 어떻게 고치는지는 단계마다 결과를 기록한다.
@@ -19,17 +19,17 @@ Windows, macOS, Linux에서 Codex CLI, Claude Code, Gemini CLI를 쓰는 아홉 
 
 Linux와 Python 3.12.14에서 세 CLI의 설치 명령을 실행했다. 새 설치 후 한글과 공백이 있는 경로에서 백업 없이 교체하고, 원본과 설치 파일의 일치와 보조 도구 실행을 확인했다. 빌드와 문서 검사도 통과했다. 단위 테스트 76개 중 74개가 통과했고 Windows의 junction과 PowerShell 검사 두 개는 이 환경에서 건너뛰었다.
 
-| 운영체제 | CLI | 설치와 백업 없는 갱신 및 도구 | CLI 시작 | 발견과 실제 적용 |
+| 운영체제 | CLI | 설치, 백업 없는 갱신, 보조 도구 | CLI 시작 | 스킬 인식 |
 | --- | --- | --- | --- | --- |
 | Linux | Codex | 통과 | 0.166.0 실행 | 이 환경의 읽기 전용 경로에서 초기화가 중단되어 발견을 확인하지 못함 |
 | Linux | Claude Code | 통과 | 2.1.325 실행 | 계정 세션의 발견 미실행 |
 | Linux | Gemini CLI | 통과 | 0.68.0 실행 | 격리한 사용자 경로와 공용 별칭의 발견 통과 |
-| macOS | Codex | 0.8.2 네이티브 실행 대기 | CI에서 확인 | CI에서 확인 |
-| macOS | Claude Code | 0.8.2 네이티브 실행 대기 | CI에서 확인 | 계정 세션에서 확인 |
-| macOS | Gemini CLI | 0.8.2 네이티브 실행 대기 | CI에서 확인 | CI에서 확인 |
-| Windows | Codex | 0.8.2 네이티브 실행 대기 | CI에서 확인 | CI에서 확인 |
-| Windows | Claude Code | 0.8.2 네이티브 실행 대기 | CI에서 확인 | 계정 세션에서 확인 |
-| Windows | Gemini CLI | 0.8.2 네이티브 실행 대기 | CI에서 확인 | CI에서 확인 |
+| macOS | Codex | 실행 전 | CI에서 확인 | CI에서 확인 |
+| macOS | Claude Code | 실행 전 | CI에서 확인 | 계정 세션에서 확인 |
+| macOS | Gemini CLI | 실행 전 | CI에서 확인 | CI에서 확인 |
+| Windows | Codex | 실행 전 | CI에서 확인 | CI에서 확인 |
+| Windows | Claude Code | 실행 전 | CI에서 확인 | 계정 세션에서 확인 |
+| Windows | Gemini CLI | 실행 전 | CI에서 확인 | CI에서 확인 |
 
 이번 실행에서는 설치와 보조 도구, CLI 시작과 가능한 범위의 스킬 발견을 확인했다. 로그인 후 원고를 처리하는 생성 검사는 별도로 확인한다. 앞선 버전의 실행 범위는 당시 자료에서 볼 수 있다. [0.8.0 공개 CI](https://github.com/jhchoi0309/im-poet/actions/runs/44085122317), [0.8.1 실행 결과](../evals/results/release-0.8.1.json)
 
