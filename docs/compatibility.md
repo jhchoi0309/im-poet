@@ -1,6 +1,6 @@
-# 0.8.1 호환성 및 확인 범위
+# 0.8.2 호환성과 실행 기록
 
-Windows, macOS, Linux와 Codex CLI, Claude Code, Gemini CLI의 아홉 조합을 지원 대상으로 개발한다. 각 CLI가 공식 지원하는 운영체제와 프로세서에서 사용한다. 설치와 보조 도구는 Python 3.10 이상과 표준 라이브러리를 사용하며 윤문 지침 자체는 Python이 없어도 읽을 수 있다.
+Windows, macOS, Linux에서 Codex CLI, Claude Code, Gemini CLI를 쓰는 아홉 조합을 검사 대상으로 둔다. 운영체제와 프로세서의 지원 범위는 각 CLI를 따른다. 설치기와 보조 도구는 Python 3.10 이상과 표준 라이브러리를 쓰고, 핵심 윤문 지침은 텍스트로 읽을 수 있다.
 
 ## 검증을 나누는 기준
 
@@ -13,25 +13,25 @@ Windows, macOS, Linux와 Codex CLI, Claude Code, Gemini CLI의 아홉 조합을 
 | 네이티브 발견 | 호스트가 실제로 선택한 이름과 경로, 활성 상태 |
 | 모델 적용 | 로그인한 세션에서 원고를 처리하는 실제 생성 |
 
-위 단계는 서로 대체하지 않는다. 파일 검사와 CLI 시작만으로 발견이나 윤문 성능을 보장하지 않는다.
+파일이 제자리에 놓였는지, 도구가 그 파일을 찾아 쓰는지, 실제로 원고를 어떻게 고치는지는 단계마다 결과를 기록한다.
 
 ## 이번 실행의 아홉 조합
 
-이번 개발 환경은 Linux와 Python 3.12.14다. Linux 행은 실제 설치 명령으로 새 설치, 백업 없는 교체, 한글과 공백이 있는 경로, 도구를 확인한 결과다. macOS와 Windows의 0.8.1 실행은 업로드 뒤 CI에서 확인한다.
+Linux와 Python 3.12.14에서 세 CLI의 설치 명령을 실행했다. 새 설치 후 한글과 공백이 있는 경로에서 백업 없이 교체하고, 원본과 설치 파일의 일치와 보조 도구 실행을 확인했다. 빌드와 문서 검사도 통과했다. 단위 테스트 76개 중 74개가 통과했고 Windows의 junction과 PowerShell 검사 두 개는 이 환경에서 건너뛰었다.
 
 | 운영체제 | CLI | 설치와 백업 없는 갱신 및 도구 | CLI 시작 | 발견과 실제 적용 |
 | --- | --- | --- | --- | --- |
-| Linux | Codex | 통과 | 0.166.0 실행 | 발견 요청 전에 이 환경의 읽기 전용 상태 디렉터리에서 초기화 중단 |
+| Linux | Codex | 통과 | 0.166.0 실행 | 이 환경의 읽기 전용 경로에서 초기화가 중단되어 발견을 확인하지 못함 |
 | Linux | Claude Code | 통과 | 2.1.325 실행 | 계정 세션의 발견 미실행 |
 | Linux | Gemini CLI | 통과 | 0.68.0 실행 | 격리한 사용자 경로와 공용 별칭의 발견 통과 |
-| macOS | Codex | 이번 릴리스 CI 대기 | CI에서 실행 | 이번 릴리스 결과 확인 필요 |
-| macOS | Claude Code | 이번 릴리스 CI 대기 | CI에서 실행 | 계정 세션의 실제 적용은 별도 |
-| macOS | Gemini CLI | 이번 릴리스 CI 대기 | CI에서 실행 | 이번 릴리스 결과 확인 필요 |
-| Windows | Codex | 이번 릴리스 CI 대기 | CI에서 실행 | 이번 릴리스 결과 확인 필요 |
-| Windows | Claude Code | 이번 릴리스 CI 대기 | CI에서 실행 | 계정 세션의 실제 적용은 별도 |
-| Windows | Gemini CLI | 이번 릴리스 CI 대기 | CI에서 실행 | 이번 릴리스 결과 확인 필요 |
+| macOS | Codex | 0.8.2 네이티브 실행 대기 | CI에서 확인 | CI에서 확인 |
+| macOS | Claude Code | 0.8.2 네이티브 실행 대기 | CI에서 확인 | 계정 세션에서 확인 |
+| macOS | Gemini CLI | 0.8.2 네이티브 실행 대기 | CI에서 확인 | CI에서 확인 |
+| Windows | Codex | 0.8.2 네이티브 실행 대기 | CI에서 확인 | CI에서 확인 |
+| Windows | Claude Code | 0.8.2 네이티브 실행 대기 | CI에서 확인 | 계정 세션에서 확인 |
+| Windows | Gemini CLI | 0.8.2 네이티브 실행 대기 | CI에서 확인 | CI에서 확인 |
 
-세 CLI에 대한 로그인 후 모델 생성은 수행하지 않았다. [0.8.0의 공개 CI](https://github.com/jhchoi0309/im-poet/actions/runs/44085122317)에서는 아홉 작업이 통과했다. 이전 버전의 설치와 발견 검사 결과이며 현재 개정의 결과로 세지 않는다. 이번 실행의 기계 기록은 [0.8.1 릴리스 검증](../evals/results/release-0.8.1.json)에 있다.
+이번 실행에서는 설치와 보조 도구, CLI 시작과 가능한 범위의 스킬 발견을 확인했다. 로그인 후 원고를 처리하는 생성 검사는 별도로 확인한다. 앞선 버전의 실행 범위는 당시 자료에서 볼 수 있다. [0.8.0 공개 CI](https://github.com/jhchoi0309/im-poet/actions/runs/44085122317), [0.8.1 실행 결과](../evals/results/release-0.8.1.json)
 
 ## 자동화
 
@@ -39,7 +39,7 @@ Windows, macOS, Linux와 Codex CLI, Claude Code, Gemini CLI의 아홉 조합을 
 
 [일반 검증 워크플로](../.github/workflows/validate.yml)는 세 운영체제와 Python 3.10, 3.13의 여섯 조합을 검사한다. Windows의 junction과 네이티브 PowerShell 검사는 해당 환경에서 실행한다. Linux에서 생략된 검사를 통과로 세지 않는다.
 
-업로드하면 push 이벤트로 두 워크플로가 실행된다. 현재 패키지를 만들기 전에 해당 커밋을 GitHub에 게시하지 않았으므로 그 실행 결과를 미리 통과로 기록하지 않는다. 이전 버전의 네이티브 CI는 [역사 평가 기록](evaluation.md)에서 현재 결과와 구분한다.
+커밋을 올리면 push 이벤트로 두 워크플로가 시작된다. 해당 커밋의 Actions에서 운영체제별 결과를 볼 수 있다. [이전 평가 기록](evaluation.md)
 
 ## 경로와 정책
 

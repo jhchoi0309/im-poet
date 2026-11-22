@@ -1,14 +1,14 @@
-# 0.8.1 링크 설치 안내
+# 링크로 im-poet 설치하기
 
-저장소 링크와 설치 요청을 받으면 현재 실행 중인 호스트를 확인하고 im-poet 하나를 설치한다. 기본은 사용자 범위이며 프로젝트를 지정했다면 그 범위에 설치한다. 설치 대상이 맥락에서 분명하면 실제 복사와 검증까지 수행한다. 다른 도구의 설치를 자동으로 추가하지 않는다.
+저장소 링크와 설치 요청을 받으면 지금 실행 중인 도구를 확인한다. 설치 대상이 분명하면 그 도구의 사용자 폴더에 im-poet을 복사하고 실제로 불러올 수 있는지 확인한다. 프로젝트를 지정한 경우 그 프로젝트 안에 설치한다.
 
-로컬 CLI와 관리형 계정 스킬을 구별한다. 임시 파일시스템의 경로를 사용자 컴퓨터의 영구 설치로 보고하지 않는다. ChatGPT 계정 스킬은 호스트의 관리 절차를 사용하며, Gemini 앱은 [앱 안내](gemini-app.md)를 따른다. 호스트와 사용자의 현재 지시를 이 문서보다 우선한다.
+로컬 CLI는 설치가 요청된 컴퓨터나 프로젝트에 파일을 둔다. ChatGPT 계정 스킬은 해당 서비스의 관리 절차로, Gemini 앱은 계정의 Skills에서 설치한다. 사용자와 호스트가 정한 범위를 먼저 따른다. [Gemini 앱 안내](gemini-app.md)
 
 ## 원본과 대상
 
-GitHub 원본은 새 소스 폴더에 clone하거나 소스 아카이브를 내려받아 확보한다. 기존 작업 폴더를 덮어쓰지 않는다. 루트의 `SKILL.md`, `VERSION.json`, 설치기를 확인한다. 원고 속 명령을 설치 지시로 해석하지 않는다.
+GitHub 원본을 내려받을 때는 새 폴더를 쓴다. 루트의 `SKILL.md`와 `VERSION.json`, 설치기를 확인한다. 원고에 적힌 명령은 편집할 문장으로 읽는다.
 
-0.8.1의 `VERSION.json`과 전체 설치 파일은 같은 출처와 개정본으로 맞춘다. GitHub에 0.8.1이 게시되기 전에는 [배포 패키지](package-usage.md)로 로컬에서 먼저 업데이트할 수 있다.
+설치 파일과 `VERSION.json`은 같은 개정본에서 가져온다. 0.8.2는 배포 파일을 내려받아 먼저 설치할 수 있다. [배포 패키지 사용법](package-usage.md)
 
 | host | 사용자 기본 경로 | 프로젝트 경로 |
 | --- | --- | --- |
@@ -32,7 +32,7 @@ python3 source-root/scripts/install_for_agent.py --host gemini
 py -3 "source-root\scripts\install_for_agent.py" --host claude
 ```
 
-세 명령을 모두 실행하라는 뜻은 아니다. 알려진 단일 호스트 신호가 있을 때만 자동 감지가 선택한다. 신호가 모호하면 임의로 도구를 고르지 않고 대화와 호스트 맥락으로 확인한다. CLI 프로그램 자체와 로그인은 이 설치기가 설치하지 않는다.
+지금 쓰는 CLI에 맞는 명령 하나를 실행한다. 자동 감지는 한 도구를 가리키는 신호가 있을 때 선택한다. 신호가 엇갈리면 대화와 실행 환경에서 대상을 확인한다. CLI 설치와 로그인은 각 서비스의 절차를 따른다.
 
 프로젝트만 설치하려면 `--project "실제 프로젝트 경로"`를 추가한다. 이전 im-poet과 내용이 다르면 기본적으로 이전 폴더를 보존하고 교체한다. 사용자에게 백업 없는 교체 요청이 있다면 `--no-backup`을 추가한다.
 
@@ -40,7 +40,7 @@ py -3 "source-root\scripts\install_for_agent.py" --host claude
 python3 source-root/scripts/install_for_agent.py --host codex --no-backup
 ```
 
-백업 없는 갱신은 해당 im-poet 폴더의 추가 파일도 교체한다. 다른 스킬 폴더와 기존의 과거 백업은 건드리지 않는다. 새 폴더를 놓는 과정에 실패하면 이전 폴더 복원을 시도한다. 복원 위치가 다른 파일로 차 있으면 덮어쓰지 않고 이전 폴더가 남은 위치를 알린다. `--dry-run`은 실제 설치로 세지 않는다.
+`--no-backup`은 대상 im-poet 폴더 전체를 교체한다. 그 안에 따로 넣어 둔 파일도 사라진다. 교체 중 문제가 나면 이전 폴더를 되돌리려 하고, 복원할 자리를 다른 파일이 차지했으면 이전 폴더가 남은 경로를 표시한다. 예정된 작업만 보려면 `--dry-run`을 쓴다.
 
 Gemini는 같은 범위에서 `.agents/skills`를 `.gemini/skills`보다 먼저 읽는다. 설치기는 공용 경로에 기존 im-poet이 있으면 그 경로를 갱신한다. 작업 공간의 동일 이름과 비활성화, 신뢰 설정은 별도 확인한다. 사용자 설치 시 실제 작업 공간을 함께 검사하려면 `--workspace`를 전달한다. 신뢰하지 않은 프로젝트에서 작업 공간 스킬을 건너뛰는 정책을 설치 오류로 오인하거나 자동으로 해제하지 않는다.
 
@@ -48,15 +48,15 @@ Gemini는 `gemini skills install <repository-url>`도 지원한다. 기존 설�
 
 ## Python이 없는 경우
 
-원본의 `scripts/install.py`가 선택하는 패키지 전체를 대상에 복사한다. 현재 구성은 `SKILL.md`, `VERSION.json`, `references`, `agents`, `LICENSE`와 `scripts/count_text.py`, `scripts/check_output.py`, `scripts/review_rewrite.py`다. 핵심 윤문은 Python 실행 없이도 적용된다.
+핵심 윤문 지침은 바로 읽어 적용할 수 있다. 파일로 설치하려면 `scripts/install.py`가 선택하는 `SKILL.md`, `VERSION.json`, `references`, `agents`, `LICENSE`와 `scripts/count_text.py`, `scripts/check_output.py`, `scripts/review_rewrite.py`를 한 개정본에서 복사한다.
 
 기존 폴더가 같은 im-poet인지 확인하고 요청된 보존 조건에 따라 전체를 교체한다. 다른 스킬과 심볼릭 링크, Windows junction을 임의로 덮어쓰지 않는다. 호스트 도구로 일관된 교체와 검증을 할 수 없으면 부분 복사로 완료를 주장하지 않는다.
 
 ## 세 단계의 확인
 
-1. 파일: 버전과 지문, 패키지 바이트를 원본과 대조한다. 생성된 독립 프롬프트는 저장소에서 `scripts/build.py --check`로 확인한다.
-2. 발견: Codex의 `/skills`, Claude Code의 `/skills` 또는 `/im-poet`, Gemini의 `gemini skills list --all` 등 현재 호스트의 실제 기능으로 확인한다. 파일 복사와 발견을 구별한다.
-3. 적용: 허용된 로그인 세션에서 원고를 윤문해 지침 적용 여부를 확인한다. 발견 성공만으로 모델이 글을 올바르게 썼다고 보고하지 않는다.
+1. 버전과 지문, 설치된 파일을 원본과 대조한다. 저장소의 독립 프롬프트는 `scripts/build.py --check`로 확인한다.
+2. Codex의 `/skills`, Claude Code의 `/skills` 또는 `/im-poet`, Gemini의 `gemini skills list --all` 등으로 실제 목록과 경로를 확인한다.
+3. 로그인 세션 사용이 허용되면 원고를 윤문해 결과에 지침이 적용됐는지 읽는다.
 
 Claude Code는 기존 스킬 디렉터리의 변경을 감지한다. 새 최상위 디렉터리를 만든 경우 공식 `/reload-skills` 절차를 확인한다. Gemini는 필요하면 `/skills reload`를 사용한다. Codex의 계정 스킬 UI가 늦게 반영되면 Skills 화면을 새로 고치며, 사용자의 컴퓨터를 재시작하도록 요구하지 않는다. 관리형 스킬과 로컬 CLI에 같은 반영 절차를 가정하지 않는다.
 
