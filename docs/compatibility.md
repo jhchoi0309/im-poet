@@ -1,4 +1,4 @@
-# 0.8.2.1 호환성과 실행 기록
+# 0.8.2.2 호환성과 실행 기록
 
 Windows, macOS, Linux에서 Codex CLI, Claude Code, Gemini CLI를 쓰는 아홉 조합을 검사 대상으로 둔다. 운영체제와 프로세서의 지원 범위는 각 CLI를 따른다. 설치기와 보조 도구는 Python 3.10 이상과 표준 라이브러리를 쓰고, 핵심 윤문 지침은 텍스트로 읽을 수 있다.
 
@@ -31,7 +31,7 @@ Linux와 Python 3.12.14에서 세 CLI의 설치 명령을 실행했다. 새 설�
 | Windows | Claude Code | 실행 전 | CI에서 확인 | 계정 세션에서 확인 |
 | Windows | Gemini CLI | 실행 전 | CI에서 확인 | CI에서 확인 |
 
-이번 실행에서는 설치와 보조 도구, CLI 시작과 가능한 범위의 스킬 발견을 확인했다. 로그인 후 원고를 처리하는 생성 검사는 별도로 확인한다. 앞선 버전의 실행 범위는 당시 자료에서 볼 수 있다. [0.8.0 공개 CI](https://github.com/jhchoi0309/im-poet/actions/runs/44085122317), [0.8.1 실행 결과](../evals/results/release-0.8.1.json)
+이번 실행에서는 설치와 보조 도구, CLI 시작과 가능한 범위의 스킬 인식을 확인했다. 로그인한 에이전트에게 링크를 보내 설치를 맡기는 과정과 원고 윤문은 별도 확인 항목이다. 앞선 버전의 실행 범위는 당시 자료에서 볼 수 있다. [0.8.0 공개 CI](https://github.com/jhchoi0309/im-poet/actions/runs/44085122317), [0.8.1 실행 결과](../evals/results/release-0.8.1.json)
 
 ## 자동화
 

@@ -30,5 +30,5 @@
     "scripts/count_text.py": "4b954968cd48ff9ada919fb687cfe2ec9d0d650bd83a128debc009059d826b10",
     "scripts/review_rewrite.py": "588912486e37bee202330eff2ffc152966ff24045c4814c6b907b4dc1b8e53b2"
   },
-  "version": "0.8.2.1"
+  "version": "0.8.2.2"
 }
